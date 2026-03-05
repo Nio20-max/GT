@@ -18,3 +18,5 @@
 2026-03-05T13:58:00Z | API_HEALTH | pass | `/health` and `/api/v1/bootstrap` verified on live service.
 2026-03-05T14:03:00Z | APK_BUILD | pass | Built debug and unsigned release APKs and staged under `/mnt/website/GT/artifacts`.
 2026-03-05T14:05:00Z | OPS_HOOKS | pass | Added and executed backup/archive hooks with artifact output paths.
+2026-03-05T14:09:00Z | DB_EXPANSION | pass | Added `0002_domain_expansion.sql` and validated expanded schema on disposable Postgres.
+2026-03-05T14:10:00Z | RELEASE_BRANCH | pass | Created and pushed `release/agent-complete` branch and `v0.1.0-agent` tag.

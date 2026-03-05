@@ -9,6 +9,7 @@
 ## Current State
 
 - Completed: initial migration `backend/migrations/0001_core_schema.sql` for core domains (`users`, `clubs`, `players`, `matches`, `training_logs`, `economy_transactions`).
+- Completed: expanded migration `backend/migrations/0002_domain_expansion.sql` for lineup, training programs, scouting, transfer market, competitions/seasons, social/chat, alliances, tasks, telemetry.
 - Completed: partitioned table baseline for `training_logs` and `economy_transactions`.
 - Completed: API envelope and first contract endpoints:
   - `POST /api/v1/auth/login`
@@ -27,6 +28,6 @@
 ## Remaining For Full Phase B
 
 1. Add remaining contract endpoints from `plan/04_frontend_backend_api_contract.md`.
-2. Expand migrations for all domains (lineups, tactics, scouting, transfer market, alliances, chat, tasks, telemetry).
+2. Convert placeholder schema into fully constrained production schema with retention/partition policies for every heavy table.
 3. Add WAL archival and backup hooks under `/mnt/website/GT/backups` (test-safe paths).
 4. Add endpoint-level contract tests for all implemented endpoints.

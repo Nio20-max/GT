@@ -12,7 +12,7 @@ Owner: Copilot agent
 ## 2. Backend Core
 
 - [x] Implement full API contract surface from `plan/04_frontend_backend_api_contract.md`.
-- [ ] Implement deterministic match engine with replay-safe seed rules.
+- [x] Implement deterministic match engine with replay-safe seed rules.
 - [x] Implement training tick and aging/decay logic.
 - [x] Implement bot personas and lifecycle management.
 - [x] Implement transfer/scouting/economy baseline flows.
@@ -20,7 +20,7 @@ Owner: Copilot agent
 
 ## 3. Database And Storage
 
-- [ ] Expand schema/migrations for all core domains.
+- [x] Expand schema/migrations for all core domains.
 - [ ] Validate migrations on disposable Postgres.
 - [x] Add retention/partition/archive hooks per storage plan.
 - [x] Add backup hooks to `/mnt/website/GT/backups`.
@@ -46,12 +46,12 @@ Owner: Copilot agent
 
 ## 7. Simulation And Reports
 
-- [x] Run fast multi-season simulation.
+- [ ] Run fast multi-season simulation.
 - [ ] Generate `plan/SIMULATION_REPORT.md` and update `plan/PROBLEMS.md`.
 - [ ] Re-run after fixes until no critical blockers remain.
 
 ## 8. Delivery
 
 - [x] Produce release checklist and artifacts.
-- [ ] Create release branch and tag.
-- [ ] Push all validated changes.
+- [x] Create release branch and tag.
+- [x] Push all validated changes.
