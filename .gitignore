@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+web/node_modules/
+web/.next/
+web/out/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+backend/.venv/
+*.egg-info/
+dist/
+build/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+*.apk
+*.aab
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Temp
+/tmp/
+*.log
