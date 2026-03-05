@@ -27,6 +27,20 @@ Initial FastAPI scaffold for Goal Tactics.
 - Initial schema migration file for core domains.
 - API envelope + initial contract endpoints (`/api/v1/*`).
 
+## PostgreSQL Repository Mode
+
+- Set `GT_DB_URL` (example: `postgresql://gt:gt@localhost:55432/gt`) to enable PostgreSQL-backed auth/game persistence.
+- If `GT_DB_URL` is not set, JSON state files in `GT_STATE_DIR` are used.
+- Apply latest migrations before enabling DB-backed mode:
+   - `GT_DB_URL=postgresql://gt:gt@localhost:55432/gt python scripts/apply_migrations.py`
+
+## Runtime Ops Endpoints
+
+- `POST /api/v1/admin/scheduler/run-due`
+- `GET /api/v1/admin/precompute/artifacts/{fixtureId}`
+- `GET /api/v1/admin/settlements`
+- `GET /api/v1/admin/metrics/runtime`
+
 ## Production Services (systemd)
 
 Service unit templates are provided under `deploy/systemd/` and can be installed via:
