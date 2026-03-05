@@ -4,11 +4,14 @@ import argparse
 import logging
 import time
 
+from app.services.runtime_state import RUNTIME_STATE
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
 
 def run_once() -> None:
-    logging.info("bot cycle: persona actions placeholder executed")
+    summary = RUNTIME_STATE.run_bot_cycle()
+    logging.info("bot cycle: %s", summary)
 
 
 def run_daemon(interval_seconds: int = 120) -> None:

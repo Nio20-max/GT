@@ -21,7 +21,7 @@ Owner: Copilot agent
 ## 3. Database And Storage
 
 - [x] Expand schema/migrations for all core domains.
-- [ ] Validate migrations on disposable Postgres.
+- [x] Validate migrations on disposable Postgres.
 - [x] Add retention/partition/archive hooks per storage plan.
 - [x] Add backup hooks to `/mnt/website/GT/backups`.
 
@@ -29,7 +29,7 @@ Owner: Copilot agent
 
 - [x] Build a deployable Next.js client with GT shell and key pages.
 - [x] Wire API client + health/bootstrap integration.
-- [ ] Validate production build.
+- [x] Validate production build.
 
 ## 5. Android Client
 
@@ -46,8 +46,8 @@ Owner: Copilot agent
 
 ## 7. Simulation And Reports
 
-- [ ] Run fast multi-season simulation.
-- [ ] Generate `plan/SIMULATION_REPORT.md` and update `plan/PROBLEMS.md`.
+- [x] Run fast multi-season simulation.
+- [x] Generate `plan/SIMULATION_REPORT.md` and update `plan/PROBLEMS.md`.
 - [ ] Re-run after fixes until no critical blockers remain.
 
 ## 8. Delivery

@@ -8,7 +8,7 @@
 ## Current State
 
 - Completed: development-grade multi-season simulation harness (`backend/scripts/simulate_fast_mode.py`).
-- Completed: deterministic run with metrics captured in `plan/SIMULATION_REPORT.md`.
+- Completed: deterministic expanded run (30 seasons, 8 leagues, 15,840 matches) with metrics captured in `plan/SIMULATION_REPORT.md`.
 - Completed: issue log initialized in `plan/PROBLEMS.md`.
 
 ## Verification

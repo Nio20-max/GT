@@ -20,3 +20,6 @@
 2026-03-05T14:05:00Z | OPS_HOOKS | pass | Added and executed backup/archive hooks with artifact output paths.
 2026-03-05T14:09:00Z | DB_EXPANSION | pass | Added `0002_domain_expansion.sql` and validated expanded schema on disposable Postgres.
 2026-03-05T14:10:00Z | RELEASE_BRANCH | pass | Created and pushed `release/agent-complete` branch and `v0.1.0-agent` tag.
+2026-03-05T14:22:00Z | HTTPS | pass | Configured nginx vhost + Let's Encrypt cert for `gt.nikolai-linschmann.de`.
+2026-03-05T14:29:00Z | API_VERIFY | pass | Verified 151 HTTP API endpoints over HTTPS (`scripts/verify_api_endpoints.sh`).
+2026-03-05T14:33:00Z | SIM_30x8 | pass | Ran 30-season x 8-league simulation and wrote `plan/simulations/sim_30seasons_8leagues.json`.

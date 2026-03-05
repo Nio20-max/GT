@@ -5,6 +5,7 @@ from pydantic import BaseModel
 
 from app.api.envelope import ok
 from app.domain.training import TrainingContext, daily_gain
+from app.services.runtime_state import RUNTIME_STATE
 
 router = APIRouter(prefix="/api/v1")
 
@@ -192,7 +193,21 @@ def _register_contract_endpoint(method: str, path: str) -> None:
 
 
 for _method, _path in CONTRACT_ENDPOINTS:
-    if _path in {"/auth/login", "/bootstrap", "/club"}:
+    if _path in {
+        "/auth/login",
+        "/bootstrap",
+        "/club",
+        "/runtime/calendar",
+        "/runtime/locks",
+        "/admin/ticks/run",
+        "/admin/bots/run-cycle",
+        "/admin/seasons/rollover",
+        "/admin/health/deep",
+        "/admin/precompute/run",
+        "/admin/training-tick/run",
+        "/admin/training-tick/catchup",
+        "/admin/transfer/injections/run",
+    }:
         continue
     _register_contract_endpoint(_method, _path)
 
@@ -260,6 +275,58 @@ def scheduler_windows() -> dict:
             "training_tick": "00:00",
         }
     )
+
+
+@router.get("/runtime/calendar")
+def runtime_calendar() -> dict:
+    return ok(RUNTIME_STATE.runtime_calendar())
+
+
+@router.get("/runtime/locks")
+def runtime_locks() -> dict:
+    return ok(RUNTIME_STATE.runtime_locks())
+
+
+@router.post("/admin/precompute/run")
+def admin_precompute_run(competition: str = "league") -> dict:
+    result = RUNTIME_STATE.run_precompute(competition)
+    return ok(result)
+
+
+@router.post("/admin/ticks/run")
+def admin_ticks_run() -> dict:
+    return ok(RUNTIME_STATE.run_ticks())
+
+
+@router.post("/admin/bots/run-cycle")
+def admin_bots_cycle() -> dict:
+    return ok(RUNTIME_STATE.run_bot_cycle())
+
+
+@router.post("/admin/seasons/rollover")
+def admin_rollover() -> dict:
+    return ok(RUNTIME_STATE.rollover())
+
+
+@router.get("/admin/health/deep")
+def admin_health_deep() -> dict:
+    return ok(RUNTIME_STATE.deep_health())
+
+
+@router.post("/admin/training-tick/run")
+def admin_training_tick_run() -> dict:
+    return ok(RUNTIME_STATE.run_training_tick())
+
+
+@router.post("/admin/training-tick/catchup")
+def admin_training_tick_catchup(days: int = 1) -> dict:
+    results = [RUNTIME_STATE.run_training_tick() for _ in range(max(1, min(days, 30)))]
+    return ok({"days": days, "runs": results})
+
+
+@router.post("/admin/transfer/injections/run")
+def admin_transfer_injections_run() -> dict:
+    return ok(RUNTIME_STATE.run_transfer_injections())
 
 
 @router.websocket("/realtime")

@@ -39,3 +39,13 @@ Installed services:
 - `gt-scheduler.service` (scheduler worker)
 - `gt-bot-worker.service` (bot cycle worker)
 - `gt-web.service` (Next.js web)
+
+## Endpoint Verification
+
+- Live API verifier: `scripts/verify_api_endpoints.sh https://gt.nikolai-linschmann.de`
+- It validates all HTTP endpoints exposed in OpenAPI and reports pass/fail summary.
+
+## Nginx Domain Config
+
+- Repository template: `deploy/nginx/gt.nikolai-linschmann.de.conf`
+- Active server config path on host: `/etc/nginx/sites-available/gt.nikolai-linschmann.de`

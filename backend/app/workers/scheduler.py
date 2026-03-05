@@ -4,11 +4,14 @@ import argparse
 import logging
 import time
 
+from app.services.runtime_state import RUNTIME_STATE
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
 
 def run_once() -> None:
-    logging.info("scheduler cycle: lock/precompute/publish placeholders executed")
+    summary = RUNTIME_STATE.run_ticks()
+    logging.info("scheduler cycle: %s", summary)
 
 
 def run_daemon(interval_seconds: int = 60) -> None:

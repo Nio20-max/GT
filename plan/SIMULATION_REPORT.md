@@ -1,73 +1,68 @@
 # Simulation Report
 
 Date: 2026-03-05
-Mode: Fast deterministic harness (development scaffold)
+Mode: Fast deterministic harness (expanded run)
 
 ## Run Configuration
 
-- Seasons: 3
+- Seasons: 30
+- Leagues: 8
 - Clubs per league: 12
+- Total league matches simulated: 15,840
 - Match engine: deterministic seed-based simulation (`backend/app/domain/match_engine.py`)
 - Training model: deep-spec aligned formula baseline (`backend/app/domain/training.py`)
 - Bot model: persona + budget baseline (`backend/app/domain/bots.py`)
 
+Command used:
+
+- `/usr/bin/time -v /root/projekte/GT/.venv/bin/python backend/scripts/simulate_fast_mode.py --seasons 30 --leagues 8 --clubs-per-league 12 --output plan/simulations/sim_30seasons_8leagues.json`
+
 ## Key Metrics
 
-- Matches simulated: 198
-- Average goals per match: 2.01
-- Upset rate: 0.1717
-- Average daily training gain sample: 0.8204
-- Transfer volume (synthetic count): 412
-- Scout discoveries (synthetic count): 181
-- Average bot daily budget sample: 2335.97
+- Matches simulated: 15,840
+- Average goals per match: 2.201
+- Upset rate: 0.2064
+- Average training gain sample: 0.8000
+- Transfer volume (synthetic count): 31,468
+- Scout discoveries (synthetic count): 15,756
+- Average bot daily budget sample: 2,377.60
 
 ## Resource Snapshot
 
-From `/usr/bin/time -v` on simulation run:
+From `/usr/bin/time -v` on expanded run:
 
-- Elapsed wall time: 0.05s
-- User CPU: 0.04s
-- System CPU: 0.01s
-- Max RSS: 17,280 KB
+- Elapsed wall time: 0.58s
+- User CPU: 0.49s
+- System CPU: 0.02s
+- Max RSS: 18,432 KB
 
-Workspace component sizes:
+## Seasonal Stability Review
 
-- backend: 224K
-- web: 342M
-- android: 336K
+- Per-season avg goals range: 2.038 to 2.366
+- Per-season upset-rate range: 0.1875 to 0.2348
+- Transfer and scouting volumes remained stable across seasons with expected random variation.
 
-Mounted artifact path inventory:
+## Assessment
 
-- `/mnt/website/GT` currently present and empty (no backup/export artifacts generated yet).
+- Match output is plausible for an early deterministic baseline (goal average near low-mid real football range).
+- Upset rate is somewhat volatile in late seasons but remains within acceptable baseline for simulation variety.
+- Training progression remains conservative as requested.
+- Bot star budgets are high enough to keep market movement active in the synthetic model.
 
-## Subsystem Verification (Current Level)
+## Changes Considered After Analysis
 
-- Training progress and player development:
-  - Verified monotonic decline under high age/high strength and fatigue pressure.
-  - Baseline gains in expected conservative range from formula discovery.
-- Match result distribution:
-  - Deterministic repeatability confirmed by unit tests.
-  - Goal/upset distribution within plausible early baseline range.
-- Transfer market behavior:
-  - Synthetic transfer volume instrumentation added in harness.
-  - Full realistic pricing/inflation behavior pending full market implementation.
-- Scouting pipeline:
-  - Synthetic discovery volume instrumentation added in harness.
-  - Full scout cooldown/cost/value validation pending full scouting module.
-- Bot behavior:
-  - Persona mix + star budget + alliance overbid floor implemented and tested.
-  - Population lifecycle and strategic behavior still pending.
-- Economy health:
-  - Basic bot budget generation active; ledger-level economy balancing pending full transaction engine.
+- No immediate formula change applied from this run.
+- Recommended next change if realism tightening is desired:
+  - Slightly lower upset volatility by increasing quality delta influence in match chance allocation.
+  - Introduce per-league calibration profiles to keep goals in 2.1-2.4 target corridor.
 
-## Known Issues
+## Artifacts
 
-See `plan/PROBLEMS.md`.
+- Raw stats JSON: `plan/simulations/sim_30seasons_8leagues.json`
+- Problems list: `plan/PROBLEMS.md`
 
-## Follow-up Required
+## Remaining Gaps Before Final Gameplay Claim
 
-1. Implement full competition scheduler and lock/publish job orchestration.
-2. Replace synthetic transfer/scouting counters with real module outputs.
-3. Add DB persistence and historical telemetry capture for simulation runs.
-4. Add backup/WAL output to `/mnt/website/GT/backups` during integration tests.
-5. Repeat simulation after full Phase B/C implementation to produce production-grade report.
+1. Replace synthetic transfer/scouting counters with persistence-backed modules.
+2. Persist match events and artifacts to DB + archive tiers.
+3. Execute equivalent 30-season run against fully persistent stack and compare drift.
