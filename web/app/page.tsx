@@ -1,28 +1,33 @@
+import Link from "next/link";
+
+import GameShell from "./components/GameShell";
+import { SECTION_DATA } from "./lib/navigation";
+
 export default function HomePage() {
+  const featureCards = Object.entries(SECTION_DATA);
+
   return (
-    <main className="app-shell">
-      <aside className="left-menu">
-        <h1>Goal Tactics</h1>
-        <nav>
-          <a>Club</a>
-          <a>Squad</a>
-          <a>Lineup</a>
-          <a>Training</a>
-          <a>Market</a>
-          <a>League</a>
-        </nav>
-      </aside>
-      <section className="content">
-        <header className="economy-bar">
-          <span>Money: 5,000,000</span>
-          <span>Stars: 20,000</span>
-          <span>Medipacks: 0</span>
-        </header>
-        <article className="panel">
-          <h2>Scaffold Ready</h2>
-          <p>Web client scaffold is in place and aligned with GT dark-green visual direction.</p>
-        </article>
-      </section>
-    </main>
+    <GameShell title="Dashboard">
+      <p className="intro-text">Everything in the left menu is now mapped to a real route with usable page content.</p>
+      <div className="card-grid">
+        {featureCards.map(([slug, section]) => (
+          <section key={slug} className="feature-card">
+            <h3>{section.title}</h3>
+            <p>{section.summary}</p>
+            <Link href={`/${slug}`} className="inline-link">
+              Open {section.title}
+            </Link>
+          </section>
+        ))}
+      </div>
+      <div className="auth-cta">
+        <Link href="/register" className="inline-link">
+          Create Account
+        </Link>
+        <Link href="/login" className="inline-link">
+          Login
+        </Link>
+      </div>
+    </GameShell>
   );
 }

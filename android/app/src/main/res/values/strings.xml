@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Goal Tactics</string>
+    <string name="api_base">https://gt.nikolai-linschmann.de</string>
 </resources>

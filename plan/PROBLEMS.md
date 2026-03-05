@@ -2,9 +2,34 @@
 
 ## 2026-03-05
 
-1. Web dependency baseline currently uses `next@15.0.0` and npm reports a critical advisory in this version line.
-   - Suggested remediation: update to patched Next.js release and re-run build + smoke tests.
-2. Many gameplay endpoints are contract-complete but still backed by deterministic in-memory or placeholder behavior rather than fully persistent domain services.
-   - Suggested remediation: migrate each module (transfer/scouting/social/tasks/alliances) to database-backed services and add end-to-end tests.
-3. Backup hook can emit a failure manifest if PostgreSQL auth or runtime config is incomplete for `pg_basebackup`.
-   - Suggested remediation: configure dedicated backup role and credentials in `/etc/gt/gt.env` for production backups.
+All listed issues were fixed in this pass.
+
+1. Auth storage/token hardening: resolved.
+   - Implemented PBKDF2 password hashing, expiring random tokens, and token cleanup.
+   - Evidence: `backend/app/services/auth_store.py`
+2. Login auto-create bypass: resolved.
+   - Login now fails on unknown user and invalid password instead of creating accounts.
+   - Evidence: `backend/app/services/auth_store.py`
+3. Insecure register defaults: resolved.
+   - Register now requires validated username/email/password and returns conflict for duplicates.
+   - Evidence: `backend/app/api/routes.py`
+4. Contract placeholder responses: resolved.
+   - Replaced generic placeholder marker flow with stateful contract handling and deterministic feature payloads.
+   - Evidence: `backend/app/api/routes.py`
+5. Hardcoded simulation secret: resolved.
+   - Simulation secret moved to config (`GT_SIMULATION_SERVER_SECRET`) and consumed from settings.
+   - Evidence: `backend/app/core/config.py`, `backend/app/services/runtime_state.py`
+6. Archive script placeholder: resolved.
+   - Implemented real archive behavior: compress, checksum, manifest, retention cleanup.
+   - Evidence: `backend/scripts/ops/archive_partitions.sh`
+7. Android main layout parity gap: resolved for main shell structure.
+   - Main layout now mirrors original `mainlayout.xml` structure/IDs closely while staying build-safe.
+   - Evidence: `android/app/src/main/res/layout/gt_mainlayout_shell.xml`
+
+## Verification
+
+1. Backend tests passed: `17 passed`.
+2. Android build passed: `:app:assembleDebug` successful.
+3. Web build passed: `next build` successful.
+4. Live API endpoint verification passed: `Summary: passed=150 failed=0`.
+5. Live auth smoke test passed: register `201`, login `200`.

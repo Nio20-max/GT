@@ -5,9 +5,11 @@ from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from random import Random
 
+from app.core.config import settings
 from app.domain.bots import BotProfile, daily_star_budget, draw_persona
 from app.domain.match_engine import MatchInput, TeamVector, simulate_result
 from app.domain.training import TrainingContext, daily_gain
+from app.services.persistent_json import JsonStateFile
 
 
 @dataclass
@@ -28,7 +30,43 @@ class RuntimeState:
         self.season_id = 1
         self.fixtures: list[Fixture] = []
         self._fixture_counter = 0
-        self._seed_fixtures()
+        self._state_file = JsonStateFile(settings.state_dir_path / "runtime_state.json")
+        if not self._load():
+            self._seed_fixtures()
+            self._save()
+
+    def _load(self) -> bool:
+        payload = self._state_file.load(default={})
+        if not isinstance(payload, dict):
+            return False
+
+        raw_fixtures = payload.get("fixtures")
+        if not isinstance(raw_fixtures, list):
+            return False
+
+        parsed: list[Fixture] = []
+        for raw in raw_fixtures:
+            try:
+                parsed.append(Fixture(**raw))
+            except Exception:
+                continue
+
+        if not parsed:
+            return False
+
+        self.season_id = int(payload.get("seasonId", 1))
+        self.fixtures = parsed
+        self._fixture_counter = max(f.fixture_id for f in parsed)
+        return True
+
+    def _save(self) -> None:
+        self._state_file.save(
+            {
+                "seasonId": self.season_id,
+                "fixtureCounter": self._fixture_counter,
+                "fixtures": [asdict(fixture) for fixture in self.fixtures],
+            }
+        )
 
     def _seed_fixtures(self, leagues: int = 2, clubs_per_league: int = 12) -> None:
         self.fixtures.clear()
@@ -96,7 +134,7 @@ class RuntimeState:
                 competition=fixture.competition,
                 season_id=fixture.season_id,
                 seed_version=1,
-                server_secret="gt-server-secret",
+                server_secret=settings.simulation_server_secret,
                 home=TeamVector(70 + fixture.home_team % 10, 68 + fixture.home_team % 8, 66 + fixture.home_team % 7),
                 away=TeamVector(70 + fixture.away_team % 10, 68 + fixture.away_team % 8, 66 + fixture.away_team % 7),
             )
@@ -105,6 +143,8 @@ class RuntimeState:
             fixture.result_away = result["awayGoals"]
             fixture.status = "precomputed"
             updated += 1
+        if updated:
+            self._save()
         return {"competition": competition, "precomputed": updated}
 
     def run_publish(self, competition: str) -> dict:
@@ -113,6 +153,8 @@ class RuntimeState:
             if fixture.competition == competition and fixture.status == "precomputed":
                 fixture.status = "published"
                 published += 1
+        if published:
+            self._save()
         return {"competition": competition, "published": published}
 
     def run_training_tick(self, sample_players: int = 800) -> dict:
@@ -169,6 +211,7 @@ class RuntimeState:
     def rollover(self) -> dict:
         self.season_id += 1
         self._seed_fixtures()
+        self._save()
         return {"newSeasonId": self.season_id, "fixtures": len(self.fixtures)}
 
     def deep_health(self) -> dict:

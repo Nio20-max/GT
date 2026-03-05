@@ -12,7 +12,13 @@ def assert_envelope(payload: dict) -> None:
 
 
 def test_login_contract() -> None:
-    response = client.post("/api/v1/auth/login", json={"username": "alice", "password": "pw"})
+    register = client.post(
+        "/api/v1/auth/register",
+        json={"username": "contract_user", "email": "contract@example.com", "password": "contractpw1"},
+    )
+    assert register.status_code in (201, 409)
+
+    response = client.post("/api/v1/auth/login", json={"username": "contract_user", "password": "contractpw1"})
     assert response.status_code == 200
     payload = response.json()
     assert_envelope(payload)

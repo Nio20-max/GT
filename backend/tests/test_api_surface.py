@@ -1,4 +1,5 @@
 from fastapi.testclient import TestClient
+from uuid import uuid4
 
 from app.main import app
 
@@ -35,13 +36,23 @@ SAMPLE_ENDPOINTS = [
 
 
 def test_api_surface_endpoints_registered() -> None:
+    register_payload = {
+        "username": f"surface_{uuid4().hex[:8]}",
+        "email": "surface@example.com",
+        "password": "surfacepass1",
+    }
+
     for method, url in SAMPLE_ENDPOINTS:
         request_fn = getattr(client, method)
+        body = {}
+        if url == "/api/v1/auth/register":
+            body = register_payload
         if method == "get":
             response = request_fn(url)
         else:
-            response = request_fn(url, json={})
-        assert response.status_code == 200, f"{method.upper()} {url} failed"
+            response = request_fn(url, json=body)
+        expected_status = 201 if url == "/api/v1/auth/register" else 200
+        assert response.status_code == expected_status, f"{method.upper()} {url} failed"
         payload = response.json()
         assert payload["ok"] is True
         assert "traceId" in payload
