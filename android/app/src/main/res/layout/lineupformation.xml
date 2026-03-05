@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/LineupFormation_FootballField"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/LineupFormation_FieldImage"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:src="@drawable/soccerfield"
+        android:scaleType="fitXY"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="@id/LineupFormation_PlayersBench"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ListView
+        android:id="@id/LineupFormation_PlayersTable"
+        android:background="@drawable/background_dark_nocorners"
+        android:layout_width="250.0dip"
+        android:layout_height="fill_parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <View
+        android:id="@id/LineupFormation_PlayersBench"
+        android:background="@drawable/background_greenwithstroke"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/LineupFormationPosition_12"
+        app:layout_constraintRight_toRightOf="@id/LineupFormationPosition_17"
+        app:layout_constraintTop_toTopOf="@id/LineupFormationPosition_12" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@id/LineupFormation_TacticsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lineupformation_margin_top"
+        android:text="@string/Tactics"
+        android:layout_marginStart="@dimen/spacing_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextStyle" />
+    <Spinner
+        android:id="@id/LineupFormation_SelectTactic"
+        android:layout_width="@dimen/lineupformation_combobox_width"
+        android:layout_height="@dimen/lineupformation_combobox_height"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginStart="@dimen/spacing_small"
+        app:layout_constraintStart_toEndOf="@id/LineupFormation_TacticsText"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@id/LineupFormation_SystemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/System"
+        android:layout_marginStart="@dimen/spacing_medium"
+        app:layout_constraintStart_toEndOf="@id/LineupFormation_SelectTactic"
+        app:layout_constraintTop_toTopOf="@id/LineupFormation_TacticsText"
+        style="@style/TextStyle" />
+    <Spinner
+        android:id="@id/LineupFormation_SelectSystem"
+        android:layout_width="@dimen/lineupformation_combobox_width"
+        android:layout_height="@dimen/lineupformation_combobox_height"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginStart="@dimen/spacing_small"
+        app:layout_constraintStart_toEndOf="@id/LineupFormation_SystemText"
+        app:layout_constraintTop_toTopOf="parent" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        app:bench="true"
+        app:layout_constraintBottom_toBottomOf="@id/LineupFormation_PlayersBench"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:position="@string/Keeper" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bench="true"
+        app:layout_constraintBottom_toBottomOf="@id/LineupFormation_PlayersBench"
+        app:layout_constraintStart_toEndOf="@id/LineupFormationPosition_12"
+        app:position="@string/Defender" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bench="true"
+        app:layout_constraintBottom_toBottomOf="@id/LineupFormation_PlayersBench"
+        app:layout_constraintStart_toEndOf="@id/LineupFormationPosition_13"
+        app:position="@string/Midfielder" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bench="true"
+        app:layout_constraintBottom_toBottomOf="@id/LineupFormation_PlayersBench"
+        app:layout_constraintStart_toEndOf="@id/LineupFormationPosition_14"
+        app:position="@string/Midfielder" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bench="true"
+        app:layout_constraintBottom_toBottomOf="@id/LineupFormation_PlayersBench"
+        app:layout_constraintStart_toEndOf="@id/LineupFormationPosition_15"
+        app:position="@string/Midfielder" />
+    <de.gt.app.views.DropView
+        android:id="@id/LineupFormationPosition_17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bench="true"
+        app:layout_constraintBottom_toBottomOf="@id/LineupFormation_PlayersBench"
+        app:layout_constraintStart_toEndOf="@id/LineupFormationPosition_16"
+        app:position="@string/Striker" />
+    <TextView
+        android:textColor="@color/colorHighlight"
+        android:id="@id/LineupFormation_Strength"
+        android:paddingLeft="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:text="9999"
+        app:layout_constraintBottom_toTopOf="@id/LineupFormation_PlayersBench"
+        app:layout_constraintLeft_toRightOf="@id/LineupFormation_StrengthText"
+        style="@style/LargeTextStyle" />
+    <TextView
+        android:id="@id/LineupFormation_StrengthText"
+        android:paddingLeft="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:text="@string/Strength"
+        app:layout_constraintBottom_toTopOf="@id/LineupFormation_PlayersBench"
+        style="@style/LargeTextStyle" />
+    <TextView
+        android:id="@id/LineupFormation_Locked"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:paddingRight="@dimen/spacing_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:text="@string/Lock"
+        app:layout_constraintBottom_toTopOf="@id/LineupFormation_PlayersBench"
+        app:layout_constraintRight_toLeftOf="@id/LineupFormation_PlayersTable"
+        style="@style/LargeTextStyle" />
+    <de.gt.app.views.DraggableView
+        android:id="@id/LineupFormation_PlayerDrag"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

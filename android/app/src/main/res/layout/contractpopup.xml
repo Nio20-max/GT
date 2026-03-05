@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="@dimen/spacing_medium"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/contractImage"
+        android:padding="@dimen/spacing_medium"
+        android:layout_width="200.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:src="@drawable/contract"
+        android:scaleType="fitCenter"
+        android:layout_above="@id/contractPopupButtonsContainer"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:fillViewport="true"
+        android:layout_toRightOf="@id/contractImage"
+        android:layout_above="@id/contractPopupButtonsContainer"
+        android:layout_alignParentRight="true">
+        <TextView
+            android:gravity="center"
+            android:id="@id/contractPopupDescription"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ContractRenewText"
+            style="@style/TextStyle" />
+    </ScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/contractPopupButtonsContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@id/contractExtendPremium"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/ContractRenewButton"
+            android:layout_weight="1.0"
+            android:layout_marginEnd="@dimen/spacing_small"
+            style="@style/PremiumButtonStyle" />
+        <Button
+            android:layout_gravity="center"
+            android:id="@id/contractExtendNormal"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/ContractRenewButton"
+            android:layout_weight="1.0"
+            android:layout_marginStart="@dimen/spacing_small"
+            style="@style/ButtonStyle" />
+    </LinearLayout>
+    <Button
+        android:id="@id/contractOkButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/Ok"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        style="@style/ButtonStyle" />
+</RelativeLayout>

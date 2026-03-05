@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/individualSelectedPlayerTable"
+        android:background="@drawable/background_darkgreen"
+        android:padding="@dimen/spacing_small"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/spacing_small"
+        android:layout_weight="2.0">
+        <Spinner
+            android:id="@id/individualFreePlayersList"
+            android:layout_width="fill_parent"
+            android:layout_height="250.0dip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:translationZ="100.0dip" />
+        <Spinner
+            android:id="@id/individualSkillsList"
+            android:layout_width="fill_parent"
+            android:layout_height="250.0dip"
+            android:layout_marginTop="35.0dip"
+            android:layout_alignTop="@id/individualFreePlayersList"
+            android:layout_alignParentStart="true"
+            android:translationZ="99.0dip" />
+        <Button
+            android:gravity="center"
+            android:id="@id/individualTrainButton"
+            android:tag="individual_training_button"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:layout_alignParentBottom="true"
+            app:premium="true"
+            app:title="@string/Train" />
+        <RelativeLayout
+            android:id="@id/individualTraining_playerFrame"
+            android:background="@drawable/background_greenwithstroke"
+            android:padding="@dimen/spacing_small"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="35.0dip"
+            android:layout_above="@id/individualTrainButton"
+            android:layout_alignTop="@id/individualSkillsList">
+            <de.gt.app.views.PlayerRoundAvatar
+                android:id="@id/individualAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/individualAvatar"
+                android:layout_alignTop="@id/individualAvatar"
+                android:layout_alignBottom="@id/individualAvatar"
+                android:paddingStart="@dimen/spacing_small">
+                <TextView
+                    android:id="@id/individualName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    style="@style/TextStyle" />
+                <TextView
+                    android:textColor="@color/colorAccentGreen"
+                    android:id="@id/individualPosition"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/SmallTextStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/individualAvatar">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:gravity="center"
+                        android:id="@id/individualAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:text="@string/AgeValue"
+                        style="@style/SmallTextStyle" />
+                    <TextView
+                        android:textColor="@color/colorAccentGreen"
+                        android:gravity="center"
+                        android:id="@id/individualAgeValue"
+                        android:paddingLeft="@dimen/spacing_minimal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        style="@style/SmallTextStyle" />
+                    <TextView
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:text="@string/TalentValue"
+                        style="@style/SmallTextStyle" />
+                    <TextView
+                        android:textColor="@color/colorAccentGreen"
+                        android:gravity="center"
+                        android:id="@id/individualTalentValue"
+                        android:paddingLeft="@dimen/spacing_minimal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        style="@style/SmallTextStyle" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="0.0dip"
+                        android:text="@string/StrengthValue"
+                        style="@style/SmallTextStyle" />
+                    <TextView
+                        android:textColor="@color/colorAccentGreen"
+                        android:gravity="center"
+                        android:id="@id/individualStrengthValue"
+                        android:paddingLeft="@dimen/spacing_minimal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        style="@style/SmallTextStyle" />
+                    <de.gt.app.views.StrengthStarsView
+                        android:gravity="center"
+                        android:id="@id/individualStrengthStars"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:gravity="center"
+                        android:id="@id/individualSkillName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        style="@style/SmallTextStyle" />
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:text="@string/Colon"
+                        style="@style/SmallTextStyle" />
+                    <TextView
+                        android:textColor="@color/colorAccentGreen"
+                        android:gravity="center"
+                        android:id="@id/individualSkillValue"
+                        android:paddingLeft="@dimen/spacing_minimal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        style="@style/SmallTextStyle" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <ListView
+        android:id="@id/individualPlayerTable"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="5.0" />
+</LinearLayout>

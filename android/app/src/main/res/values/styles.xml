@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="GTTheme" parent="@style/Theme.AppCompat.NoActionBar">
+            <item name="android:windowBackground">@drawable/splash_screen</item>
+            <item name="android:windowNoTitle">true</item>
+            <item name="android:windowContentOverlay">@null</item>
+            <item name="android:textColorHint">@color/colorGray</item>
+            <item name="android:windowFullscreen">true</item>
+            <item name="android:windowActionBar">false</item>
+            <item name="android:textAllCaps">false</item>
+            <item name="colorAccent">@color/colorAccentGreen</item>
+            <item name="colorPrimary">@color/colorText</item>
+            <item name="colorPrimaryDark">@color/colorGray</item>
+            <item name="windowActionModeOverlay">true</item>
+        </style>
+    <style name="TextStyle" parent="@android:style/Widget.TextView">
+            <item name="android:textSize">12.0dip</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:textColor">@color/colorText</item>
+            <item name="android:shadowColor">@color/colorShadow</item>
+            <item name="android:shadowDx">1.0</item>
+            <item name="android:shadowDy">1.0</item>
+            <item name="android:shadowRadius">2.0</item>
+            <item name="android:fontFamily">@font/roboto</item>
+        </style>
+    <style name="SmallTextStyle" parent="@style/TextStyle">
+            <item name="android:textSize">10.0dip</item>
+        </style>
+    <style name="LargeTextStyle" parent="@style/TextStyle">
+            <item name="android:textSize">16.0dip</item>
+            <item name="android:shadowDx">0.0</item>
+            <item name="android:shadowDy">0.0</item>
+            <item name="android:shadowRadius">10.0</item>
+        </style>
+    <style name="MegaTextStyle" parent="@style/LargeTextStyle">
+            <item name="android:textSize">20.0dip</item>
+        </style>
+    <style name="MicroTextStyle" parent="@style/TextStyle">
+            <item name="android:textSize">8.0dip</item>
+        </style>
+    <style name="RegularTextStyle" parent="@style/TextStyle">
+            <item name="android:textStyle">normal</item>
+        </style>
+    <style name="RegularSmallTextStyle" parent="@style/SmallTextStyle">
+            <item name="android:textStyle">normal</item>
+        </style>
+    <style name="GlowTextStyle" parent="@style/TextStyle">
+            <item name="android:shadowColor">@color/colorText</item>
+            <item name="android:shadowDx">0.0</item>
+            <item name="android:shadowDy">0.0</item>
+            <item name="android:shadowRadius">10.0</item>
+        </style>
+    <style name="AutoSizeTextStyle" parent="@style/TextStyle" />
+    <style name="ButtonStyle" parent="@style/TextStyle">
+            <item name="android:background">@drawable/button_green_selector</item>
+        </style>
+    <style name="CancelButtonStyle" parent="@style/ButtonStyle">
+            <item name="android:background">@drawable/button_cancel_selector</item>
+        </style>
+    <style name="InactiveButtonStyle" parent="@style/ButtonStyle">
+            <item name="android:background">@drawable/button_gray_selector</item>
+        </style>
+    <style name="PremiumButtonStyle" parent="@style/TextStyle">
+            <item name="android:background">@drawable/button_premium_selector</item>
+        </style>
+    <style name="EntryStyle" parent="@style/TextStyle">
+            <item name="android:background">@drawable/textfield</item>
+        </style>
+    <style name="ClickableResourcesStyle" parent="@style/TextStyle">
+            <item name="android:background">@drawable/selector_bottombar</item>
+            <item name="android:clickable">true</item>
+        </style>
+    <style name="ResourcesStyle">
+            <item name="android:background">@drawable/background_light</item>
+        </style>
+    <style name="MenuSectionStyle" parent="@style/TextStyle">
+            <item name="android:textStyle">normal</item>
+        </style>
+    <style name="TabStyle" parent="@style/TextStyle">
+            <item name="android:background">@drawable/tab_selector</item>
+        </style>
+    <style name="SubtabStyle" parent="@style/TextStyle">
+            <item name="android:background">@drawable/subtab_selector</item>
+        </style>
+    <style name="HeaderRowStyle" parent="@style/TextStyle">
+            <item name="android:textColor">@color/colorShadow</item>
+            <item name="android:shadowColor">@color/colorText</item>
+        </style>
+    <style name="AndroidThemeColorAccentYellow">
+            <item name="android:colorAccent">#ffffff00</item>
+        </style>
+    <style name="EmptyTheme" />
+    <style name="ThemeOverlayColorAccentRed">
+            <item name="android:colorAccent">#ffff0000</item>
+        </style>
+    <style name="LinkButtonStyle" parent="@style/SmallTextStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/colorAccentGreen</item>
+    </style>
+    <style name="PreferenceSummaryTextStyle" parent="@style/SmallTextStyle">
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
+</resources>

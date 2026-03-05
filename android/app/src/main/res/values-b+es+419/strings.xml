@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    <string name="clear_text_end_icon_content_description">Borrar texto</string>
+    <string name="error_icon_content_description">Error</string>
+    <string name="exposed_dropdown_menu_content_description">Mostrar menú desplegable</string>    <string name="item_view_role_description">Pestaña</string></resources>

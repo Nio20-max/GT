@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListView
+        android:id="@id/friends_FriendsTable"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <TextView
+        android:id="@id/friends_noFriendsContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:button_1_text="@string/SearchFriends"
+        app:button_2_text="@string/FriendInvite"
+        app:character="AnnaPoint"
+        app:message="@string/NoFriendsDescription" />
+</FrameLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="horizontal"
+    android:background="@color/colorSkillCardBackground"
+    android:paddingTop="@dimen/spacing_small"
+    android:paddingBottom="@dimen/spacing_small"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_small"
+    android:paddingVertical="@dimen/spacing_small"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/sponsor_offer_skill_card_image"
+        android:layout_width="@dimen/sponsorsview_image_width"
+        android:layout_height="@dimen/sponsorsview_image_size"
+        android:src="@drawable/skill_card_icon"
+        android:scaleType="centerInside"
+        android:layout_centerVertical="true"
+        android:contentDescription="" />
+    <TextView
+        android:paddingRight="@dimen/spacing_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SkillCardsBonus"
+        android:layout_toLeftOf="@id/sponsor_offer_skill_cards"
+        android:layout_toRightOf="@id/sponsor_offer_skill_card_image"
+        android:layout_centerVertical="true"
+        style="@style/TextStyle" />
+    <TextView
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/colorSkillCardBlue"
+        android:id="@id/sponsor_offer_skill_cards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:text="+2"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        style="@style/TextStyle" />
+</RelativeLayout>

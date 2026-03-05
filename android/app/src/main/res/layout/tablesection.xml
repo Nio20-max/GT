@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:gravity="center_vertical"
+    android:background="@color/colorSection"
+    android:paddingLeft="@dimen/spacing_medium"
+    android:paddingTop="@dimen/spacing_small"
+    android:paddingRight="@dimen/spacing_medium"
+    android:paddingBottom="@dimen/spacing_small"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    style="@style/SmallTextStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/collectionCell_Container"
+    android:background="@drawable/transparent_selector"
+    android:padding="@dimen/spacing_small"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_medium"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/collectionCell_Image"
+        android:layout_width="@dimen/avatar_flag_size"
+        android:layout_height="@dimen/avatar_flag_size"
+        android:scaleType="centerInside"
+        android:contentDescription=""
+        app:touchable="true" />
+    <TextView
+        android:gravity="center"
+        android:id="@id/collectionCell_Text"
+        android:padding="@dimen/spacing_small"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextStyle" />
+</LinearLayout>

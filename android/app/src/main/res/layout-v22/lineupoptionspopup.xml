@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="@dimen/spacing_medium"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/lineupOptions_Center"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"
+        android:layout_centerInParent="true" />
+    <TextView
+        android:gravity="center"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:paddingRight="@dimen/spacing_medium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45.0dip"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:text="@string/PlayerRolesMessage"
+        android:layout_above="@id/LineupOptionsOkButton"
+        android:layout_below="@id/LineupOptions_FreeKicksText"
+        android:paddingHorizontal="@dimen/spacing_medium"
+        style="@style/RegularTextStyle" />
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@id/LineupOptionsOkButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:premium="false"
+        app:title="@string/Ok" />
+    <TextView
+        android:gravity="center"
+        android:id="@id/lineupOptions_CaptainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:text="@string/Captain"
+        android:layout_alignRight="@id/lineupOptions_Center"
+        android:layout_alignParentLeft="true"
+        style="@style/TextStyle" />
+    <TextView
+        android:gravity="center"
+        android:id="@id/LineupOptions_PenaltiesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:text="@string/Penalties"
+        android:layout_alignLeft="@id/lineupOptions_Center"
+        android:layout_alignParentRight="true"
+        style="@style/TextStyle" />
+    <TextView
+        android:gravity="center"
+        android:id="@id/LineupOptions_FreeKicksText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45.0dip"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:text="@string/FreeKicks"
+        android:layout_below="@id/LineupOptions_PenaltiesText"
+        android:layout_alignRight="@id/lineupOptions_Center"
+        android:layout_alignParentLeft="true"
+        style="@style/TextStyle" />
+    <TextView
+        android:gravity="center"
+        android:id="@id/lineupOptions_CornerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_marginTop="45.0dip"
+        android:text="@string/Corners"
+        android:layout_below="@id/LineupOptions_PenaltiesText"
+        android:layout_alignLeft="@id/lineupOptions_Center"
+        android:layout_alignParentRight="true"
+        style="@style/TextStyle" />
+    <Spinner
+        android:id="@id/LineupOptionsFreeKicks"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/lineupformation_combobox_height"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_below="@id/LineupOptions_FreeKicksText"
+        android:layout_alignLeft="@id/LineupOptions_FreeKicksText"
+        android:layout_alignRight="@id/LineupOptions_FreeKicksText" />
+    <Spinner
+        android:id="@id/LineupOptionsCorners"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/lineupformation_combobox_height"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_below="@id/LineupOptions_FreeKicksText"
+        android:layout_alignLeft="@id/lineupOptions_CornerText"
+        android:layout_alignRight="@id/lineupOptions_CornerText" />
+    <Spinner
+        android:id="@id/LineupOptionsCaptain"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/lineupformation_combobox_height"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_below="@id/LineupOptions_PenaltiesText"
+        android:layout_alignLeft="@id/lineupOptions_CaptainText"
+        android:layout_alignRight="@id/lineupOptions_CaptainText" />
+    <Spinner
+        android:id="@id/LineupOptionsPenalties"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/lineupformation_combobox_height"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_below="@id/LineupOptions_PenaltiesText"
+        android:layout_alignLeft="@id/LineupOptions_PenaltiesText"
+        android:layout_alignRight="@id/LineupOptions_PenaltiesText" />
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center_vertical"
+        android:layout_width="@dimen/avatar_size"
+        android:layout_height="@dimen/avatar_size"
+        app:cardBackgroundColor="@color/colorBlackTransparent"
+        app:cardCornerRadius="@dimen/avatar_radius">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/flagimage"
+            android:layout_width="@dimen/avatar_flag_size"
+            android:layout_height="@dimen/avatar_flag_size"
+            android:contentDescription=""
+            app:touchable="true" />
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@id/headimage"
+            android:layout_width="@dimen/avatar_player_width"
+            android:layout_height="@dimen/avatar_player_height"
+            android:layout_marginTop="@dimen/avatar_player_margin"
+            android:contentDescription=""
+            app:touchable="true" />
+        <FrameLayout
+            android:layout_gravity="center"
+            android:id="@id/border"
+            android:background="@drawable/selector_avatar"
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size" />
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <crc64e9f97cf19b8286a9.ChartView
+        android:id="@id/financeHistoryChartViewIncome"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/spacing_medium" />
+    <crc64e9f97cf19b8286a9.ChartView
+        android:id="@id/financeHistoryChartViewOutcome"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/spacing_medium" />
+    <crc64e9f97cf19b8286a9.ChartView
+        android:id="@id/financeHistoryChartViewBalance"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/spacing_medium" />
+    <TextView
+        android:id="@id/financeHistoryNoData"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:character="Anna"
+        app:message="@string/NoFinanceHistory" />
+</FrameLayout>

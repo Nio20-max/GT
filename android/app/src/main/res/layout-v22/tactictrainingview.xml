@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@id/tacticsDialog"
+        android:layout_width="@dimen/training_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/TacticsDialog"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        style="@style/SmallTextStyle" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/tacticsBg"
+        android:background="@drawable/background_transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_marginStart="@dimen/training_start"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="@dimen/spacing_small">
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_small"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_alignParentEnd="true">
+            <Spinner
+                android:id="@id/trainingTactics"
+                android:layout_width="fill_parent"
+                android:layout_height="240.0dip"
+                android:layout_alignParentStart="true"
+                android:translationZ="100.0dip" />
+            <Button
+                android:gravity="center"
+                android:id="@id/saveTacticsButton"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:text="@string/SaveSettings"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/spacing_small"
+                style="@style/ButtonStyle" />
+            <de.gt.app.views.SkillView
+                android:id="@id/tactic_skillView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/button_height"
+                android:layout_above="@id/saveTacticsButton" />
+        </RelativeLayout>
+        <ScrollView
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_small"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="3.0">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/tacticTable"
+                    android:paddingTop="@dimen/spacing_small"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:gravity="center"
+                            android:background="@drawable/tactic_table_title"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:text="@string/YourClub"
+                            android:layout_weight="1.0"
+                            style="@style/HeaderRowStyle" />
+                        <TextView
+                            android:gravity="center"
+                            android:background="@drawable/tactic_table_title"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Opponent"
+                            android:layout_weight="1.0"
+                            style="@style/HeaderRowStyle" />
+                        <TextView
+                            android:gravity="center"
+                            android:background="@drawable/tactic_table_title"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Advantage"
+                            android:layout_weight="1.0"
+                            style="@style/HeaderRowStyle" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_subzero"
+                        android:layout_marginBottom="@dimen/spacing_subzero">
+                        <TextView
+                            android:textColor="@color/colorHighlight"
+                            android:gravity="center"
+                            android:id="@id/advantageNameHigh"
+                            android:background="@drawable/tactic_table_cell"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:layout_marginEnd="@dimen/spacing_subzero"
+                            style="@style/TextStyle" />
+                        <TextView
+                            android:textColor="@color/colorHighlight"
+                            android:gravity="center"
+                            android:id="@id/advantageCounterHigh"
+                            android:background="@drawable/tactic_table_cell"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            style="@style/TextStyle" />
+                        <TextView
+                            android:textColor="@color/colorHighlight"
+                            android:gravity="center"
+                            android:id="@id/advantageValueHigh"
+                            android:background="@drawable/tactic_table_cell"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:layout_marginStart="@dimen/spacing_subzero"
+                            style="@style/TextStyle" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/colorAccentGreen"
+                            android:gravity="center"
+                            android:id="@id/advantageNameMid"
+                            android:background="@drawable/tactic_table_cell"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_subzero"
+                            android:layout_weight="1.0"
+                            android:layout_marginEnd="@dimen/spacing_subzero"
+                            style="@style/TextStyle" />
+                        <TextView
+                            android:textColor="@color/colorAccentGreen"
+                            android:gravity="center"
+                            android:id="@id/advantageCounterMid"
+                            android:background="@drawable/tactic_table_cell"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="@dimen/spacing_subzero"
+                            android:layout_weight="1.0"
+                            style="@style/TextStyle" />
+                        <TextView
+                            android:textColor="@color/colorAccentGreen"
+                            android:gravity="center"
+                            android:id="@id/advantageValueMid"
+                            android:background="@drawable/tactic_table_cell"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="@dimen/spacing_subzero"
+                            android:layout_weight="1.0"
+                            android:layout_marginStart="@dimen/spacing_subzero"
+                            style="@style/TextStyle" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_subzero">
+                        <TextView
+                            android:gravity="center"
+                            android:id="@id/advantageNameLow"
+                            android:background="@drawable/tactic_table_cell"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_subzero"
+                            android:layout_weight="1.0"
+                            android:layout_marginEnd="@dimen/spacing_subzero"
+                            style="@style/TextStyle" />
+                        <TextView
+                            android:gravity="center"
+                            android:id="@id/advantageCounterLow"
+                            android:background="@drawable/tactic_table_cell"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="@dimen/spacing_subzero"
+                            android:layout_weight="1.0"
+                            style="@style/TextStyle" />
+                        <TextView
+                            android:gravity="center"
+                            android:id="@id/advantageValueLow"
+                            android:background="@drawable/tactic_table_cell"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="@dimen/spacing_subzero"
+                            android:layout_weight="1.0"
+                            android:layout_marginStart="@dimen/spacing_subzero"
+                            style="@style/TextStyle" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@id/tacticText"
+                    android:paddingTop="@dimen/spacing_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Tactics"
+                    android:layout_below="@id/tacticTable"
+                    android:paddingStart="@dimen/spacing_small"
+                    style="@style/TextStyle" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/tacticsContainer"
+                    android:paddingBottom="@dimen/spacing_small"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@id/tacticText"
+                    android:paddingStart="@dimen/spacing_small"
+                    android:paddingEnd="@dimen/spacing_small">
+                    <include
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/tacticsprogressbar" />
+                    <include
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/tacticsprogressbar" />
+                    <include
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/tacticsprogressbar" />
+                    <include
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/tacticsprogressbar" />
+                    <include
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/tacticsprogressbar" />
+                    <include
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/tacticsprogressbar" />
+                    <include
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/tacticsprogressbar" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

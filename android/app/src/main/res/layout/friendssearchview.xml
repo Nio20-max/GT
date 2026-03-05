@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:layout_weight="1.0">
+        <View
+            android:background="@drawable/background_darkgreen"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/spacing_small" />
+        <TextView
+            android:gravity="center"
+            android:id="@id/friendsSearchTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/SearchSign"
+            style="@style/TextStyle" />
+        <EditText
+            android:id="@id/friendsSearchField"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:hint="@string/Name"
+            android:layout_below="@id/friendsSearchTitle"
+            android:inputType="text"
+            android:imeOptions="flagNoExtractUi"
+            style="@style/EntryStyle" />
+        <Spinner
+            android:id="@id/friendsLanguage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:layout_below="@id/friendsSearchField"
+            android:layout_alignParentBottom="true"
+            android:translationZ="100.0dip" />
+        <Button
+            android:id="@id/friendsResetButton"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:layout_alignParentBottom="true"
+            app:button_type="Inactive"
+            app:title="@string/Reset" />
+        <Button
+            android:id="@id/friendsSearchButton"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:layout_above="@id/friendsResetButton"
+            app:premium="false"
+            app:title="@string/Search" />
+    </RelativeLayout>
+    <ListView
+        android:id="@id/friendsSearchTable"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="3.0" />
+</LinearLayout>

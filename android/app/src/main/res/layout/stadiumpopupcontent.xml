@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="@dimen/popup_card_margin"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="@dimen/popup_corner_radius"
+    app:cardElevation="0.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/gradient_green"
+        android:paddingTop="@dimen/spacing_medium"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/popup_corner_radius">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/StadiumPopupContent_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.5" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_small"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toTopOf="@id/StadiumPopupContent_Values"
+            app:layout_constraintTop_toTopOf="parent">
+            <include
+                android:id="@id/StadiumPopupContent_Standings"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                layout="@layout/stadiumplacescounter" />
+            <include
+                android:id="@id/StadiumPopupContent_Seats"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                layout="@layout/stadiumplacescounter" />
+            <include
+                android:id="@id/StadiumPopupContent_Vips"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                layout="@layout/stadiumplacescounter" />
+        </LinearLayout>
+        <ImageView
+            android:id="@id/StadiumPopupContent_lock"
+            android:background="@drawable/lock"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginRight="@dimen/spacing_medium"
+            app:layout_constraintRight_toRightOf="parent"
+            app:touchable="true" />
+        <View
+            android:id="@id/StadiumPopupContent_Values"
+            android:background="@drawable/background_transparent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_small"
+            app:layout_constraintBottom_toTopOf="@id/StadiumPopupContent_GreenBuildButton"
+            app:layout_constraintTop_toTopOf="@id/StadiumPopupContent_RunningCost" />
+        <TextView
+            android:paddingLeft="@dimen/spacing_medium"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/RunningCost"
+            app:layout_constraintBottom_toTopOf="@id/StadiumPopupContent_Earnings"
+            app:layout_constraintLeft_toLeftOf="@id/StadiumPopupContent_Values"
+            app:layout_constraintRight_toLeftOf="@id/StadiumPopupContent_Earnings"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/color_chart_balance"
+            android:id="@id/StadiumPopupContent_RunningCost"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingTop="@dimen/spacing_small"
+            android:paddingRight="@dimen/spacing_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="117,467"
+            app:layout_constraintBottom_toTopOf="@id/StadiumPopupContent_Earnings"
+            app:layout_constraintRight_toRightOf="@id/StadiumPopupContent_Earnings"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/color_chart_outcome"
+            android:id="@id/StadiumPopupContent_RunningCostIncrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+4,670"
+            app:layout_constraintBottom_toTopOf="@id/StadiumPopupContent_EarningsIncrease"
+            app:layout_constraintLeft_toLeftOf="@id/StadiumPopupContent_EarningsIncrease"
+            style="@style/TextStyle" />
+        <TextView
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingTop="@dimen/spacing_small"
+            android:paddingBottom="@dimen/spacing_small"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/Earnings"
+            app:layout_constraintBottom_toBottomOf="@id/StadiumPopupContent_Values"
+            app:layout_constraintLeft_toLeftOf="@id/StadiumPopupContent_Values"
+            app:layout_constraintRight_toLeftOf="@id/StadiumPopupContent_Earnings"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/colorEuro"
+            android:id="@id/StadiumPopupContent_Earnings"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingTop="@dimen/spacing_small"
+            android:paddingRight="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2,117,467"
+            app:layout_constraintBottom_toBottomOf="@id/StadiumPopupContent_Values"
+            app:layout_constraintRight_toLeftOf="@id/StadiumPopupContent_EarningsIncrease"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/color_chart_income"
+            android:id="@id/StadiumPopupContent_EarningsIncrease"
+            android:paddingTop="@dimen/spacing_small"
+            android:paddingRight="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+46,700"
+            app:layout_constraintBottom_toBottomOf="@id/StadiumPopupContent_Values"
+            app:layout_constraintRight_toRightOf="@id/StadiumPopupContent_Values"
+            style="@style/TextStyle" />
+        <Button
+            android:id="@id/StadiumPopupContent_GreenBuildButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginRight="@dimen/spacing_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@id/StadiumPopupContent_center"
+            app:title="Build"
+            app:value="125000"
+            style="@style/ButtonStyle" />
+        <Button
+            android:id="@id/StadiumPopupContent_PremiumBuildButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/StadiumPopupContent_center"
+            app:premium="true"
+            app:title="Build"
+            app:value="6000"
+            style="@style/PremiumButtonStyle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/spacing_small"
+    android:paddingRight="@dimen/spacing_small"
+    android:paddingBottom="@dimen/spacing_small"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/spacing_small"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:id="@id/liveRow_leftView"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="5.0" />
+    <View
+        android:id="@id/liveRow_leftViewSmall"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" />
+    <include
+        android:id="@id/liveRow_message"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="5.0"
+        layout="@layout/laddermessage" />
+    <View
+        android:id="@id/liveRow_rightView"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="5.0" />
+    <View
+        android:id="@id/liveRow_rightViewSmall"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" />
+</LinearLayout>

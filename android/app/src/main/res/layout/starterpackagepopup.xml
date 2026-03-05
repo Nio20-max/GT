@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="4.0">
+        <ImageView
+            android:id="@id/popupStarterImage"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/special_offer1"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            android:contentDescription="" />
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5.0dip"
+                android:layout_marginBottom="@id/popupStarterImage"
+                android:src="@drawable/balance_money"
+                android:scaleType="fitCenter"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="" />
+            <TextView
+                android:textSize="30.0dip"
+                android:gravity="center_vertical"
+                android:id="@id/popupStarterEuroCount"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="500,000"
+                android:layout_alignParentBottom="true"
+                style="@style/LargeTextStyle" />
+            <ImageView
+                android:layout_width="30.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="5.0dip"
+                android:layout_marginBottom="@id/popupStarterImage"
+                android:src="@drawable/balance_star"
+                android:scaleType="fitCenter"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="" />
+            <TextView
+                android:textSize="30.0dip"
+                android:id="@id/popupStarterStarsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20,000"
+                android:layout_alignParentBottom="true"
+                style="@style/LargeTextStyle" />
+            <ImageView
+                android:layout_width="30.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="5.0dip"
+                android:layout_marginBottom="@id/popupStarterImage"
+                android:src="@drawable/balance_medipacks"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="" />
+            <TextView
+                android:textSize="30.0dip"
+                android:id="@id/popupStarterMedipacksCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:layout_alignParentBottom="true"
+                style="@style/LargeTextStyle" />
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+        <Button
+            android:layout_gravity="center"
+            android:id="@id/popupStarterButton"
+            android:layout_width="150.0dip"
+            android:layout_height="@dimen/teamview_greenbutton_height"
+            style="@style/ButtonStyle" />
+    </FrameLayout>
+</LinearLayout>

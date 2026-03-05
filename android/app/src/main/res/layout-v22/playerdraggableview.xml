@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.gt.app.views.PlayerRoundAvatar
+        android:id="@id/PlayerDraggableView_RoundAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginHorizontal="10.0dip" />
+    <TextView
+        android:textColor="@color/colorHighlight"
+        android:layout_gravity="start"
+        android:id="@id/PlayerDraggableView_Strength"
+        android:background="@drawable/background_transparent"
+        android:paddingLeft="3.0dip"
+        android:paddingRight="3.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="299.9"
+        android:paddingHorizontal="3.0dip"
+        style="@style/SmallTextStyle" />
+</FrameLayout>

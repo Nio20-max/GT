@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:gravity="center"
+        android:id="@id/campName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/TrainingCamp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/SmallTextStyle" />
+    <de.gt.app.views.SkillView
+        android:id="@id/campItem_skillView"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toTopOf="@id/campButton"
+        app:layout_constraintTop_toBottomOf="@id/campName" />
+    <TextView
+        android:textColor="@color/colorHighlight"
+        android:gravity="center"
+        android:id="@id/campBooked"
+        android:background="@drawable/background_darktransparent"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_medium"
+        android:paddingBottom="@dimen/spacing_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Booked"
+        android:maxLines="2"
+        android:paddingHorizontal="@dimen/spacing_medium"
+        android:paddingVertical="@dimen/spacing_small"
+        app:layout_constraintBottom_toBottomOf="@id/campItem_skillView"
+        app:layout_constraintLeft_toLeftOf="@id/campItem_skillView"
+        app:layout_constraintRight_toRightOf="@id/campItem_skillView"
+        app:layout_constraintTop_toTopOf="@id/campItem_skillView"
+        style="@style/LargeTextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:gravity="center"
+        android:id="@id/campTimer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/campItem_skillView"
+        style="@style/SmallTextStyle" />
+    <Button
+        android:id="@id/campButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        app:layout_constraintBottom_toTopOf="@id/campButtonPremium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:premium="false"
+        app:title="@string/Book" />
+    <Button
+        android:id="@id/campButtonPremium"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_marginVertical="@dimen/spacing_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:premium="true"
+        app:title="@string/Book" />
+    <Button
+        android:id="@id/cancelCampButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/spacing_small"
+        app:button_type="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:title="@string/Cancel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_medium"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:layout_weight="1.0"
+        app:cardBackgroundColor="@color/colorBlackTransparent"
+        app:cardCornerRadius="@dimen/spacing_medium"
+        app:cardElevation="0.0dip">
+        <ListView
+            android:id="@id/Statistics_Statistics"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_weight="1.0"
+        app:cardBackgroundColor="@color/colorBlackTransparent"
+        app:cardCornerRadius="@dimen/spacing_medium"
+        app:cardElevation="0.0dip">
+        <ListView
+            android:id="@id/Statistics_SecondStatistics"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

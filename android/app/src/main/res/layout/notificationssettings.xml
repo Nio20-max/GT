@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:background="@drawable/background_transparent_nocorners"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <View
+        android:id="@id/settingsScreenCenter"
+        android:layout_width="@dimen/teamview_clubinfo_divider"
+        android:layout_height="@dimen/teamview_clubinfo_divider"
+        android:layout_centerInParent="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/settingsSwitchers1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginEnd="@dimen/tooltip_horizontal_padding"
+        android:layout_alignEnd="@id/settingsScreenCenter">
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/seasonInformationSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/sponsorExpiredSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/playerContractEndedSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/singleTrainingExpiredSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/buildingCompletedSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/auctionEndSoonSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/auctionOverbidSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="@dimen/tooltip_horizontal_padding"
+        android:layout_marginEnd="@dimen/switcher_width"
+        android:layout_alignEnd="@id/settingsSwitchers1"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/SeasonInformation"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/SponsorExpired"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/ContractEnded"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/SingleTrainingExpired"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/BuildingCompleted"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/AuctionEnd"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/AuctionOverbid"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/settingsSwitchers2"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginEnd="@dimen/tooltip_horizontal_padding"
+        android:layout_alignParentEnd="true">
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/matchResultsSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/lineupIncompleteSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/friendInviteSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/friendlyMatchSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/ineffectiveTrainingSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/returnInviteSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_width="@dimen/switcher_width"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:id="@id/systemMessagesSwitcher"
+                android:layout_width="@dimen/switcher_width"
+                android:layout_height="@dimen/switcher_height" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="@dimen/tooltip_horizontal_padding"
+        android:layout_marginEnd="@dimen/switcher_width"
+        android:layout_alignStart="@id/settingsScreenCenter"
+        android:layout_alignEnd="@id/settingsSwitchers2">
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/MatchResults"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/LineupIncomplete"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/FriendInvite"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/FriendlyMatch"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/IneffectiveTraining"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/ReturnInvite"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:text="@string/SystemMessages"
+            android:maxLines="1"
+            android:layout_weight="1.0"
+            style="@style/TextStyle" />
+    </LinearLayout>
+</RelativeLayout>

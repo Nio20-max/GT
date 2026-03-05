@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/liveView_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListView
+        android:id="@id/liveView_list"
+        android:background="@drawable/background_transparent"
+        android:paddingTop="@dimen/live_top_shadow"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:item_template="@layout/liverow" />
+    <View
+        android:background="@drawable/gradient_green_transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/live_top_shadow" />
+    <ImageView
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:src="@drawable/score_bg"
+        android:scaleType="fitXY"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="@id/liveView_score"
+        app:layout_constraintLeft_toLeftOf="@id/liveView_score"
+        app:layout_constraintRight_toRightOf="@id/liveView_score"
+        app:layout_constraintTop_toTopOf="@id/liveView_score" />
+    <TextView
+        android:id="@id/liveView_score"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_large"
+        android:paddingBottom="@dimen/spacing_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/MegaTextStyle" />
+    <ImageView
+        android:id="@id/liveView_homeLogo"
+        android:layout_width="50.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:src="@drawable/wappen01_normal"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/liveView_score"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/liveView_score" />
+    <ImageView
+        android:id="@id/liveView_homeShirt"
+        android:layout_width="50.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:src="@drawable/trikot0"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/liveView_score"
+        app:layout_constraintRight_toLeftOf="@id/liveView_score"
+        app:layout_constraintTop_toTopOf="@id/liveView_score" />
+    <TextView
+        android:gravity="center_vertical"
+        android:id="@id/liveView_homeName"
+        android:paddingLeft="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_small"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/liveView_score"
+        app:layout_constraintLeft_toRightOf="@id/liveView_homeLogo"
+        app:layout_constraintRight_toLeftOf="@id/liveView_homeShirt"
+        app:layout_constraintTop_toTopOf="@id/liveView_score"
+        style="@style/LargeTextStyle" />
+    <ImageView
+        android:id="@id/liveView_awayLogo"
+        android:layout_width="50.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:src="@drawable/wappen02_normal"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/liveView_score"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/liveView_score" />
+    <ImageView
+        android:id="@id/liveView_awayShirt"
+        android:layout_width="50.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:src="@drawable/trikot1"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/liveView_score"
+        app:layout_constraintLeft_toRightOf="@id/liveView_score"
+        app:layout_constraintTop_toTopOf="@id/liveView_score" />
+    <TextView
+        android:gravity="center_vertical"
+        android:id="@id/liveView_awayName"
+        android:paddingLeft="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_small"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toBottomOf="@id/liveView_score"
+        app:layout_constraintLeft_toRightOf="@id/liveView_awayShirt"
+        app:layout_constraintRight_toLeftOf="@id/liveView_awayLogo"
+        app:layout_constraintTop_toTopOf="@id/liveView_score"
+        style="@style/LargeTextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/liveView_time"
+        android:background="@drawable/background_darktransparent"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_minimal"
+        android:paddingRight="@dimen/spacing_large"
+        android:paddingBottom="@dimen/spacing_minimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/liveView_score"
+        style="@style/TextStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

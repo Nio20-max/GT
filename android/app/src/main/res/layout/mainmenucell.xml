@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:gravity="center"
+        android:id="@id/menuCellTitle"
+        android:background="@color/colorDarkGray"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/menu_section_height"
+        style="@style/MenuSectionStyle" />
+    <FrameLayout
+        android:id="@id/menuCellButton"
+        android:background="@drawable/menu_row_selector"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/menu_cell_height">
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@id/menuCellText"
+            android:paddingLeft="@dimen/menu_title_inset"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/TextStyle" />
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/menuCellImage"
+            android:layout_width="@dimen/menu_image_size"
+            android:layout_height="@dimen/menu_image_size"
+            android:contentDescription=""
+            android:layout_marginStart="@dimen/spacing_medium" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Game-specific custom view attributes -->
+    <declare-styleable name="GTCustomView">
+        <attr name="touchable" format="boolean" />
+        <attr name="highlight_empty" format="boolean" />
+        <attr name="custom_background" format="boolean" />
+        <attr name="bench" format="boolean" />
+        <attr name="right" format="boolean" />
+        <attr name="premium" format="boolean" />
+        <attr name="button_type" format="string" />
+        <attr name="character" format="string" />
+        <attr name="item_template" format="reference" />
+        <attr name="message" format="string|reference" />
+        <attr name="position" format="string|reference" />
+        <attr name="text" format="string|reference" />
+        <attr name="title" format="string|reference" />
+        <attr name="value" format="string|integer" />
+        <attr name="max" format="integer" />
+        <attr name="button_1_text" format="string|reference" />
+        <attr name="button_2_text" format="string|reference" />
+    </declare-styleable>
+</resources>

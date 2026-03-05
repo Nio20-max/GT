@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_medium"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:layout_weight="1.0"
+        layout="@layout/detailedplayerinfo" />
+    <de.gt.app.views.TabsView
+        android:id="@id/DetailedPlayerInfo_tabsView"
+        android:background="@drawable/background_transparent"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" />
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/matchInfo_Container"
+    android:background="@drawable/transparent_selector"
+    android:padding="@dimen/spacing_small"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/matchinfo_height"
+    android:layout_marginLeft="@dimen/matchinfo_margin_horizontal"
+    android:layout_marginTop="@dimen/matchinfo_default_margin"
+    android:layout_marginRight="@dimen/matchinfo_margin_horizontal"
+    android:layout_marginHorizontal="@dimen/matchinfo_margin_horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/matchInfo_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SmallTextStyle" />
+    <ImageView
+        android:id="@id/matchInfo_leaguelogo"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_marginLeft="@dimen/matchinfo_margin_horizontal"
+        android:layout_marginRight="@dimen/matchinfo_margin_horizontal"
+        android:src="@drawable/menu_league"
+        android:layout_centerInParent="true"
+        android:contentDescription=""
+        android:layout_marginHorizontal="@dimen/matchinfo_margin_horizontal" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:layout_centerHorizontal="true"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/matchInfo_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        style="@style/SmallTextStyle" />
+    <TextView
+        android:textSize="@dimen/matchinfo_text_size"
+        android:id="@id/matchInfo_HomeTeamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:layout_toLeftOf="@id/matchInfo_HomeTeamLogo"
+        android:layout_centerVertical="true"
+        style="@style/TextStyle" />
+    <TextView
+        android:textSize="@dimen/matchinfo_text_size"
+        android:id="@id/matchInfo_AwayTeamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toLeftOf="@id/matchinfo_arrow"
+        android:layout_toRightOf="@id/matchInfo_AwayTeamLogo"
+        android:layout_centerVertical="true"
+        style="@style/TextStyle" />
+    <ImageView
+        android:id="@id/matchInfo_HomeTeamLogo"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_marginTop="@dimen/matchinfo_default_margin"
+        android:layout_marginBottom="@dimen/matchinfo_default_margin"
+        android:src="@drawable/wappen01_normal"
+        android:adjustViewBounds="true"
+        android:layout_toLeftOf="@id/matchInfo_leaguelogo"
+        android:layout_centerVertical="true"
+        android:contentDescription=""
+        android:layout_marginVertical="@dimen/matchinfo_default_margin" />
+    <ImageView
+        android:id="@id/matchInfo_AwayTeamLogo"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_marginTop="@dimen/matchinfo_default_margin"
+        android:layout_marginBottom="@dimen/matchinfo_default_margin"
+        android:src="@drawable/wappen02_normal"
+        android:adjustViewBounds="true"
+        android:layout_toRightOf="@id/matchInfo_leaguelogo"
+        android:layout_centerVertical="true"
+        android:contentDescription=""
+        android:layout_marginVertical="@dimen/matchinfo_default_margin" />
+    <ImageView
+        android:id="@id/matchinfo_arrow"
+        android:layout_width="25.0dip"
+        android:layout_height="50.0dip"
+        android:layout_marginTop="@dimen/matchinfo_default_margin"
+        android:layout_marginBottom="@dimen/matchinfo_default_margin"
+        android:src="@drawable/arrow_right_selector"
+        android:adjustViewBounds="true"
+        android:layout_centerVertical="true"
+        android:contentDescription=""
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="@dimen/matchinfo_default_margin" />
+    <ImageView
+        android:id="@id/matchInfo_Warning"
+        android:background="@drawable/exclamation"
+        android:layout_width="25.0dip"
+        android:layout_height="25.0dip"
+        android:layout_marginLeft="@dimen/matchinfo_warning_margin"
+        android:layout_marginBottom="@dimen/matchinfo_warning_margin"
+        android:scaleType="centerInside"
+        android:layout_alignParentBottom="true"
+        android:contentDescription=""
+        app:touchable="true" />
+</RelativeLayout>

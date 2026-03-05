@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/skillCard_Card"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/skillCard_frame_3"
+        android:background="@drawable/skill_card_0"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/skill_margin"
+        android:layout_marginTop="@dimen/skill_margin"
+        android:layout_marginRight="@dimen/skill_margin_negative"
+        android:layout_marginBottom="@dimen/skill_margin_negative"
+        app:layout_constraintBottom_toBottomOf="@id/skillCard_frame_2"
+        app:layout_constraintLeft_toLeftOf="@id/skillCard_frame_2"
+        app:layout_constraintRight_toRightOf="@id/skillCard_frame_2"
+        app:layout_constraintTop_toTopOf="@id/skillCard_frame_2" />
+    <View
+        android:id="@id/skillCard_frame_2"
+        android:background="@drawable/skill_card_0"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/skill_margin"
+        android:layout_marginTop="@dimen/skill_margin"
+        android:layout_marginRight="@dimen/skill_margin_negative"
+        android:layout_marginBottom="@dimen/skill_margin_negative"
+        app:layout_constraintBottom_toBottomOf="@id/skillCard_frame_1"
+        app:layout_constraintLeft_toLeftOf="@id/skillCard_frame_1"
+        app:layout_constraintRight_toRightOf="@id/skillCard_frame_1"
+        app:layout_constraintTop_toTopOf="@id/skillCard_frame_1" />
+    <View
+        android:id="@id/skillCard_frame_1"
+        android:background="@drawable/skill_card_0"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/skill_margin"
+        android:layout_marginTop="@dimen/skill_margin"
+        android:layout_marginRight="@dimen/skill_margin_negative"
+        android:layout_marginBottom="@dimen/skill_margin_negative"
+        app:layout_constraintBottom_toBottomOf="@id/skillCard_frame"
+        app:layout_constraintLeft_toLeftOf="@id/skillCard_frame"
+        app:layout_constraintRight_toRightOf="@id/skillCard_frame"
+        app:layout_constraintTop_toTopOf="@id/skillCard_frame" />
+    <View
+        android:id="@id/skillCard_frame"
+        android:background="@drawable/skill_card_0"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:layout_marginBottom="20.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="10:14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@id/skillCard_imageContainer"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_margin="@dimen/card_border_margin"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="0.0dip"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/skillCard_frame"
+        app:layout_constraintRight_toRightOf="@id/skillCard_frame"
+        app:layout_constraintTop_toTopOf="@id/skillCard_frame">
+        <ImageView
+            android:id="@id/skillCard_Image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription=""
+            app:touchable="true" />
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@id/skillCard_Star_0"
+        android:layout_width="@dimen/skill_card_star_size"
+        android:layout_height="@dimen/skill_card_star_size"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:src="@drawable/star_yellow"
+        android:contentDescription=""
+        app:layout_constraintLeft_toLeftOf="@id/skillCard_frame"
+        app:layout_constraintTop_toTopOf="@id/skillCard_frame" />
+    <ImageView
+        android:id="@id/skillCard_Star_1"
+        android:layout_width="@dimen/skill_card_star_size"
+        android:layout_height="@dimen/skill_card_star_size"
+        android:layout_marginLeft="@dimen/skill_card_star_margin"
+        android:src="@drawable/star_yellow"
+        android:contentDescription=""
+        app:layout_constraintLeft_toLeftOf="@id/skillCard_Star_0"
+        app:layout_constraintTop_toTopOf="@id/skillCard_Star_0" />
+    <ImageView
+        android:id="@id/skillCard_Star_2"
+        android:layout_width="@dimen/skill_card_star_size"
+        android:layout_height="@dimen/skill_card_star_size"
+        android:layout_marginLeft="@dimen/skill_card_star_margin"
+        android:src="@drawable/star_yellow"
+        android:contentDescription=""
+        app:layout_constraintLeft_toLeftOf="@id/skillCard_Star_1"
+        app:layout_constraintTop_toTopOf="@id/skillCard_Star_0" />
+    <TextView
+        android:gravity="bottom|center"
+        android:id="@id/skillCard_Name"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/card_border_margin"
+        android:layout_marginRight="@dimen/card_border_margin"
+        android:text="Keeping"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/skillCard_Bonus"
+        app:layout_constraintLeft_toLeftOf="@id/skillCard_frame"
+        app:layout_constraintRight_toRightOf="@id/skillCard_frame"
+        app:layout_constraintTop_toBottomOf="@id/skillCard_imageContainer"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/color_chart_income"
+        android:gravity="center"
+        android:id="@id/skillCard_Bonus"
+        android:padding="@dimen/spacing_minimal"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="@dimen/card_border_margin"
+        android:layout_marginRight="@dimen/card_border_margin"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:text="+2.25"
+        android:maxLines="1"
+        android:shadowColor="@color/color_chart_income"
+        app:layout_constraintBottom_toBottomOf="@id/skillCard_frame"
+        app:layout_constraintLeft_toLeftOf="@id/skillCard_frame"
+        app:layout_constraintRight_toRightOf="@id/skillCard_frame"
+        app:layout_constraintTop_toBottomOf="@id/skillCard_Name"
+        style="@style/GlowTextStyle" />
+    <TextView
+        android:textSize="16.0dip"
+        android:gravity="center"
+        android:id="@id/skillCard_Count"
+        android:background="@drawable/skill_card_badge"
+        android:layout_width="@dimen/skill_card_count_badge_size"
+        android:layout_height="@dimen/skill_card_count_badge_size"
+        android:text="99"
+        app:layout_constraintRight_toRightOf="@id/skillCard_frame"
+        app:layout_constraintTop_toTopOf="@id/skillCard_frame"
+        style="@style/HeaderRowStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

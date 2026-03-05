@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/mailDetailsCharacter"
+        android:layout_width="@dimen/maildetails_manager_width"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/maildetails_manager_margin_top"
+        android:src="@drawable/characters_coach"
+        android:scaleType="centerCrop"
+        android:contentDescription=""
+        android:layout_alignParentEnd="true" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/maildetails_tablet_margin_top"
+        android:layout_marginEnd="@dimen/maildetails_tablet_margin_end">
+        <ImageView
+            android:layout_width="@dimen/maildetails_tablet_border"
+            android:layout_height="@dimen/maildetails_tablet_border"
+            android:src="@drawable/tablettopleft"
+            android:contentDescription="" />
+        <ImageView
+            android:layout_width="@dimen/maildetails_tablet_border"
+            android:layout_height="@dimen/maildetails_tablet_border"
+            android:src="@drawable/tablettopright"
+            android:contentDescription=""
+            android:layout_alignParentEnd="true" />
+        <ImageView
+            android:layout_width="@dimen/maildetails_tablet_border"
+            android:layout_height="@dimen/maildetails_tablet_border"
+            android:src="@drawable/tabletbottomleft"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="" />
+        <ImageView
+            android:layout_width="@dimen/maildetails_tablet_border"
+            android:layout_height="@dimen/maildetails_tablet_border"
+            android:src="@drawable/tabletbottomright"
+            android:layout_alignParentBottom="true"
+            android:contentDescription=""
+            android:layout_alignParentEnd="true" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/maildetails_tablet_border"
+            android:layout_marginLeft="@dimen/maildetails_tablet_border"
+            android:layout_marginRight="@dimen/maildetails_tablet_border"
+            android:src="@drawable/tablettop"
+            android:scaleType="fitXY"
+            android:contentDescription=""
+            android:layout_marginHorizontal="@dimen/maildetails_tablet_border" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/maildetails_tablet_border"
+            android:layout_marginLeft="@dimen/maildetails_tablet_border"
+            android:layout_marginRight="@dimen/maildetails_tablet_border"
+            android:src="@drawable/tabletbottom"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:contentDescription=""
+            android:layout_marginHorizontal="@dimen/maildetails_tablet_border" />
+        <ImageView
+            android:layout_width="@dimen/maildetails_tablet_border"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/maildetails_tablet_border"
+            android:layout_marginBottom="@dimen/maildetails_tablet_border"
+            android:src="@drawable/tabletleft"
+            android:scaleType="fitXY"
+            android:contentDescription=""
+            android:layout_marginVertical="@dimen/maildetails_tablet_border" />
+        <ImageView
+            android:layout_width="@dimen/maildetails_tablet_border"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/maildetails_tablet_border"
+            android:layout_marginBottom="@dimen/maildetails_tablet_border"
+            android:src="@drawable/tabletright"
+            android:scaleType="fitXY"
+            android:contentDescription=""
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="@dimen/maildetails_tablet_border" />
+        <android.webkit.WebView
+            android:id="@id/mailDetailsWebView"
+            android:background="@color/colorShadow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/maildetails_tablet_border" />
+    </RelativeLayout>
+    <ImageButton
+        android:id="@id/mailDetailsButtonDown"
+        android:background="@drawable/arrow_down_selector"
+        android:layout_width="@dimen/maildetails_button_width"
+        android:layout_height="@dimen/maildetails_button_height"
+        android:layout_margin="@dimen/maildetails_button_margin"
+        android:layout_alignParentBottom="true"
+        android:contentDescription=""
+        android:layout_alignParentEnd="true" />
+    <ImageButton
+        android:id="@id/mailDetailsButtonUp"
+        android:background="@drawable/arrow_up_selector"
+        android:layout_width="@dimen/maildetails_button_width"
+        android:layout_height="@dimen/maildetails_button_height"
+        android:layout_marginRight="@dimen/maildetails_button_margin_right"
+        android:layout_marginBottom="@dimen/maildetails_button_margin"
+        android:layout_alignParentBottom="true"
+        android:contentDescription=""
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

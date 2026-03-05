@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:gravity="center"
+        android:id="@id/entryPopupDescription"
+        android:padding="@dimen/spacing_medium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/entryPopupText"
+        android:layout_alignParentTop="true"
+        style="@style/TextStyle" />
+    <EditText
+        android:id="@id/entryPopupText"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/entry_height"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:layout_centerInParent="true"
+        android:inputType="textPersonName"
+        android:imeOptions="flagNoExtractUi"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        app:highlight_empty="true"
+        style="@style/EntryStyle" />
+    <Button
+        android:id="@id/entryPopupButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:premium="true"
+        style="@style/ButtonStyle" />
+</RelativeLayout>

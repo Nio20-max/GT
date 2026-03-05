@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/spacing_large"
+    android:paddingTop="@dimen/spacing_small"
+    android:paddingRight="@dimen/spacing_large"
+    android:paddingBottom="@dimen/spacing_small"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/spacing_large"
+    android:paddingVertical="@dimen/spacing_small"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:gravity="center"
+        android:id="@id/homeLivePlayerNameText"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:layout_weight="1.0"
+        style="@style/RegularTextStyle" />
+    <TextView
+        android:gravity="center"
+        android:id="@id/awayLivePlayerNameText"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:layout_weight="1.0"
+        style="@style/RegularTextStyle" />
+</LinearLayout>

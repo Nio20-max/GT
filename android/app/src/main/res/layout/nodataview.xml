@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/noData_Container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/noData_character"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="735:480"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <TextView
+        android:gravity="end"
+        android:id="@id/noData_Description"
+        android:padding="@dimen/spacing_large"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/LadderAlreadyFinished"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.65"
+        style="@style/LargeTextStyle" />
+    <Button
+        android:id="@id/noData_Button1"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/spacing_extralarge"
+        android:layout_marginRight="@dimen/spacing_large"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noData_Description"
+        app:layout_constraintWidth_percent="0.33"
+        app:premium="false" />
+    <Button
+        android:id="@id/noData_Button2"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noData_Button1"
+        app:layout_constraintWidth_percent="0.33"
+        app:premium="false" />
+</androidx.constraintlayout.widget.ConstraintLayout>

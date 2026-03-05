@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/squadSkillCards"
+    android:padding="@dimen/spacing_medium"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/spacing_small"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <LinearLayout
+                android:id="@id/squadSkillCards_Talent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:text="@string/Talent" />
+            <LinearLayout
+                android:id="@id/squadSkillCards_Age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                app:text="@string/Age" />
+            <LinearLayout
+                android:id="@id/squadSkillCards_Position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                app:text="@string/Position" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small">
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/squadSkillCards_Strength"
+                    android:paddingRight="@dimen/spacing_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:text="@string/Strength" />
+                <de.gt.app.views.StrengthStarsView
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/squadSkillCards_Stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/squadSkillCards_StrengthBonus"
+                    android:paddingLeft="@dimen/spacing_small"
+                    android:paddingRight="@dimen/spacing_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+0.99"
+                    style="@style/GlowTextStyle" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ImpactSkills"
+                style="@style/TextStyle" />
+            <de.gt.app.views.SkillsView
+                android:id="@id/squadSkillCards_Skills"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:gravity="center"
+        android:id="@id/squadSkillCards_Description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SkillCardsDescription"
+        style="@style/RegularTextStyle" />
+    <TextView
+        android:gravity="center"
+        android:id="@id/squadSkillCards_NoCards"
+        android:paddingTop="@dimen/spacing_extralarge"
+        android:paddingBottom="@dimen/spacing_extralarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SkillCardsHint"
+        style="@style/MegaTextStyle" />
+</LinearLayout>

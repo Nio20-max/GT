@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="@dimen/spacing_medium"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@id/playerInfoTab_Name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Player"
+        style="@style/LargeTextStyle" />
+    <de.gt.app.views.StrengthStarsView
+        android:id="@id/playerInfoTab_Stars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerInfoTab_Name" />
+    <TextView
+        android:id="@id/playerInfoTab_StrengthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/StrengthValue"
+        android:layout_below="@id/playerInfoTab_Stars"
+        android:layout_centerVertical="true"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/playerInfoTab_Strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toRightOf="@id/playerInfoTab_StrengthText"
+        android:layout_below="@id/playerInfoTab_Stars"
+        style="@style/TextStyle" />
+    <TextView
+        android:id="@id/playerInfoTab_TalentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TalentValue"
+        android:layout_below="@id/playerInfoTab_Strength"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/playerInfoTab_Talent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toRightOf="@id/playerInfoTab_TalentText"
+        android:layout_below="@id/playerInfoTab_Strength"
+        style="@style/TextStyle" />
+    <TextView
+        android:id="@id/playerInfoTab_AgeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AgeValue"
+        android:layout_below="@id/playerInfoTab_TalentText"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/playerInfoTab_Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toRightOf="@id/playerInfoTab_AgeText"
+        android:layout_below="@id/playerInfoTab_TalentText"
+        style="@style/TextStyle" />
+    <TextView
+        android:id="@id/playerInfoTab_OriginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/OriginValue"
+        android:layout_below="@id/playerInfoTab_AgeText"
+        android:layout_centerVertical="true"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/playerInfoTab_Origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toRightOf="@id/playerInfoTab_OriginText"
+        android:layout_below="@id/playerInfoTab_AgeText"
+        style="@style/TextStyle" />
+    <ImageView
+        android:id="@id/playerInfoTab_Country"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:scaleType="centerInside"
+        android:layout_toRightOf="@id/playerInfoTab_Origin"
+        android:layout_below="@id/playerInfoTab_AgeText"
+        android:contentDescription="" />
+    <TextView
+        android:id="@id/playerInfoTab_SalaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SalaryValue"
+        android:layout_below="@id/playerInfoTab_OriginText"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/playerInfoTab_Salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toRightOf="@id/playerInfoTab_SalaryText"
+        android:layout_below="@id/playerInfoTab_OriginText"
+        style="@style/TextStyle" />
+    <TextView
+        android:id="@id/playerInfoTab_MarketValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/MarketValueSign"
+        android:layout_below="@id/playerInfoTab_SalaryText"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/playerInfoTab_MarketValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toRightOf="@id/playerInfoTab_MarketValueText"
+        android:layout_below="@id/playerInfoTab_SalaryText"
+        style="@style/TextStyle" />
+    <TextView
+        android:id="@id/playerInfoTab_PositionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PositionValue"
+        android:layout_below="@id/playerInfoTab_MarketValueText"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/playerInfoTab_Position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toRightOf="@id/playerInfoTab_PositionText"
+        android:layout_below="@id/playerInfoTab_MarketValueText"
+        style="@style/TextStyle" />
+    <TextView
+        android:id="@id/playerInfoTab_QualityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/QualityValue"
+        android:layout_below="@id/playerInfoTab_PositionText"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/playerInfoTab_Quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toRightOf="@id/playerInfoTab_QualityText"
+        android:layout_below="@id/playerInfoTab_PositionText"
+        style="@style/TextStyle" />
+    <TextView
+        android:id="@id/playerInfoTab_ContractUntilText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ContractUntilValue"
+        android:layout_below="@id/playerInfoTab_QualityText"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/playerInfoTab_ContractUntil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toRightOf="@id/playerInfoTab_ContractUntilText"
+        android:layout_below="@id/playerInfoTab_QualityText"
+        style="@style/TextStyle" />
+    <ImageView
+        android:id="@id/playerInfoTab_Warning"
+        android:background="@drawable/exclamation"
+        android:padding="@dimen/spacing_small"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:contentDescription=""
+        android:layout_alignParentEnd="true"
+        app:touchable="true" />
+</RelativeLayout>

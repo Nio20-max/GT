@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <EditText
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/quickEnterTeamName"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/entry_height"
+                android:hint="@string/YourTeamName"
+                android:width="@dimen/entry_width"
+                android:inputType="textPersonName"
+                android:imeOptions="flagNoExtractUi"
+                app:highlight_empty="true"
+                style="@style/EntryStyle" />
+        </FrameLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@id/quickCountrySelect"
+                android:layout_width="@dimen/flag_size"
+                android:layout_height="@dimen/flag_size"
+                app:touchable="true" />
+            <TextView
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SelectCountry"
+                style="@style/TextStyle" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <Button
+                android:layout_gravity="center"
+                android:id="@id/quickStart"
+                android:layout_width="@dimen/large_button_width"
+                android:layout_height="@dimen/large_button_height"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/LetsStart"
+                style="@style/ButtonStyle" />
+            <Button
+                android:layout_gravity="center"
+                android:id="@id/quickSignUp"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/SignInSignUp"
+                style="@style/InactiveButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="bottom|center|right"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_medium">
+        <Button
+            android:id="@id/quickStart_privacyPolicy"
+            android:paddingLeft="@dimen/spacing_small"
+            android:paddingRight="@dimen/spacing_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/PrivacyPolicy"
+            android:paddingHorizontal="@dimen/spacing_small"
+            style="@style/LinkButtonStyle" />
+        <TextView
+            android:id="@id/quickStart_version"
+            android:padding="@dimen/spacing_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RegularSmallTextStyle" />
+    </LinearLayout>
+</FrameLayout>

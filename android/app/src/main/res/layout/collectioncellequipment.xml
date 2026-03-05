@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/shop_blank"
+        android:layout_width="200.0dip"
+        android:layout_height="177.0dip"
+        android:layout_margin="10.0dip">
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="242.0">
+            <ImageView
+                android:id="@id/cellCollectionImage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="20.0dip"
+                android:src="@drawable/wappen01_normal"
+                android:scaleType="centerInside"
+                android:contentDescription="" />
+        </FrameLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="88.0">
+            <View
+                android:id="@id/cellCollectionCenter"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:layout_centerInParent="true" />
+            <Button
+                android:id="@id/collectionCellButton1"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/teamview_greenbutton_height"
+                android:text="@string/Home"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="6.0dip"
+                android:layout_marginEnd="3.0dip"
+                android:layout_alignEnd="@id/cellCollectionCenter"
+                android:layout_alignParentStart="true"
+                style="@style/ButtonStyle" />
+            <Button
+                android:id="@id/collectionCellButton2"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/teamview_greenbutton_height"
+                android:text="@string/Away"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="3.0dip"
+                android:layout_marginEnd="6.0dip"
+                android:layout_alignStart="@id/cellCollectionCenter"
+                android:layout_alignParentEnd="true"
+                style="@style/ButtonStyle" />
+            <Button
+                android:id="@id/collectionCellEquipButton"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/teamview_greenbutton_height"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_centerVertical="true"
+                style="@style/ButtonStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

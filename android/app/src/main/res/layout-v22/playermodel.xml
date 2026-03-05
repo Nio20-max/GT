@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:paddingLeft="@dimen/spacing_medium"
+    android:paddingRight="@dimen/spacing_medium"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingHorizontal="@dimen/spacing_medium"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/head"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerInside"
+        android:contentDescription="" />
+    <ImageView
+        android:id="@id/body"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerInside"
+        android:contentDescription="" />
+    <ImageView
+        android:id="@id/gloves"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerInside"
+        android:contentDescription="" />
+    <ImageView
+        android:id="@id/shoes"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerInside"
+        android:contentDescription="" />
+    <ImageView
+        android:id="@id/trikot"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerInside"
+        android:contentDescription="" />
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:id="@id/playerModel_numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" />
+    <ImageView
+        android:layout_gravity="bottom|center"
+        android:id="@id/Medipack"
+        android:layout_width="60.0dip"
+        android:layout_height="60.0dip"
+        android:layout_marginBottom="65.0dip"
+        android:src="@drawable/medikit"
+        android:contentDescription="" />
+    <TextView
+        android:layout_gravity="bottom|center"
+        android:id="@id/Injured"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46.0dip"
+        style="@style/TextStyle" />
+    <Button
+        android:layout_gravity="bottom"
+        android:id="@id/HealButton"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        app:premium="true"
+        app:title="Heal now" />
+</FrameLayout>

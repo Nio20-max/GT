@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="@dimen/popup_card_margin"
+    app:cardCornerRadius="@dimen/popup_corner_radius"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/popup_corner_radius">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/background_green"
+            android:paddingTop="@dimen/spacing_large"
+            android:paddingBottom="@dimen/spacing_large"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0">
+            <Button
+                android:id="@id/compareButton1"
+                android:background="@drawable/button_compare_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:text="@string/Club"
+                android:layout_weight="1.0"
+                style="@style/TextStyle" />
+            <Button
+                android:id="@id/compareButton2"
+                android:background="@drawable/button_compare_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:text="@string/Squad"
+                android:layout_weight="1.0"
+                style="@style/TextStyle" />
+            <Button
+                android:id="@id/compareButton3"
+                android:background="@drawable/button_compare_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:text="@string/League"
+                android:layout_weight="1.0"
+                style="@style/TextStyle" />
+            <Button
+                android:id="@id/compareButton4"
+                android:background="@drawable/button_compare_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:text="@string/Matchday"
+                android:layout_weight="1.0"
+                style="@style/TextStyle" />
+            <Button
+                android:id="@id/compareButton5"
+                android:background="@drawable/button_compare_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:text="@string/GoalGetter"
+                android:layout_weight="1.0"
+                style="@style/TextStyle" />
+            <Button
+                android:id="@id/compareButton7"
+                android:background="@drawable/button_compare_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:text="@string/Compare"
+                android:layout_weight="1.0"
+                style="@style/TextStyle" />
+        </LinearLayout>
+        <FrameLayout
+            android:id="@id/compareContainer"
+            android:background="@drawable/background"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="6.0">
+            <ProgressBar
+                android:layout_gravity="center"
+                android:id="@id/comparePopup_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

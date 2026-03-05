@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    <string name="clear_text_end_icon_content_description">Видалити текст</string>
+    <string name="com_facebook_like_button_liked">Подобається</string>
+    <string name="com_facebook_like_button_not_liked">Подобається</string>
+    <string name="com_facebook_loading">Завантаження…</string>
+    <string name="com_facebook_loginview_cancel_action">Скасувати</string>
+    <string name="com_facebook_loginview_log_in_button">Увійти</string>
+    <string name="com_facebook_loginview_log_in_button_continue">Продовжити у Facebook</string>
+    <string name="com_facebook_loginview_log_in_button_long">Увійдіть використовуючи Facebook</string>
+    <string name="com_facebook_loginview_log_out_action">Вийти</string>
+    <string name="com_facebook_loginview_log_out_button">Вийти</string>
+    <string name="com_facebook_loginview_logged_in_as">Ви ввійшли як %1$s</string>
+    <string name="com_facebook_send_button_text">Надіслати</string>
+    <string name="com_facebook_share_button_text">Поширити</string>
+    <string name="com_facebook_smart_login_confirmation_cancel">Це не ви?</string>
+    <string name="com_facebook_smart_login_confirmation_continue_as">Продовжити як %1$s</string>
+    <string name="common_google_play_services_enable_button">Увімкнути</string>
+    <string name="common_google_play_services_enable_text">Додаток %1$s не працюватиме, якщо не ввімкнути сервіси Google Play.</string>
+    <string name="common_google_play_services_enable_title">Увімкнути сервіси Google Play</string>
+    <string name="common_google_play_services_install_button">Установити</string>
+    <string name="common_google_play_services_install_text">Додаток %1$s не працюватиме без сервісів Google Play, яких немає на вашому пристрої.</string>
+    <string name="common_google_play_services_install_title">Установити сервіси Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Доступність сервісів Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Помилка сервісів Google Play</string>
+    <string name="common_google_play_services_unknown_issue">У додатку %1$s виникла проблема із сервісами Google Play. Повторіть спробу.</string>
+    <string name="common_google_play_services_unsupported_text">Додаток %1$s не працюватиме без сервісів Google Play, які не підтримуються на вашому пристрої.</string>
+    <string name="common_google_play_services_update_button">Оновити</string>
+    <string name="common_google_play_services_update_text">Додаток %1$s не працюватиме, якщо не оновити сервіси Google Play.</string>
+    <string name="common_google_play_services_update_title">Оновіть сервіси Google Play</string>
+    <string name="common_google_play_services_updating_text">Додаток %1$s не працюватиме без сервісів Google Play, які зараз оновлюються.</string>
+    <string name="common_google_play_services_wear_update_text">Потрібна нова версія сервісів Google Play. Вони невдовзі оновляться.</string>
+    <string name="common_open_on_phone">Відкрити на телефоні</string>
+    <string name="common_signin_button_text">Увійти</string>
+    <string name="common_signin_button_text_long">Увійти в облік. запис Google</string>
+    <string name="copy">Скопіювати</string>
+    <string name="copy_toast_msg">Посилання скопійовано в буфер обміну</string>
+    <string name="error_icon_content_description">Помилка</string>
+    <string name="expand_button_title">Додатково</string>
+    <string name="exposed_dropdown_menu_content_description">Показати спадне меню</string>
+    <string name="fallback_menu_item_copy_link">Копіювати посилання</string>
+    <string name="fallback_menu_item_open_in_browser">Відкрити у веб-переглядачі</string>
+    <string name="fallback_menu_item_share_link">Надіслати посилання</string>
+    <string name="fcm_fallback_notification_channel_label">Інше</string>    <string name="hs__question_header" />    <string name="item_view_role_description">Вкладка</string>    <string name="not_set">Не налаштовано</string>    <string name="preference_copied">\"%1$s\": скопійовано в буфер обміну.</string>    <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
+    <string name="v7_preference_off">ВИМКНЕНО</string>
+    <string name="v7_preference_on">УВІМКНЕНО</string>
+</resources>
