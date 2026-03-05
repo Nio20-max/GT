@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+
+node_modules/
+.next/
+
+.gradle/
+android/.gradle/
+android/local.properties
+android/**/build/
+
+.DS_Store
+
+*.apk

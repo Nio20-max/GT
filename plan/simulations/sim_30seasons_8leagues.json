@@ -1,0 +1,254 @@
+{
+  "seasons": 30,
+  "leagues": 8,
+  "clubs_per_league": 12,
+  "matches": 15840,
+  "avg_goals_per_match": 2.201,
+  "upset_rate": 0.2064,
+  "avg_training_gain": 0.8,
+  "transfer_volume": 31468,
+  "scout_discoveries": 15756,
+  "avg_bot_daily_budget": 2377.6,
+  "season_summaries": [
+    {
+      "season": 1,
+      "matches": 528,
+      "avg_goals_per_match": 2.195,
+      "upset_rate": 0.2178,
+      "transfer_volume": 1097,
+      "scout_discoveries": 531
+    },
+    {
+      "season": 2,
+      "matches": 528,
+      "avg_goals_per_match": 2.231,
+      "upset_rate": 0.2273,
+      "transfer_volume": 1077,
+      "scout_discoveries": 523
+    },
+    {
+      "season": 3,
+      "matches": 528,
+      "avg_goals_per_match": 2.301,
+      "upset_rate": 0.2008,
+      "transfer_volume": 1028,
+      "scout_discoveries": 517
+    },
+    {
+      "season": 4,
+      "matches": 528,
+      "avg_goals_per_match": 2.295,
+      "upset_rate": 0.214,
+      "transfer_volume": 1113,
+      "scout_discoveries": 512
+    },
+    {
+      "season": 5,
+      "matches": 528,
+      "avg_goals_per_match": 2.123,
+      "upset_rate": 0.2254,
+      "transfer_volume": 1006,
+      "scout_discoveries": 511
+    },
+    {
+      "season": 6,
+      "matches": 528,
+      "avg_goals_per_match": 2.208,
+      "upset_rate": 0.1894,
+      "transfer_volume": 1029,
+      "scout_discoveries": 531
+    },
+    {
+      "season": 7,
+      "matches": 528,
+      "avg_goals_per_match": 2.227,
+      "upset_rate": 0.2178,
+      "transfer_volume": 990,
+      "scout_discoveries": 550
+    },
+    {
+      "season": 8,
+      "matches": 528,
+      "avg_goals_per_match": 2.258,
+      "upset_rate": 0.1894,
+      "transfer_volume": 1073,
+      "scout_discoveries": 523
+    },
+    {
+      "season": 9,
+      "matches": 528,
+      "avg_goals_per_match": 2.25,
+      "upset_rate": 0.2045,
+      "transfer_volume": 1024,
+      "scout_discoveries": 524
+    },
+    {
+      "season": 10,
+      "matches": 528,
+      "avg_goals_per_match": 2.114,
+      "upset_rate": 0.197,
+      "transfer_volume": 1111,
+      "scout_discoveries": 495
+    },
+    {
+      "season": 11,
+      "matches": 528,
+      "avg_goals_per_match": 2.237,
+      "upset_rate": 0.1913,
+      "transfer_volume": 987,
+      "scout_discoveries": 560
+    },
+    {
+      "season": 12,
+      "matches": 528,
+      "avg_goals_per_match": 2.278,
+      "upset_rate": 0.1875,
+      "transfer_volume": 1017,
+      "scout_discoveries": 506
+    },
+    {
+      "season": 13,
+      "matches": 528,
+      "avg_goals_per_match": 2.231,
+      "upset_rate": 0.2083,
+      "transfer_volume": 1021,
+      "scout_discoveries": 524
+    },
+    {
+      "season": 14,
+      "matches": 528,
+      "avg_goals_per_match": 2.239,
+      "upset_rate": 0.2064,
+      "transfer_volume": 1019,
+      "scout_discoveries": 513
+    },
+    {
+      "season": 15,
+      "matches": 528,
+      "avg_goals_per_match": 2.186,
+      "upset_rate": 0.2197,
+      "transfer_volume": 1023,
+      "scout_discoveries": 539
+    },
+    {
+      "season": 16,
+      "matches": 528,
+      "avg_goals_per_match": 2.089,
+      "upset_rate": 0.1875,
+      "transfer_volume": 1060,
+      "scout_discoveries": 514
+    },
+    {
+      "season": 17,
+      "matches": 528,
+      "avg_goals_per_match": 2.214,
+      "upset_rate": 0.197,
+      "transfer_volume": 1067,
+      "scout_discoveries": 548
+    },
+    {
+      "season": 18,
+      "matches": 528,
+      "avg_goals_per_match": 2.157,
+      "upset_rate": 0.2045,
+      "transfer_volume": 1035,
+      "scout_discoveries": 530
+    },
+    {
+      "season": 19,
+      "matches": 528,
+      "avg_goals_per_match": 2.197,
+      "upset_rate": 0.2008,
+      "transfer_volume": 1089,
+      "scout_discoveries": 518
+    },
+    {
+      "season": 20,
+      "matches": 528,
+      "avg_goals_per_match": 2.038,
+      "upset_rate": 0.214,
+      "transfer_volume": 1046,
+      "scout_discoveries": 554
+    },
+    {
+      "season": 21,
+      "matches": 528,
+      "avg_goals_per_match": 2.152,
+      "upset_rate": 0.1951,
+      "transfer_volume": 1121,
+      "scout_discoveries": 520
+    },
+    {
+      "season": 22,
+      "matches": 528,
+      "avg_goals_per_match": 2.146,
+      "upset_rate": 0.2064,
+      "transfer_volume": 1066,
+      "scout_discoveries": 530
+    },
+    {
+      "season": 23,
+      "matches": 528,
+      "avg_goals_per_match": 2.366,
+      "upset_rate": 0.2102,
+      "transfer_volume": 1043,
+      "scout_discoveries": 480
+    },
+    {
+      "season": 24,
+      "matches": 528,
+      "avg_goals_per_match": 2.142,
+      "upset_rate": 0.2178,
+      "transfer_volume": 1051,
+      "scout_discoveries": 556
+    },
+    {
+      "season": 25,
+      "matches": 528,
+      "avg_goals_per_match": 2.188,
+      "upset_rate": 0.2121,
+      "transfer_volume": 1031,
+      "scout_discoveries": 506
+    },
+    {
+      "season": 26,
+      "matches": 528,
+      "avg_goals_per_match": 2.22,
+      "upset_rate": 0.2008,
+      "transfer_volume": 1040,
+      "scout_discoveries": 527
+    },
+    {
+      "season": 27,
+      "matches": 528,
+      "avg_goals_per_match": 2.153,
+      "upset_rate": 0.1913,
+      "transfer_volume": 1072,
+      "scout_discoveries": 556
+    },
+    {
+      "season": 28,
+      "matches": 528,
+      "avg_goals_per_match": 2.133,
+      "upset_rate": 0.1913,
+      "transfer_volume": 1024,
+      "scout_discoveries": 522
+    },
+    {
+      "season": 29,
+      "matches": 528,
+      "avg_goals_per_match": 2.195,
+      "upset_rate": 0.2348,
+      "transfer_volume": 1065,
+      "scout_discoveries": 475
+    },
+    {
+      "season": 30,
+      "matches": 528,
+      "avg_goals_per_match": 2.28,
+      "upset_rate": 0.233,
+      "transfer_volume": 1043,
+      "scout_discoveries": 561
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[Unit]
+Description=Goal Tactics Scheduler Worker
+After=network.target gt-api.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/projekte/GT/backend
+EnvironmentFile=-/etc/gt/gt.env
+ExecStart=/root/projekte/GT/.venv/bin/python -m app.workers.scheduler --interval 60
+Restart=on-failure
+RestartSec=3
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

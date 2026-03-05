@@ -1,0 +1,16 @@
+[Unit]
+Description=Goal Tactics API
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/projekte/GT/backend
+EnvironmentFile=-/etc/gt/gt.env
+ExecStart=/root/projekte/GT/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=on-failure
+RestartSec=3
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
