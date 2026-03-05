@@ -11,3 +11,5 @@ android/local.properties
 android/**/build/
 
 .DS_Store
+
+*.apk

@@ -26,3 +26,16 @@ Initial FastAPI scaffold for Goal Tactics.
 - Deterministic training formula module with tunable constants.
 - Initial schema migration file for core domains.
 - API envelope + initial contract endpoints (`/api/v1/*`).
+
+## Production Services (systemd)
+
+Service unit templates are provided under `deploy/systemd/` and can be installed via:
+
+- `cd /root/projekte/GT && bash scripts/install_systemd_services.sh`
+
+Installed services:
+
+- `gt-api.service` (FastAPI)
+- `gt-scheduler.service` (scheduler worker)
+- `gt-bot-worker.service` (bot cycle worker)
+- `gt-web.service` (Next.js web)

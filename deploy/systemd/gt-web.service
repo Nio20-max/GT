@@ -1,0 +1,16 @@
+[Unit]
+Description=Goal Tactics Web Client
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/projekte/GT/web
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/npm run start -- --hostname 0.0.0.0 --port 3000
+Restart=on-failure
+RestartSec=3
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

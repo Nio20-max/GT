@@ -14,3 +14,7 @@
 2026-03-05T12:54:00Z | PHASE-C_TESTS | pass | Backend suite passed after Phase C additions (`14 passed`).
 2026-03-05T12:58:00Z | PHASE-F_SIM | pass | Ran fast deterministic multi-season simulation harness (3 seasons, 198 matches).
 2026-03-05T12:59:00Z | REPORTING | pass | Created `plan/SIMULATION_REPORT.md`, `plan/PROBLEMS.md`, and `plan/status/phase-F.md`.
+2026-03-05T13:57:00Z | SYSTEMD_DEPLOY | pass | Installed/enabled gt-api, gt-scheduler, gt-bot-worker, gt-web services.
+2026-03-05T13:58:00Z | API_HEALTH | pass | `/health` and `/api/v1/bootstrap` verified on live service.
+2026-03-05T14:03:00Z | APK_BUILD | pass | Built debug and unsigned release APKs and staged under `/mnt/website/GT/artifacts`.
+2026-03-05T14:05:00Z | OPS_HOOKS | pass | Added and executed backup/archive hooks with artifact output paths.
