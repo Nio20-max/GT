@@ -12,12 +12,12 @@ This checklist is derived from all `plan/*.md` files and is the execution baseli
 
 ## A. Discovery And Scaffolding
 
-- [ ] Read all `plan/*.md` and extract actionable requirements.
-- [ ] Produce `plan/FORMULA_DISCOVERY_REPORT.md` with empirical tests for training formulas.
-- [ ] Scaffold backend project (FastAPI + workers + migrations + tests).
-- [ ] Scaffold web client (Next.js TypeScript skeleton).
-- [ ] Scaffold Android client (Gradle Kotlin app shell with preserved assets pipeline).
-- [ ] Write `plan/status/phase-A.md` with outcomes.
+- [x] Read all `plan/*.md` and extract actionable requirements.
+- [x] Produce `plan/FORMULA_DISCOVERY_REPORT.md` with empirical tests for training formulas.
+- [x] Scaffold backend project (FastAPI + workers + migrations + tests).
+- [x] Scaffold web client (Next.js TypeScript skeleton).
+- [x] Scaffold Android client (Gradle Kotlin app shell with preserved assets pipeline).
+- [x] Write `plan/status/phase-A.md` with outcomes.
 
 Acceptance criteria:
 - `plan/IMPLEMENTATION_CHECKLIST.md` exists.
@@ -26,11 +26,11 @@ Acceptance criteria:
 
 ## B. Backend And DB
 
-- [ ] Create PostgreSQL schema + migration system for core domains.
-- [ ] Implement monthly partition strategy for heavy time-series tables.
+- [x] Create PostgreSQL schema + migration system for core domains.
+- [x] Implement monthly partition strategy for heavy time-series tables.
 - [ ] Implement API contracts from `plan/04_frontend_backend_api_contract.md`.
 - [ ] Add endpoint contract tests.
-- [ ] Validate migrations on disposable Postgres.
+- [x] Validate migrations on disposable Postgres.
 - [ ] Add backup hooks (base + WAL archive test path under `/mnt/website/GT/backups`).
 - [ ] Write `plan/status/phase-B.md`.
 

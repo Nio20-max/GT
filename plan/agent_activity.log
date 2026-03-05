@@ -7,3 +7,6 @@
 2026-03-05T12:39:00Z | WEB_BUILD | pass | `npm run build` succeeded for web scaffold.
 2026-03-05T12:40:00Z | ANDROID_BUILD | fail | Build blocked by missing Android SDK path (`ANDROID_HOME` / `local.properties`).
 2026-03-05T12:41:22Z | PHASE-A_STATUS | pass | Updated phase status with completed artifacts and known blockers.
+2026-03-05T12:46:00Z | PHASE-B_API | pass | Added API envelope and initial `/api/v1` contract endpoints with tests.
+2026-03-05T12:48:00Z | PHASE-B_DB | pass | Applied migrations on disposable Postgres via docker compose.
+2026-03-05T12:49:00Z | PHASE-B_SMOKE | pass | Verified core relations exist and partitioned tables are configured.
