@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base GT text style (matches original APK TextStyle) -->
+    <style name="TextStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:shadowColor">@color/colorShadow</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">2.0</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Small text variant -->
+    <style name="SmallTextStyle" parent="TextStyle">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <!-- Large text variant -->
+    <style name="LargeTextStyle" parent="TextStyle">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">0.0</item>
+        <item name="android:shadowRadius">10.0</item>
+    </style>
+
+    <!-- Green button -->
+    <style name="ButtonStyle" parent="TextStyle">
+        <item name="android:background">@drawable/button_green_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/spacing_medium</item>
+        <item name="android:paddingEnd">@dimen/spacing_medium</item>
+    </style>
+
+    <!-- Gray inactive button -->
+    <style name="InactiveButtonStyle" parent="ButtonStyle">
+        <item name="android:background">@drawable/button_gray_selector</item>
+    </style>
+
+    <!-- Menu section header -->
+    <style name="MenuSectionStyle" parent="SmallTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorDarkGray</item>
+    </style>
+
+</resources>

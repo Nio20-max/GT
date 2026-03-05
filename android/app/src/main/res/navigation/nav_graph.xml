@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.goaltactics.app.ui.login.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_login_to_shell"
+            app:destination="@id/mainShellFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainShellFragment"
+        android:name="com.goaltactics.app.ui.shell.MainShellFragment"
+        android:label="Goal Tactics">
+        <action
+            android:id="@+id/action_shell_to_club"
+            app:destination="@id/clubFragment" />
+        <action
+            android:id="@+id/action_shell_to_finances"
+            app:destination="@id/financesFragment" />
+        <action
+            android:id="@+id/action_shell_to_stadium"
+            app:destination="@id/stadiumFragment" />
+        <action
+            android:id="@+id/action_shell_to_squad"
+            app:destination="@id/squadFragment" />
+        <action
+            android:id="@+id/action_shell_to_lineup"
+            app:destination="@id/lineupFragment" />
+        <action
+            android:id="@+id/action_shell_to_training"
+            app:destination="@id/trainingFragment" />
+        <action
+            android:id="@+id/action_shell_to_scouting"
+            app:destination="@id/scoutingFragment" />
+        <action
+            android:id="@+id/action_shell_to_transfer"
+            app:destination="@id/transferMarketFragment" />
+        <action
+            android:id="@+id/action_shell_to_league"
+            app:destination="@id/leagueFragment" />
+        <action
+            android:id="@+id/action_shell_to_ladder"
+            app:destination="@id/ladderFragment" />
+        <action
+            android:id="@+id/action_shell_to_friends"
+            app:destination="@id/friendsFragment" />
+        <action
+            android:id="@+id/action_shell_to_live"
+            app:destination="@id/liveFragment" />
+        <action
+            android:id="@+id/action_shell_to_chat"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_shell_to_shop"
+            app:destination="@id/shopFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/clubFragment"
+        android:name="com.goaltactics.app.ui.club.ClubFragment"
+        android:label="@string/menu_club" />
+
+    <fragment
+        android:id="@+id/financesFragment"
+        android:name="com.goaltactics.app.ui.finances.FinancesFragment"
+        android:label="@string/menu_finances" />
+
+    <fragment
+        android:id="@+id/stadiumFragment"
+        android:name="com.goaltactics.app.ui.stadium.StadiumFragment"
+        android:label="@string/menu_stadium" />
+
+    <fragment
+        android:id="@+id/squadFragment"
+        android:name="com.goaltactics.app.ui.squad.SquadFragment"
+        android:label="@string/menu_squad" />
+
+    <fragment
+        android:id="@+id/lineupFragment"
+        android:name="com.goaltactics.app.ui.lineup.LineupFragment"
+        android:label="@string/menu_lineup" />
+
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.goaltactics.app.ui.training.TrainingFragment"
+        android:label="@string/menu_training" />
+
+    <fragment
+        android:id="@+id/scoutingFragment"
+        android:name="com.goaltactics.app.ui.scouting.ScoutingFragment"
+        android:label="@string/menu_scouting" />
+
+    <fragment
+        android:id="@+id/transferMarketFragment"
+        android:name="com.goaltactics.app.ui.transfer.TransferMarketFragment"
+        android:label="@string/menu_transfer_market" />
+
+    <fragment
+        android:id="@+id/leagueFragment"
+        android:name="com.goaltactics.app.ui.league.LeagueFragment"
+        android:label="@string/menu_league" />
+
+    <fragment
+        android:id="@+id/ladderFragment"
+        android:name="com.goaltactics.app.ui.ladder.LadderFragment"
+        android:label="@string/menu_gt_ladder" />
+
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.goaltactics.app.ui.friends.FriendsFragment"
+        android:label="@string/menu_friends" />
+
+    <fragment
+        android:id="@+id/liveFragment"
+        android:name="com.goaltactics.app.ui.live.LiveFragment"
+        android:label="@string/menu_live" />
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.goaltactics.app.ui.chat.ChatFragment"
+        android:label="@string/menu_chat" />
+
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.goaltactics.app.ui.shop.ShopFragment"
+        android:label="@string/menu_shop" />
+
+</navigation>

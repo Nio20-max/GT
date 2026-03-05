@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Goal Tactics</string>
+
+    <!-- Login -->
+    <string name="sign_in_text">Sign in to play</string>
+    <string name="your_manager_name">Your Manager Name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="connect_facebook">Connect with Facebook</string>
+    <string name="support">Support</string>
+    <string name="quick_start">Quick Start</string>
+    <string name="new_player">New Player</string>
+
+    <!-- Main menu sections -->
+    <string name="menu_section_team">Team</string>
+    <string name="menu_section_competitions">Competitions</string>
+    <string name="menu_section_social">Social</string>
+    <string name="menu_section_other">Other</string>
+
+    <!-- Main menu items -->
+    <string name="menu_club">Club</string>
+    <string name="menu_finances">Finances</string>
+    <string name="menu_stadium">Stadium</string>
+    <string name="menu_squad">Squad</string>
+    <string name="menu_equipment">Equipment</string>
+    <string name="menu_lineup">Line Up</string>
+    <string name="menu_training">Training</string>
+    <string name="menu_scouting">Scouting</string>
+    <string name="menu_transfer_market">Transfer Market</string>
+    <string name="menu_league">League</string>
+    <string name="menu_gt_ladder">GT Ladder</string>
+    <string name="menu_friends">Friends</string>
+    <string name="menu_live">Live</string>
+    <string name="menu_chat">Chat</string>
+    <string name="menu_shop">Shop</string>
+
+    <!-- HUD -->
+    <string name="medipacks">Medipacks</string>
+    <string name="stars">Stars</string>
+    <string name="money">Money</string>
+
+    <!-- Common -->
+    <string name="back">Back</string>
+    <string name="menu">Menu</string>
+    <string name="help">Help</string>
+    <string name="no_data">No data available</string>
+    <string name="loading">Loading…</string>
+</resources>

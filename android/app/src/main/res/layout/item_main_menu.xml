@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Section header -->
+    <TextView
+        android:id="@+id/menuCellTitle"
+        style="@style/MenuSectionStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_section_height"
+        android:gravity="center" />
+
+    <!-- Clickable row -->
+    <FrameLayout
+        android:id="@+id/menuCellButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_cell_height"
+        android:background="@drawable/menu_row_selector">
+
+        <TextView
+            android:id="@+id/menuCellText"
+            style="@style/TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/menu_title_inset"
+            android:paddingEnd="@dimen/spacing_medium" />
+
+        <ImageView
+            android:id="@+id/menuCellImage"
+            android:layout_width="@dimen/menu_image_size"
+            android:layout_height="@dimen/menu_image_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:contentDescription="" />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- Left-side menu list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainMenu"
+        android:layout_width="@dimen/mainlayout_main_menu_width"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground" />
+
+    <!-- Game container (right of menu) -->
+    <RelativeLayout
+        android:id="@+id/gameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/mainlayout_main_menu_width">
+
+        <!-- Top bar -->
+        <TextView
+            android:id="@+id/topBar"
+            style="@style/TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mainlayout_topbar_height"
+            android:background="@color/colorDarkGray"
+            android:gravity="center" />
+
+        <!-- Chat button (top-left) -->
+        <ImageButton
+            android:id="@+id/chatButton"
+            android:layout_width="@dimen/mainlayout_topbar_height"
+            android:layout_height="@dimen/mainlayout_topbar_height"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/menu_chat"
+            android:scaleType="centerInside" />
+
+        <!-- Help button (top-right) -->
+        <ImageButton
+            android:id="@+id/helpButton"
+            android:layout_width="@dimen/mainlayout_topbar_height"
+            android:layout_height="@dimen/mainlayout_topbar_height"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/help"
+            android:scaleType="centerInside" />
+
+        <!-- Content frame (between top bar and bottom bar) -->
+        <FrameLayout
+            android:id="@+id/contentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomBarContainer"
+            android:layout_below="@id/topBar" />
+
+        <!-- Bottom bar -->
+        <include
+            android:id="@+id/bottomBarContainer"
+            layout="@layout/view_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mainlayout_bottombar_height"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</FrameLayout>
