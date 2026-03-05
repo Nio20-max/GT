@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/userDataContainer"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/registerName"
+        style="@style/EntryStyle"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/entry_height"
+        android:layout_margin="@dimen/spacing_small"
+        android:hint="@string/YourManagerName"
+        android:width="@dimen/entry_width"
+        android:inputType="textPersonName"
+        android:imeOptions="flagNoExtractUi" />
+
+    <EditText
+        android:id="@+id/registerEmail"
+        style="@style/EntryStyle"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/entry_height"
+        android:layout_margin="@dimen/spacing_small"
+        android:hint="@string/YourEmail"
+        android:width="@dimen/entry_width"
+        android:inputType="textEmailAddress"
+        android:imeOptions="flagNoExtractUi" />
+
+    <EditText
+        android:id="@+id/registerPassword"
+        style="@style/EntryStyle"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/entry_height"
+        android:layout_margin="@dimen/spacing_small"
+        android:hint="@string/Password"
+        android:width="@dimen/entry_width"
+        android:inputType="textPassword"
+        android:imeOptions="flagNoExtractUi" />
+
+    <EditText
+        android:id="@+id/registerRepeatPassword"
+        style="@style/EntryStyle"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/entry_height"
+        android:layout_margin="@dimen/spacing_small"
+        android:hint="@string/RepeatPassword"
+        android:width="@dimen/entry_width"
+        android:inputType="textPassword"
+        android:imeOptions="flagNoExtractUi" />
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small">
+
+        <Button
+            android:id="@+id/registerCancelButton"
+            style="@style/InactiveButtonStyle"
+            android:tag="cancel_button"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:text="@string/Cancel" />
+
+        <Button
+            android:id="@+id/registerNextButton"
+            style="@style/ButtonStyle"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:text="@string/Next" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -140,4 +140,38 @@
     <!-- Live -->
     <string name="match_report">Match Report</string>
     <string name="no_match">No live match at the moment.</string>
+
+    <!-- Registration -->
+    <string name="YourManagerName">Your Manager Name</string>
+    <string name="YourEmail">Your Email</string>
+    <string name="Password">Password</string>
+    <string name="RepeatPassword">Repeat Password</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Next">Next</string>
+    <string name="YourTeamName">Your Team Name</string>
+    <string name="SelectCountry">Select Country</string>
+    <string name="LetsStart">Let\'s Start!</string>
+    <string name="SignInSignUp">Sign In / Sign Up</string>
+    <string name="PrivacyPolicy">Privacy Policy</string>
+
+    <!-- Training -->
+    <string name="TeamTrainingDialog">Select main and sub skill for your team training.</string>
+    <string name="MainSkill">Main Skill</string>
+    <string name="SubSkill">Sub Skill</string>
+    <string name="TrainingEffeciencyValue">Training Efficiency:</string>
+    <string name="DecreaseInValue">Decrease in:</string>
+    <string name="SaveSettings">Save Settings</string>
+    <string name="Train">Train</string>
+    <string name="CampDialog">Send your team to a training camp to boost their skills.</string>
+    <string name="TacticsDialog">Train your team tactics to gain advantages in matches.</string>
+    <string name="Tactics">Tactics</string>
+    <string name="YourClub">Your Club</string>
+    <string name="Opponent">Opponent</string>
+    <string name="Advantage">Advantage</string>
+
+    <!-- Player Info -->
+    <string name="AgeValue">Age:</string>
+    <string name="TalentValue">Talent:</string>
+    <string name="StrengthValue">Strength:</string>
+    <string name="Colon">:</string>
 </resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Left panel: selected player info -->
+    <RelativeLayout
+        android:id="@+id/individualSelectedPlayerTable"
+        android:background="@drawable/background_darkgreen"
+        android:padding="@dimen/spacing_small"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/spacing_small"
+        android:layout_weight="2.0">
+
+        <Spinner
+            android:id="@+id/individualFreePlayersList"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:translationZ="100dp" />
+
+        <Spinner
+            android:id="@+id/individualSkillsList"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="35dp"
+            android:layout_alignTop="@+id/individualFreePlayersList"
+            android:layout_alignParentStart="true"
+            android:translationZ="99dp" />
+
+        <Button
+            android:id="@+id/individualTrainButton"
+            style="@style/PremiumButtonStyle"
+            android:gravity="center"
+            android:tag="individual_training_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:text="@string/Train"
+            android:layout_alignParentBottom="true" />
+
+        <RelativeLayout
+            android:id="@+id/individualTraining_playerFrame"
+            android:background="@drawable/background_greenwithstroke"
+            android:padding="@dimen/spacing_small"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="35dp"
+            android:layout_above="@+id/individualTrainButton"
+            android:layout_alignTop="@+id/individualSkillsList">
+
+            <!-- Player avatar placeholder -->
+            <ImageView
+                android:id="@+id/individualAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/individualAvatar"
+                android:layout_alignTop="@+id/individualAvatar"
+                android:layout_alignBottom="@+id/individualAvatar"
+                android:paddingStart="@dimen/spacing_small">
+
+                <TextView
+                    android:id="@+id/individualName"
+                    style="@style/TextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2" />
+
+                <TextView
+                    android:id="@+id/individualPosition"
+                    style="@style/SmallTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccentGreen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/individualAvatar">
+
+                <!-- Age / Talent row -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:id="@+id/individualAge"
+                        style="@style/SmallTextStyle"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/AgeValue" />
+
+                    <TextView
+                        android:id="@+id/individualAgeValue"
+                        style="@style/SmallTextStyle"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/spacing_minimal"
+                        android:textColor="@color/colorAccentGreen" />
+
+                    <TextView
+                        style="@style/SmallTextStyle"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:text="@string/TalentValue" />
+
+                    <TextView
+                        android:id="@+id/individualTalentValue"
+                        style="@style/SmallTextStyle"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/spacing_minimal"
+                        android:textColor="@color/colorAccentGreen" />
+
+                </LinearLayout>
+
+                <!-- Strength row -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        style="@style/SmallTextStyle"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="0dp"
+                        android:text="@string/StrengthValue" />
+
+                    <TextView
+                        android:id="@+id/individualStrengthValue"
+                        style="@style/SmallTextStyle"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/spacing_minimal"
+                        android:textColor="@color/colorAccentGreen" />
+
+                    <RatingBar
+                        android:id="@+id/individualStrengthStars"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:numStars="5"
+                        android:isIndicator="true" />
+
+                </LinearLayout>
+
+                <!-- Skill row -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:id="@+id/individualSkillName"
+                        style="@style/SmallTextStyle"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        style="@style/SmallTextStyle"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/Colon" />
+
+                    <TextView
+                        android:id="@+id/individualSkillValue"
+                        style="@style/SmallTextStyle"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/spacing_minimal"
+                        android:textColor="@color/colorAccentGreen" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Right panel: player list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/individualPlayerTable"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5.0" />
+
+</LinearLayout>
