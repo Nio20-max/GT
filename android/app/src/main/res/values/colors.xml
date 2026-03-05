@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary GT palette (from original APK) -->
+    <color name="colorAccentGreen">#FFAFD50C</color>
+    <color name="colorBackground">#FF1D2B03</color>
+    <color name="colorBackgroundTransparent">#E02E5A10</color>
+    <color name="colorText">#FFFFFFFF</color>
+    <color name="colorHighlight">#FFFFFF00</color>
+    <color name="colorSection">#A0AFD50C</color>
+    <color name="colorSectionInactive">#A0999999</color>
+
+    <!-- Table row alternation -->
+    <color name="colorEvenRow">#641D2B03</color>
+    <color name="colorUnevenRow">#6492CC46</color>
+
+    <!-- General purpose -->
+    <color name="colorGreen">#FF3D6A1B</color>
+    <color name="colorDarkGray">#FF555555</color>
+    <color name="colorGray">#FF999999</color>
+    <color name="colorShadow">#FF000000</color>
+
+    <!-- HUD / economy -->
+    <color name="colorStars">#FFFEE697</color>
+    <color name="colorEuro">#FFDCFFB2</color>
+    <color name="colorMoneyDecrease">#FFFDBE2C</color>
+
+    <!-- Popup / overlay -->
+    <color name="colorPopup">#FF1D2B03</color>
+    <color name="colorBlackTransparent">#99000000</color>
+    <color name="colorBlackTransparentDark">#E6000000</color>
+
+    <!-- Accent blue -->
+    <color name="colorAccentBlue">#FF004497</color>
+
+    <!-- Warning rows -->
+    <color name="colorWarningEvenRow">#64B22222</color>
+    <color name="colorWarningUnevenRow">#648B0000</color>
+
+    <!-- Gradient helpers -->
+    <color name="colorGradientStart">#FF3D6A1B</color>
+    <color name="colorGradientEnd">#003D6A1B</color>
+    <color name="colorBlackGradientStart">#CC000000</color>
+    <color name="colorBlackGradientEnd">#00000000</color>
+
+    <!-- Inactive rows -->
+    <color name="colorInactiveEvenRow">#64555555</color>
+    <color name="colorInactiveUnevenRow">#64999999</color>
+
+    <!-- New-item rows -->
+    <color name="colorNewEvenRow">#64002248</color>
+    <color name="colorNewUnevenRow">#64004497</color>
+
+    <!-- Ladder -->
+    <color name="colorLadderGreen">#FF6A8D0C</color>
+    <color name="colorLadderStamina">#FF323BB4</color>
+
+    <!-- Compare screen -->
+    <color name="colorCompareBackground">#FF161F13</color>
+    <color name="colorCompareGreen">#FF2E5A10</color>
+
+    <!-- Skill card colors -->
+    <color name="colorSkillCardBackground">#66376E78</color>
+    <color name="colorSkillCardBlue">#FF6ED4E7</color>
+    <color name="colorSkillCardLegend">#FFA425F3</color>
+    <color name="colorSkillCardMaster">#FF126CEF</color>
+
+    <!-- Score gradient -->
+    <color name="colorScoreGradientStart">#FF2A2A2A</color>
+    <color name="colorScoreGradientEnd">#FF151515</color>
+
+    <!-- Section variants -->
+    <color name="colorSectionWaring">#A0B22222</color>
+    <color name="colorSectionNew">#A00088FF</color>
+
+    <!-- Chart colors -->
+    <color name="color_chart_balance">#FFFFD700</color>
+    <color name="color_chart_income">#FF00FF00</color>
+    <color name="color_chart_outcome">#FFFF5555</color>
+</resources>

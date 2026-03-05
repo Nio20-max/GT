@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Squad layout matching APK squad.xml: players table left, details tabs right -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <!-- Main content: horizontal split (matches APK squad_playersContainer) -->
+    <LinearLayout
+        android:id="@+id/playersContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- Players table (left, weight 10) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/playersTable"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:clipToPadding="false" />
+
+        <!-- Details tab view (right, weight 25, matches APK) -->
+        <FrameLayout
+            android:id="@+id/detailsTabView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:background="@drawable/background_darktransparent" />
+    </LinearLayout>
+
+    <!-- No data overlay (matches APK squad_noPlayersContainer / NoDataView) -->
+    <include
+        android:id="@+id/noDataCard"
+        layout="@layout/view_no_data_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

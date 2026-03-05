@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/matchInfo_Container"
+    android:background="@drawable/transparent_selector"
+    android:padding="@dimen/spacing_small"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/matchinfo_height"
+    android:layout_marginLeft="@dimen/matchinfo_margin_horizontal"
+    android:layout_marginTop="@dimen/matchinfo_default_margin"
+    android:layout_marginRight="@dimen/matchinfo_margin_horizontal">
+
+    <TextView
+        android:id="@+id/matchInfo_Date"
+        style="@style/SmallTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccentGreen" />
+
+    <ImageView
+        android:id="@+id/matchInfo_leaguelogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/matchinfo_margin_horizontal"
+        android:layout_marginRight="@dimen/matchinfo_margin_horizontal"
+        android:src="@drawable/menu_league"
+        android:layout_centerInParent="true"
+        android:contentDescription="" />
+
+    <TextView
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:textColor="@color/colorAccentGreen"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/matchInfo_Status"
+        style="@style/SmallTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccentGreen"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/matchInfo_HomeTeamName"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/matchinfo_text_size"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:layout_toLeftOf="@+id/matchInfo_HomeTeamLogo"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/matchInfo_AwayTeamName"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/matchinfo_text_size"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_toLeftOf="@+id/matchinfo_arrow"
+        android:layout_toRightOf="@+id/matchInfo_AwayTeamLogo"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/matchInfo_HomeTeamLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/matchinfo_default_margin"
+        android:layout_marginBottom="@dimen/matchinfo_default_margin"
+        android:src="@drawable/wappen01_normal"
+        android:adjustViewBounds="true"
+        android:layout_toLeftOf="@+id/matchInfo_leaguelogo"
+        android:layout_centerVertical="true"
+        android:contentDescription="" />
+
+    <ImageView
+        android:id="@+id/matchInfo_AwayTeamLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/matchinfo_default_margin"
+        android:layout_marginBottom="@dimen/matchinfo_default_margin"
+        android:src="@drawable/wappen02_normal"
+        android:adjustViewBounds="true"
+        android:layout_toRightOf="@+id/matchInfo_leaguelogo"
+        android:layout_centerVertical="true"
+        android:contentDescription="" />
+
+    <ImageView
+        android:id="@+id/matchinfo_arrow"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/matchinfo_default_margin"
+        android:layout_marginBottom="@dimen/matchinfo_default_margin"
+        android:src="@drawable/arrow_right_selector"
+        android:adjustViewBounds="true"
+        android:layout_centerVertical="true"
+        android:contentDescription=""
+        android:layout_alignParentEnd="true" />
+
+    <!-- Replaces GTImageView with touchable attribute -->
+    <ImageView
+        android:id="@+id/matchInfo_Warning"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/exclamation"
+        android:layout_marginLeft="@dimen/matchinfo_warning_margin"
+        android:layout_marginBottom="@dimen/matchinfo_warning_margin"
+        android:scaleType="centerInside"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="" />
+
+</RelativeLayout>

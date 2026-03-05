@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/player_Center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/player_Shirt"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:paddingRight="5dp"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:src="@drawable/trikot1"
+        android:scaleType="centerInside"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player_Number"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:text="99"
+        app:layout_constraintBottom_toBottomOf="@+id/player_Shirt"
+        app:layout_constraintLeft_toLeftOf="@+id/player_Shirt"
+        app:layout_constraintRight_toRightOf="@+id/player_Shirt"
+        app:layout_constraintTop_toTopOf="@+id/player_Shirt" />
+
+    <TextView
+        android:id="@+id/playerName"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="99. Player Name"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/player_Center"
+        app:layout_constraintLeft_toRightOf="@+id/player_Shirt"
+        app:layout_constraintRight_toLeftOf="@+id/player_YellowCards" />
+
+    <!-- Stars rating row (replaces GTStrengthStarsView) -->
+    <RatingBar
+        android:id="@+id/playerStars"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:numStars="5"
+        android:isIndicator="true"
+        app:layout_constraintLeft_toLeftOf="@+id/playerName"
+        app:layout_constraintTop_toBottomOf="@+id/player_Center" />
+
+    <TextView
+        android:id="@+id/player_Strength"
+        style="@style/LargeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|right"
+        android:paddingLeft="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_small"
+        android:text="999.9"
+        app:layout_constraintBottom_toBottomOf="@+id/playerStars"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/playerStars" />
+
+    <!-- Yellow cards indicator (replaces MultiImageView) -->
+    <LinearLayout
+        android:id="@+id/player_YellowCards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toLeftOf="@+id/player_RedCard"
+        app:layout_constraintTop_toTopOf="@+id/playerName" />
+
+    <ImageView
+        android:id="@+id/player_RedCard"
+        android:layout_width="@dimen/message_icon_size"
+        android:layout_height="@dimen/message_icon_size"
+        android:layout_marginRight="2dp"
+        android:src="@drawable/live_redcard"
+        android:scaleType="centerInside"
+        android:contentDescription=""
+        app:layout_constraintRight_toLeftOf="@+id/player_MedChest"
+        app:layout_constraintTop_toTopOf="@+id/playerName" />
+
+    <ImageView
+        android:id="@+id/player_MedChest"
+        android:layout_width="@dimen/message_icon_size"
+        android:layout_height="@dimen/message_icon_size"
+        android:layout_marginRight="2dp"
+        android:src="@drawable/balance_medipacks"
+        android:scaleType="centerInside"
+        android:contentDescription=""
+        app:layout_constraintRight_toLeftOf="@+id/player_ForSell"
+        app:layout_constraintTop_toTopOf="@+id/playerName" />
+
+    <ImageView
+        android:id="@+id/player_ForSell"
+        android:layout_width="@dimen/message_icon_size"
+        android:layout_height="@dimen/message_icon_size"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:src="@drawable/transfer"
+        android:scaleType="centerInside"
+        android:contentDescription=""
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/playerName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

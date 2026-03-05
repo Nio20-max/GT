@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mainlayout_bottombar_height"
+    android:background="@drawable/navigationbar"
+    android:clipChildren="false">
+
+    <!-- Back button (matches APK back/back_pressed selector) -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="@dimen/mainlayout_menubutton_width"
+        android:layout_height="@dimen/mainlayout_bottombar_height"
+        android:background="@drawable/button_back_selector"
+        android:contentDescription="@string/back"
+        android:tag="back_button" />
+
+    <!-- Menu toggle button -->
+    <ImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="@dimen/mainlayout_menubutton_width"
+        android:layout_height="@dimen/mainlayout_bottombar_height"
+        android:background="@drawable/menu_selector"
+        android:contentDescription="@string/menu"
+        android:tag="menu_button" />
+
+    <!-- Centre HUD: Medipacks | Stars | Money (matches APK exactly) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clipChildren="false"
+        android:orientation="horizontal">
+
+        <!-- Medipacks -->
+        <LinearLayout
+            android:id="@+id/mediPacksButton"
+            style="@style/ClickableResourcesStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mainlayout_balance_height"
+            android:clipChildren="false"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/resourcesMedipacksPlus"
+                android:layout_width="@dimen/mainlayout_balance_plus_size"
+                android:layout_height="@dimen/mainlayout_balance_plus_size"
+                android:layout_marginTop="@dimen/mainlayout_balance_margin_start"
+                android:layout_marginStart="@dimen/mainlayout_balance_margin_start"
+                android:contentDescription=""
+                android:src="@drawable/balance_plus" />
+
+            <ImageView
+                android:layout_width="@dimen/mainlayout_balanceimage_size"
+                android:layout_height="@dimen/mainlayout_balanceimage_size"
+                android:layout_gravity="center_vertical"
+                android:contentDescription=""
+                android:src="@drawable/balance_medipacks" />
+
+            <TextView
+                android:id="@+id/resourcesMedipacks"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:minWidth="@dimen/mainlayout_medipacks_min_width"
+                android:layout_marginStart="@dimen/mainlayout_balance_margin_start"
+                android:text="0" />
+        </LinearLayout>
+
+        <!-- Stars -->
+        <LinearLayout
+            android:id="@+id/starsButton"
+            style="@style/ClickableResourcesStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mainlayout_balance_height"
+            android:layout_marginStart="@dimen/mainlayout_balance_layout_margin_start"
+            android:clipChildren="false"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/resourcesStarsPlus"
+                android:layout_width="@dimen/mainlayout_balance_plus_size"
+                android:layout_height="@dimen/mainlayout_balance_plus_size"
+                android:layout_marginTop="@dimen/mainlayout_balance_margin_start"
+                android:layout_marginStart="@dimen/mainlayout_balance_margin_start"
+                android:contentDescription=""
+                android:src="@drawable/balance_plus" />
+
+            <ImageView
+                android:layout_width="@dimen/mainlayout_balanceimage_size"
+                android:layout_height="@dimen/mainlayout_balanceimage_size"
+                android:layout_gravity="center_vertical"
+                android:contentDescription=""
+                android:src="@drawable/balance_star" />
+
+            <TextView
+                android:id="@+id/resourcesStars"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:minWidth="@dimen/mainlayout_stars_min_width"
+                android:layout_marginStart="@dimen/mainlayout_balance_margin_start"
+                android:text="0" />
+        </LinearLayout>
+
+        <!-- Money -->
+        <LinearLayout
+            style="@style/ResourcesStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mainlayout_balance_height"
+            android:layout_marginStart="@dimen/mainlayout_balance_layout_margin_start"
+            android:clipChildren="false"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/mainlayout_balanceimage_size"
+                android:layout_height="@dimen/mainlayout_balanceimage_size"
+                android:layout_gravity="center_vertical"
+                android:contentDescription=""
+                android:src="@drawable/balance_money" />
+
+            <TextView
+                android:id="@+id/resourcesMoney"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/mainlayout_euro_min_width"
+                android:layout_marginStart="@dimen/mainlayout_balance_margin_start"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Context menu button (right side, matches APK) -->
+    <ImageButton
+        android:id="@+id/contextMenuButton"
+        android:layout_width="@dimen/mainlayout_menubutton_width"
+        android:layout_height="@dimen/mainlayout_bottombar_height"
+        android:layout_gravity="end"
+        android:background="@drawable/submenu_selector"
+        android:contentDescription=""
+        android:tag="context_menu_button" />
+
+</FrameLayout>

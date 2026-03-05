@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/teamTrainingDialog"
+        style="@style/SmallTextStyle"
+        android:layout_width="@dimen/training_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/TeamTrainingDialog"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/background_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_marginStart="@dimen/training_start"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:layout_alignParentEnd="true">
+
+        <!-- Main skill column -->
+        <RelativeLayout
+            android:padding="@dimen/spacing_small"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:layout_alignParentEnd="true">
+
+            <Spinner
+                android:id="@+id/trainingMainSkill"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:layout_alignParentStart="true"
+                android:translationZ="100dp" />
+
+            <TextView
+                android:id="@+id/mainSkillText"
+                style="@style/SmallTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="@string/MainSkill"
+                android:textColor="@color/colorHighlight"
+                android:layout_alignParentBottom="true" />
+
+            <ProgressBar
+                android:id="@+id/mainSkillView"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:tag="mainskill_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/button_height"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:layout_above="@+id/mainSkillText" />
+
+        </RelativeLayout>
+
+        <!-- Sub skill column -->
+        <RelativeLayout
+            android:padding="@dimen/spacing_small"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:layout_alignParentEnd="true">
+
+            <Spinner
+                android:id="@+id/trainingSubSkill"
+                android:layout_width="match_parent"
+                android:layout_height="315dp"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:translationZ="100dp" />
+
+            <TextView
+                android:id="@+id/subSkillText"
+                style="@style/SmallTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="@string/SubSkill"
+                android:textColor="@color/colorAccentGreen"
+                android:layout_alignParentBottom="true" />
+
+            <ProgressBar
+                android:id="@+id/subSkillView"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/button_height"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:layout_above="@+id/subSkillText" />
+
+        </RelativeLayout>
+
+        <!-- Info column -->
+        <RelativeLayout
+            android:padding="@dimen/spacing_small"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:layout_weight="1.0"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/trainingEfficiencyText"
+                style="@style/SmallTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TrainingEffeciencyValue" />
+
+            <TextView
+                android:id="@+id/trainingEffect"
+                style="@style/SmallTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_toRightOf="@+id/trainingEfficiencyText" />
+
+            <TextView
+                android:id="@+id/trainingEffectText"
+                style="@style/SmallTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_below="@+id/trainingEffect" />
+
+            <TextView
+                android:id="@+id/decreaseIn"
+                style="@style/SmallTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/DecreaseInValue"
+                android:layout_below="@+id/trainingEffectText" />
+
+            <TextView
+                android:id="@+id/timeLeft"
+                style="@style/SmallTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_toRightOf="@+id/decreaseIn"
+                android:layout_alignTop="@+id/decreaseIn"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveTrainingButton"
+        style="@style/ButtonStyle"
+        android:tag="save_training_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:text="@string/SaveSettings"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

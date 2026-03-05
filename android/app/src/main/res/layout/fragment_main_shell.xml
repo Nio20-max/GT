@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- Left-side menu list (matches APK GTListView) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainMenu"
+        android:layout_width="@dimen/mainlayout_main_menu_width"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground" />
+
+    <!-- Game container (right of menu, matches APK gameContainer) -->
+    <RelativeLayout
+        android:id="@+id/gameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/mainlayout_main_menu_width">
+
+        <!-- Background image (matches APK: background drawable, centerCrop) -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription=""
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
+
+        <!-- Top bar title (matches APK topBar) -->
+        <TextView
+            android:id="@+id/topBar"
+            style="@style/TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mainlayout_topbar_height"
+            android:background="@drawable/tab_middle_inactive"
+            android:gravity="center" />
+
+        <!-- Character image (matches APK main_character GTImageView) -->
+        <ImageView
+            android:id="@+id/main_character"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomBarContainer"
+            android:layout_below="@id/topBar"
+            android:layout_marginTop="@dimen/spacing_extralarge"
+            android:contentDescription=""
+            android:scaleType="fitStart"
+            android:visibility="gone" />
+
+        <!-- Content frame (between top bar and bottom bar, matches APK mainFrame) -->
+        <FrameLayout
+            android:id="@+id/contentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomBarContainer"
+            android:layout_below="@id/topBar"
+            android:clipChildren="false" />
+
+        <!-- Bottom bar (matches APK bottomBar) -->
+        <include
+            android:id="@+id/bottomBarContainer"
+            layout="@layout/view_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mainlayout_bottombar_height"
+            android:layout_alignParentBottom="true" />
+
+        <!-- Chat button container (top-left, matches APK mainLayout_chatButtonContainer) -->
+        <FrameLayout
+            android:id="@+id/chatButtonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_medium">
+
+            <ImageButton
+                android:id="@+id/chatButton"
+                android:layout_width="@dimen/round_button_size"
+                android:layout_height="@dimen/round_button_size"
+                android:background="@drawable/button_chat_selector"
+                android:contentDescription="@string/menu_chat" />
+
+            <View
+                android:id="@+id/chatNotification"
+                android:layout_width="@dimen/mainlayout_chat_notification_size"
+                android:layout_height="@dimen/mainlayout_chat_notification_size"
+                android:layout_gravity="center|end|top"
+                android:background="@drawable/badge_circle"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- Help button (top-right, matches APK mainLayout_helpButtonContainer) -->
+        <FrameLayout
+            android:id="@+id/helpButtonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_medium">
+
+            <ImageButton
+                android:id="@+id/helpButton"
+                android:layout_width="@dimen/round_button_size"
+                android:layout_height="@dimen/round_button_size"
+                android:background="@drawable/button_helpshift_selector"
+                android:contentDescription="@string/help" />
+        </FrameLayout>
+
+        <!-- Context menu container (bottom-right, matches APK) -->
+        <LinearLayout
+            android:id="@+id/contextMenuContainer"
+            android:layout_width="@dimen/mainlayout_context_menu_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/mainlayout_bottombar_height"
+            android:orientation="vertical" />
+
+        <!-- Menu blocker overlay (matches APK menuBlocker) -->
+        <View
+            android:id="@+id/menuBlocker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_shadow"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!-- Loading screen overlay (matches APK loadingImage) -->
+    <ImageView
+        android:id="@+id/loadingImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription=""
+        android:scaleType="centerCrop"
+        android:src="@drawable/loadingscreen"
+        android:visibility="gone" />
+
+    <!-- Version text (bottom-right corner, matches APK app_version_text) -->
+    <TextView
+        android:id="@+id/appVersionText"
+        style="@style/SmallTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/spacing_extralarge"
+        android:layout_marginBottom="@dimen/spacing_medium" />
+
+</FrameLayout>

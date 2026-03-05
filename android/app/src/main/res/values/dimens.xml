@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing (exact APK values) -->
+    <dimen name="spacing_subzero">-1dp</dimen>
+    <dimen name="spacing_minimal">1dp</dimen>
+    <dimen name="spacing_extrasmall">2dp</dimen>
+    <dimen name="spacing_small">5dp</dimen>
+    <dimen name="spacing_medium">10dp</dimen>
+    <dimen name="spacing_large">20dp</dimen>
+    <dimen name="spacing_extralarge">30dp</dimen>
+
+    <!-- Main layout (exact APK values) -->
+    <dimen name="mainlayout_main_menu_width">250dp</dimen>
+    <dimen name="mainlayout_topbar_height">30dp</dimen>
+    <dimen name="mainlayout_bottombar_height">50dp</dimen>
+    <dimen name="mainlayout_menubutton_width">105dp</dimen>
+    <dimen name="mainlayout_balance_height">30dp</dimen>
+    <dimen name="mainlayout_balanceimage_size">25dp</dimen>
+    <dimen name="mainlayout_balance_plus_size">10dp</dimen>
+    <dimen name="mainlayout_balance_margin_start">3dp</dimen>
+    <dimen name="mainlayout_balance_layout_margin_start">5dp</dimen>
+    <dimen name="mainlayout_medipacks_min_width">30dp</dimen>
+    <dimen name="mainlayout_stars_min_width">70dp</dimen>
+    <dimen name="mainlayout_euro_min_width">100dp</dimen>
+    <dimen name="mainlayout_chat_notification_size">10dp</dimen>
+    <dimen name="mainlayout_context_menu_width">200dp</dimen>
+    <dimen name="mainlayout_context_menu_item_height">30dp</dimen>
+
+    <!-- Menu cells (exact APK values) -->
+    <dimen name="menu_cell_height">50dp</dimen>
+    <dimen name="menu_section_height">20dp</dimen>
+    <dimen name="menu_title_inset">60dp</dimen>
+    <dimen name="menu_image_size">40dp</dimen>
+
+    <!-- Text sizes (exact APK values) -->
+    <dimen name="text_size_default">12sp</dimen>
+    <dimen name="text_size_small">10sp</dimen>
+    <dimen name="text_size_large">16dp</dimen>
+    <dimen name="matchinfo_text_size">20dp</dimen>
+
+    <!-- Entry fields (exact APK values) -->
+    <dimen name="entry_height">35dp</dimen>
+    <dimen name="entry_width">150pt</dimen>
+
+    <!-- Buttons (exact APK values) -->
+    <dimen name="button_height">30dp</dimen>
+    <dimen name="button_width">150dp</dimen>
+    <dimen name="large_button_height">40dp</dimen>
+    <dimen name="large_button_width">180dp</dimen>
+    <dimen name="round_button_size">30dp</dimen>
+
+    <!-- Popup (exact APK values) -->
+    <dimen name="popup_button_shift">18dp</dimen>
+    <dimen name="popup_button_size">25dp</dimen>
+    <dimen name="over_button_elevation">100dp</dimen>
+
+    <!-- Team view (exact APK values) -->
+    <dimen name="teamview_blackbutton_height">30dp</dimen>
+    <dimen name="teamview_blackbutton_margin_end">-10dp</dimen>
+    <dimen name="teamview_blackbutton_margin_top">10dp</dimen>
+    <dimen name="teamview_greenbutton_height">30dp</dimen>
+    <dimen name="teamview_greenbutton_margin_end">-3dp</dimen>
+    <dimen name="teamview_greenbutton_margin_top">5dp</dimen>
+
+    <!-- Mail details (exact APK values) -->
+    <dimen name="maildetails_button_height">30dp</dimen>
+    <dimen name="maildetails_button_margin">10dp</dimen>
+    <dimen name="maildetails_button_margin_right">100dp</dimen>
+    <dimen name="maildetails_button_width">80dp</dimen>
+
+    <!-- Table and list -->
+    <dimen name="table_cell_height">40dp</dimen>
+    <dimen name="table_header_height">25dp</dimen>
+</resources>

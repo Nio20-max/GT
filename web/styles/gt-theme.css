@@ -1,0 +1,12 @@
+/* Goal Tactics – custom design tokens (matches APK palette) */
+
+:root {
+  --gt-bg: #1D2B03;
+  --gt-accent: #AFD50C;
+  --gt-text: #FFFFFF;
+  --gt-highlight: #FFFF00;
+  --gt-section: rgba(175, 213, 12, 0.63);
+  --gt-dark-gray: #555555;
+  --gt-green: #3D6A1B;
+  --gt-fb-blue: #3B5998;
+}

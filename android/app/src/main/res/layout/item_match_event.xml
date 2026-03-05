@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/homePlayerActionImage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/homeGameCourseActionText"
+        style="@style/RegularTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@+id/homePlayerActionImage"
+        android:layout_alignBottom="@+id/homePlayerActionImage" />
+
+    <TextView
+        android:id="@+id/awayGameCourseActionText"
+        style="@style/RegularTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:textColor="@android:color/white"
+        android:layout_toLeftOf="@+id/awayPlayerActionImage"
+        android:layout_alignBottom="@+id/awayPlayerActionImage" />
+
+    <ImageView
+        android:id="@+id/awayPlayerActionImage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

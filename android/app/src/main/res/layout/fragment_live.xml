@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <!-- Main live match content -->
+    <LinearLayout
+        android:id="@+id/matchContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Match header: team names and score -->
+        <LinearLayout
+            android:id="@+id/matchHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_score"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_medium">
+
+            <TextView
+                android:id="@+id/homeTeamName"
+                style="@style/TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end" />
+
+            <TextView
+                android:id="@+id/scoreText"
+                style="@style/LargeTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                android:textColor="@color/colorAccentGreen" />
+
+            <TextView
+                android:id="@+id/awayTeamName"
+                style="@style/TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start" />
+
+        </LinearLayout>
+
+        <!-- Minute-by-minute events list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:padding="@dimen/spacing_medium" />
+
+        <!-- Player stats table at bottom -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/statsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_dark_nocorners"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:padding="@dimen/spacing_small" />
+
+    </LinearLayout>
+
+    <!-- No-data overlay when no match is live -->
+    <LinearLayout
+        android:id="@+id/noDataView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/background_darktransparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_large"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/noDataMessage"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_match" />
+
+    </LinearLayout>
+
+</FrameLayout>

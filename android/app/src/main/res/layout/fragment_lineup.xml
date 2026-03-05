@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lineup formation layout matching APK lineupformation.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lineupFormationField"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <!-- Soccer field image -->
+    <ImageView
+        android:id="@+id/fieldImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:contentDescription=""
+        android:scaleType="fitXY"
+        android:src="@drawable/soccerfield"
+        app:layout_constraintBottom_toTopOf="@+id/benchArea"
+        app:layout_constraintEnd_toStartOf="@+id/playersTable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Players table (right side, matches APK 250dp width) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playersTable"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_dark_nocorners"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Tactics label and spinner -->
+    <TextView
+        android:id="@+id/tacticsText"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/tactics"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/selectTactic"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:background="@drawable/background_combobox"
+        app:layout_constraintStart_toEndOf="@id/tacticsText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/systemText"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:text="@string/system"
+        app:layout_constraintStart_toEndOf="@id/selectTactic"
+        app:layout_constraintTop_toTopOf="@id/tacticsText" />
+
+    <Spinner
+        android:id="@+id/selectSystem"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:background="@drawable/background_combobox"
+        app:layout_constraintStart_toEndOf="@id/systemText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 11 field position slots (GK + 10 outfield) -->
+    <FrameLayout android:id="@+id/slot1" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintVertical_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+    <FrameLayout android:id="@+id/slot2" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.22" app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+    <FrameLayout android:id="@+id/slot3" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.22" app:layout_constraintVertical_bias="0.40"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+    <FrameLayout android:id="@+id/slot4" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.22" app:layout_constraintVertical_bias="0.60"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+    <FrameLayout android:id="@+id/slot5" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.22" app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+    <FrameLayout android:id="@+id/slot6" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.45" app:layout_constraintVertical_bias="0.20"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+    <FrameLayout android:id="@+id/slot7" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.45" app:layout_constraintVertical_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+    <FrameLayout android:id="@+id/slot8" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.45" app:layout_constraintVertical_bias="0.80"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+    <FrameLayout android:id="@+id/slot9" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.70" app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+    <FrameLayout android:id="@+id/slot10" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.70" app:layout_constraintVertical_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+    <FrameLayout android:id="@+id/slot11" android:layout_width="48dp" android:layout_height="48dp"
+        app:layout_constraintHorizontal_bias="0.70" app:layout_constraintVertical_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@id/benchArea" />
+
+    <!-- Bench area (6 bench slots, matches APK positions 12-17) -->
+    <LinearLayout
+        android:id="@+id/benchArea"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/background_greenwithstroke"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/playersTable"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout android:id="@+id/benchSlot1" android:layout_width="48dp" android:layout_height="48dp" android:layout_margin="2dp" />
+        <FrameLayout android:id="@+id/benchSlot2" android:layout_width="48dp" android:layout_height="48dp" android:layout_margin="2dp" />
+        <FrameLayout android:id="@+id/benchSlot3" android:layout_width="48dp" android:layout_height="48dp" android:layout_margin="2dp" />
+        <FrameLayout android:id="@+id/benchSlot4" android:layout_width="48dp" android:layout_height="48dp" android:layout_margin="2dp" />
+        <FrameLayout android:id="@+id/benchSlot5" android:layout_width="48dp" android:layout_height="48dp" android:layout_margin="2dp" />
+        <FrameLayout android:id="@+id/benchSlot6" android:layout_width="48dp" android:layout_height="48dp" android:layout_margin="2dp" />
+    </LinearLayout>
+
+    <!-- Strength display -->
+    <TextView
+        android:id="@+id/strengthText"
+        style="@style/LargeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:paddingHorizontal="@dimen/spacing_small"
+        android:text="@string/strength"
+        app:layout_constraintBottom_toTopOf="@id/benchArea"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/strengthValue"
+        style="@style/LargeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:paddingHorizontal="@dimen/spacing_small"
+        android:text="0"
+        android:textColor="@color/colorHighlight"
+        app:layout_constraintBottom_toTopOf="@id/benchArea"
+        app:layout_constraintStart_toEndOf="@id/strengthText" />
+
+    <!-- Lock label -->
+    <TextView
+        android:id="@+id/lockLabel"
+        style="@style/LargeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:paddingHorizontal="@dimen/spacing_medium"
+        android:text="@string/lock"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/benchArea"
+        app:layout_constraintEnd_toStartOf="@id/playersTable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

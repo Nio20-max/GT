@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <!-- Bottom button row: Support | Quick Start | New Player -->
+    <LinearLayout
+        android:id="@+id/login_buttonsStack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium">
+
+        <Button
+            android:id="@+id/btn_support"
+            style="@style/InactiveButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:text="@string/support" />
+
+        <Button
+            android:id="@+id/btn_quick_start"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:text="@string/quick_start" />
+
+        <Button
+            android:id="@+id/btn_new_player"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:text="@string/new_player" />
+    </LinearLayout>
+
+    <!-- Main content: horizontal split -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/login_buttonsStack"
+        android:orientation="horizontal">
+
+        <!-- Left panel: Facebook connect -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:background="@drawable/background_darktransparent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_facebook_connect"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_large"
+                android:text="@string/connect_facebook" />
+        </LinearLayout>
+
+        <!-- Right panel: Username / Password / Login -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:layout_weight="1"
+            android:background="@drawable/background_darktransparent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <TextView
+                style="@style/SmallTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/spacing_small"
+                android:text="@string/sign_in_text" />
+
+            <EditText
+                android:id="@+id/login_name"
+                style="@style/TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/entry_height"
+                android:background="@drawable/background_darktransparent"
+                android:gravity="center"
+                android:hint="@string/your_manager_name"
+                android:imeOptions="flagNoExtractUi"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/colorGray" />
+
+            <EditText
+                android:id="@+id/login_password"
+                style="@style/TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/entry_height"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:background="@drawable/background_darktransparent"
+                android:gravity="center"
+                android:hint="@string/password"
+                android:imeOptions="flagNoExtractUi"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:textColorHint="@color/colorGray" />
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/login" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

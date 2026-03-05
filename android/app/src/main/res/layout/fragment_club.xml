@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <!-- Club info header -->
+    <LinearLayout
+        android:id="@+id/clubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_darktransparent"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_medium">
+
+        <TextView
+            android:id="@+id/clubName"
+            style="@style/LargeTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/leagueLabel"
+                style="@style/SmallTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:background="@color/colorGray" />
+
+            <TextView
+                android:id="@+id/strengthLabel"
+                style="@style/SmallTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:background="@color/colorGray" />
+
+            <TextView
+                android:id="@+id/ratingLabel"
+                style="@style/SmallTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Section tabs: My Club, Sponsors, Emails, Accomplishments -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_dark_nocorners"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorAccentGreen"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorAccentGreen"
+        app:tabTextColor="@color/colorSectionInactive">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_club" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sponsors" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emails" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/accomplishments" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Tab content area -->
+    <FrameLayout
+        android:id="@+id/tabContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

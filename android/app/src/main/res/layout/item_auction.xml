@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_medium"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:layout_weight="1.0"
+        layout="@layout/item_player_info" />
+
+    <!-- Tabs area (replaces TabsView) -->
+    <LinearLayout
+        android:id="@+id/DetailedPlayerInfo_tabsView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:background="@drawable/background_transparent"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/auction_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed" />
+
+        <FrameLayout
+            android:id="@+id/auction_tab_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" />
+
+    </LinearLayout>
+
+</LinearLayout>

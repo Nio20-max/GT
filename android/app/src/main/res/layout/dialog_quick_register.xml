@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0">
+
+            <EditText
+                android:id="@+id/quickEnterTeamName"
+                style="@style/EntryStyle"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/entry_height"
+                android:hint="@string/YourTeamName"
+                android:width="@dimen/entry_width"
+                android:inputType="textPersonName"
+                android:imeOptions="flagNoExtractUi" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/quickCountrySelect"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/flag_size"
+                android:layout_height="@dimen/flag_size"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                style="@style/TextStyle"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SelectCountry" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0">
+
+            <Button
+                android:id="@+id/quickStart"
+                style="@style/ButtonStyle"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/large_button_width"
+                android:layout_height="@dimen/large_button_height"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/LetsStart" />
+
+            <Button
+                android:id="@+id/quickSignUp"
+                style="@style/InactiveButtonStyle"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/SignInSignUp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="bottom|center|right"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_medium">
+
+        <Button
+            android:id="@+id/quickStart_privacyPolicy"
+            style="@style/LinkButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/spacing_small"
+            android:paddingRight="@dimen/spacing_small"
+            android:text="@string/PrivacyPolicy" />
+
+        <TextView
+            android:id="@+id/quickStart_version"
+            style="@style/RegularSmallTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_small" />
+
+    </LinearLayout>
+
+</FrameLayout>
