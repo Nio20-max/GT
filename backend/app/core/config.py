@@ -11,6 +11,11 @@ class Settings(BaseSettings):
     simulation_server_secret: str = "change-me-simulation-secret"
     auth_token_ttl_seconds: int = 3600
     state_dir: str = "/tmp/gt-state"
+    db_url: str = ""
+    rate_limit_window_seconds: int = 60
+    rate_limit_login_per_window: int = 30
+    rate_limit_register_per_window: int = 20
+    rate_limit_shop_grant_per_window: int = 60
 
     @property
     def state_dir_path(self) -> Path:
