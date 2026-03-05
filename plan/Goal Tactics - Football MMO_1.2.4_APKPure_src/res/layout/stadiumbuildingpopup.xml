@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="@dimen/popup_card_margin"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="@dimen/popup_corner_radius"
+    app:cardElevation="0.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/gradient_green"
+        android:padding="@dimen/spacing_medium"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/popup_corner_radius">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/buildingPopup_centerX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.5" />
+        <crc645877ad3d44b9b81b.GTImageView
+            android:id="@id/StadiumBuildingPopUp_BuildingImage"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:src="@drawable/building_fanshop04"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toTopOf="@id/buildingPopup_levelConatiner"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.7" />
+        <TextView
+            android:id="@id/buildingPopup_description"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="The office is the center of your managerial cereer. It is from here that you steer the ship."
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/buildingPopup_centerX"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/RegularTextStyle" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/buildingPopup_levelConatiner"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            app:layout_constraintBottom_toTopOf="@id/StadiumBuildingPopUp_PremiumBuildButton"
+            app:layout_constraintLeft_toLeftOf="@id/buildingPopup_centerX"
+            app:layout_constraintRight_toRightOf="parent">
+            <TextView
+                android:gravity="center"
+                android:id="@id/StadiumBuildingPopUp_BuildingLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:text="Level 10"
+                style="@style/TextStyle" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/spacing_large"
+                android:layout_height="@dimen/spacing_large"
+                android:src="@drawable/arrow_in"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+        <TextView
+            android:id="@id/StadiumBuildingPopUp_Duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:text="@string/Duration"
+            app:layout_constraintBottom_toTopOf="@id/buildingPopup_buttonsBarrier"
+            app:layout_constraintLeft_toLeftOf="parent"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/colorAccentGreen"
+            android:id="@id/StadiumBuildingPopUp_DurationValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:text="05:00:00"
+            app:layout_constraintLeft_toRightOf="@id/StadiumBuildingPopUp_Duration"
+            app:layout_constraintTop_toTopOf="@id/StadiumBuildingPopUp_Duration"
+            style="@style/TextStyle" />
+        <TextView
+            android:id="@id/StadiumBuildingPopUp_Expenses"
+            android:paddingRight="@dimen/spacing_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RunningCost"
+            app:layout_constraintBottom_toTopOf="@id/StadiumBuildingPopUp_Duration"
+            app:layout_constraintLeft_toLeftOf="@id/StadiumBuildingPopUp_Duration"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/color_chart_balance"
+            android:id="@id/StadiumBuildingPopUp_ExpensesValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,300€"
+            app:layout_constraintLeft_toRightOf="@id/StadiumBuildingPopUp_Expenses"
+            app:layout_constraintTop_toTopOf="@id/StadiumBuildingPopUp_Expenses"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/color_chart_outcome"
+            android:id="@id/StadiumBuildingPopUp_ExpensesIncrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+250€"
+            app:layout_constraintLeft_toRightOf="@id/StadiumBuildingPopUp_ExpensesValue"
+            app:layout_constraintTop_toTopOf="@id/StadiumBuildingPopUp_Expenses"
+            style="@style/TextStyle" />
+        <TextView
+            android:id="@id/buildingPopup_effectName"
+            android:paddingRight="@dimen/spacing_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Building effect"
+            app:layout_constraintBottom_toTopOf="@id/StadiumBuildingPopUp_Expenses"
+            app:layout_constraintLeft_toLeftOf="@id/StadiumBuildingPopUp_Duration"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/colorEuro"
+            android:id="@id/buildingPopup_effectValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30%"
+            app:layout_constraintLeft_toRightOf="@id/buildingPopup_effectName"
+            app:layout_constraintTop_toTopOf="@id/buildingPopup_effectName"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/color_chart_income"
+            android:id="@id/buildingPopup_effectIncrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+4%"
+            app:layout_constraintLeft_toRightOf="@id/buildingPopup_effectValue"
+            app:layout_constraintTop_toTopOf="@id/buildingPopup_effectName"
+            style="@style/TextStyle" />
+        <TextView
+            android:id="@id/buildingPopup_levelName"
+            android:paddingRight="@dimen/spacing_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Level"
+            app:layout_constraintBottom_toTopOf="@id/buildingPopup_effectName"
+            app:layout_constraintLeft_toLeftOf="@id/StadiumBuildingPopUp_Duration"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/colorAccentGreen"
+            android:id="@id/buildingPopup_levelValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 / 10"
+            app:layout_constraintLeft_toRightOf="@id/buildingPopup_levelName"
+            app:layout_constraintTop_toTopOf="@id/buildingPopup_levelName"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center"
+            android:id="@id/buildingPopup_progressTime"
+            android:background="@drawable/background_darktransparent"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:text="00:00:00"
+            app:layout_constraintBottom_toTopOf="@id/buildingPopup_progress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/TextStyle" />
+        <FrameLayout
+            android:id="@id/buildingPopup_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            app:layout_constraintBottom_toTopOf="@id/buildingPopup_effectName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <crc645877ad3d44b9b81b.GTProgressBar
+                android:layout_gravity="center"
+                android:id="@id/buildingPopup_progressBar"
+                android:layout_width="150.0dip"
+                android:layout_height="20.0dip" />
+            <TextView
+                android:textColor="@color/colorHighlight"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/buildingPopup_progressValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                style="@style/TextStyle" />
+        </FrameLayout>
+        <crc645877ad3d44b9b81b.GTButton
+            android:id="@id/StadiumBuildingPopUp_GreenBuildButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginRight="@dimen/spacing_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/buildingPopup_centerX"
+            app:title="Build"
+            app:value="2000" />
+        <crc645877ad3d44b9b81b.GTButton
+            android:id="@id/StadiumBuildingPopUp_PremiumBuildButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/buildingPopup_centerX"
+            app:premium="true"
+            app:title="Build"
+            app:value="300" />
+        <crc645877ad3d44b9b81b.GTButton
+            android:id="@id/buildingPopup_speedUpButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:premium="true"
+            app:title="@string/SpeedUp"
+            app:value="300" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@id/buildingPopup_buttonsBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="buildingPopup_speedUpButton,StadiumBuildingPopUp_GreenBuildButton" />
+        <crc645877ad3d44b9b81b.GTImageView
+            android:id="@id/buildingPopup_lock"
+            android:background="@drawable/lock"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:contentDescription=""
+            app:layout_constraintRight_toRightOf="parent"
+            app:touchable="true" />
+        <crc645877ad3d44b9b81b.GTImageView
+            android:id="@id/buildingPopup_warning"
+            android:background="@drawable/exclamation"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_margin="@dimen/spacing_small"
+            android:contentDescription=""
+            app:layout_constraintRight_toLeftOf="@id/buildingPopup_lock"
+            app:touchable="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

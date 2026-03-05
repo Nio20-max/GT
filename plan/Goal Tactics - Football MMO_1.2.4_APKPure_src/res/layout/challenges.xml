@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <crc645877ad3d44b9b81b.GTTableView
+        android:id="@id/friends_ChallengesTable"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <crc645877ad3d44b9b81b.NoDataView
+        android:id="@id/friends_noChallengesContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:character="Coach"
+        app:message="@string/NoChallengesDescription" />
+</FrameLayout>

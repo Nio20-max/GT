@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:gravity="center"
+        android:id="@id/timerButtonCellTimer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        style="@style/TextStyle" />
+    <crc645877ad3d44b9b81b.GTButton
+        android:layout_gravity="center_vertical"
+        android:id="@id/timerButtonCellButton"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height" />
+</FrameLayout>

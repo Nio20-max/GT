@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/spacing_medium"
+    android:layout_marginTop="@dimen/spacing_medium"
+    android:layout_marginRight="@dimen/spacing_medium"
+    android:layout_marginHorizontal="@dimen/spacing_medium"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/LadderMessage_Background"
+        android:background="@drawable/background_darkgreen"
+        android:padding="@dimen/spacing_small"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+            <TextView
+                android:textColor="@color/colorAccentGreen"
+                android:id="@id/LadderMessage_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:text="95'"
+                style="@style/SmallTextStyle" />
+            <crc645877ad3d44b9b81b.GTImageView
+                android:id="@id/LadderMessage_Icon"
+                android:layout_width="@dimen/message_icon_size"
+                android:layout_height="@dimen/message_icon_size"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:scaleType="centerInside"
+                app:auto_hide="true" />
+        </LinearLayout>
+        <TextView
+            android:id="@id/LadderMessage_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Defensive error! Ralf Mauel is through, but fails to beat Jerome Custodio. Defensive error! Ralf Mauel is through, but fails to beat Jerome Custodio."
+            style="@style/SmallTextStyle" />
+    </LinearLayout>
+</FrameLayout>

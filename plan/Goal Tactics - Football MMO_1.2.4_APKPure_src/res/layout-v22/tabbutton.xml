@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/TabStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:gravity="center"
+        android:id="@id/tabButton_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="Tab text"
+        style="@style/AutoSizeTextStyle" />
+    <TextView
+        android:gravity="center"
+        android:id="@id/tabButton_badge"
+        android:background="@drawable/badge_circle"
+        android:paddingLeft="4.0dip"
+        android:paddingRight="4.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="18.0dip"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:minWidth="18.0dip"
+        android:text="99+"
+        android:lines="1"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingHorizontal="4.0dip"
+        style="@style/SmallTextStyle" />
+</RelativeLayout>

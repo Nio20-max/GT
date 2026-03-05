@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:background="@drawable/background_green"
+    android:paddingTop="5.0dip"
+    android:paddingBottom="5.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5.0dip"
+    android:layout_marginTop="5.0dip"
+    android:layout_marginRight="5.0dip"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:gravity="start"
+        android:id="@id/textCell_Text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:layout_weight="1.0"
+        android:paddingStart="5.0dip"
+        style="@style/SmallTextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:gravity="center"
+        android:id="@id/textCell_FirstValue"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="Value"
+        android:layout_weight="1.0"
+        style="@style/SmallTextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:gravity="center"
+        android:id="@id/textCell_SecondValue"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="Value"
+        android:layout_weight="1.0"
+        style="@style/SmallTextStyle" />
+</LinearLayout>

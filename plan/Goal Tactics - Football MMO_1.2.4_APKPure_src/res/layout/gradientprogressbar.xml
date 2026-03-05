@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/gradientProgressBar_container"
+    android:background="@drawable/background_greenwithstroke"
+    android:padding="@dimen/spacing_minimal"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/button_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:id="@id/gradientProgressBar_shape"
+        android:background="@drawable/rounded_corners_shape_small"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <crc645877ad3d44b9b81b.StadiumProgressBar
+            android:id="@id/gradientProgressBar_progress"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <TextView
+            android:gravity="center"
+            android:id="@id/gradientProgressBar_largeText"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/LargeTextStyle" />
+        <TextView
+            android:gravity="center"
+            android:id="@id/gradientProgressBar_text"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/TextStyle" />
+    </FrameLayout>
+</FrameLayout>

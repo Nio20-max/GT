@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:fillViewport="true"
+        android:layout_above="@id/dialogPopup_buttonsContainer">
+        <TextView
+            android:gravity="center"
+            android:id="@id/dialogPopupDescription"
+            android:padding="@dimen/spacing_large"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle" />
+    </ScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/dialogPopup_buttonsContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/spacing_medium">
+        <crc645877ad3d44b9b81b.GTButton
+            android:id="@id/dialogPopupNoButton"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/No"
+            android:layout_weight="1.0"
+            android:layout_marginEnd="@dimen/spacing_small"
+            style="@style/ButtonStyle" />
+        <crc645877ad3d44b9b81b.GTButton
+            android:id="@id/dialogPopupYesButton"
+            android:layout_width="0.0dip"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/Yes"
+            android:layout_weight="1.0"
+            android:layout_marginStart="@dimen/spacing_small"
+            style="@style/ButtonStyle" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/background_extradarktransparent"
+    android:padding="@dimen/spacing_large"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@id/LadderMatchResult_Result"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:paddingRight="@dimen/spacing_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Victory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/MegaTextStyle" />
+    <TextView
+        android:id="@id/LadderMatchResult_Possesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:text="@string/Possession"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LadderMatchResult_Result"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/LadderMatchResult_HomePossession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:text="@string/Details"
+        app:layout_constraintRight_toLeftOf="@id/LadderMatchResult_Possesion"
+        app:layout_constraintTop_toTopOf="@id/LadderMatchResult_Possesion"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/LadderMatchResult_AwayPossession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:text="@string/Details"
+        app:layout_constraintLeft_toRightOf="@id/LadderMatchResult_Possesion"
+        app:layout_constraintTop_toTopOf="@id/LadderMatchResult_Possesion"
+        style="@style/TextStyle" />
+    <TextView
+        android:id="@id/LadderMatchResult_Strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:text="@string/Strength"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LadderMatchResult_Possesion"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/LadderMatchResult_HomeStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:text="@string/Details"
+        app:layout_constraintRight_toLeftOf="@id/LadderMatchResult_Strength"
+        app:layout_constraintTop_toTopOf="@id/LadderMatchResult_Strength"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/LadderMatchResult_AwayStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:text="@string/Details"
+        app:layout_constraintLeft_toRightOf="@id/LadderMatchResult_Strength"
+        app:layout_constraintTop_toTopOf="@id/LadderMatchResult_Strength"
+        style="@style/TextStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

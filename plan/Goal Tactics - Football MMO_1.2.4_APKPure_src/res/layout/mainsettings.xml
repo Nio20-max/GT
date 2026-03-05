@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_medium"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:background="@drawable/background_transparent"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:layout_weight="1.0">
+        <RelativeLayout
+            android:padding="@dimen/spacing_medium"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:gravity="center"
+                android:id="@id/facebookText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FacebookTitle"
+                android:layout_alignParentTop="true"
+                style="@style/TextStyle" />
+            <com.facebook.login.widget.ProfilePictureView
+                android:id="@id/profilePicture"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="@dimen/spacing_medium"
+                android:layout_above="@id/connectWithFacebookButton"
+                android:layout_below="@id/facebookText" />
+            <com.facebook.login.widget.LoginButton
+                android:gravity="center"
+                android:id="@id/connectWithFacebookButton"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:background="@drawable/background_transparent"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_weight="1.0">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_medium"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:id="@id/managerName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/ManagerName"
+                    style="@style/TextStyle" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Music"
+                    style="@style/TextStyle" />
+                <crc645877ad3d44b9b81b.GTSwitcher
+                    android:layout_gravity="center|right"
+                    android:id="@id/musicSwitcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Sound"
+                    style="@style/TextStyle" />
+                <crc645877ad3d44b9b81b.GTSwitcher
+                    android:layout_gravity="center|right"
+                    android:id="@id/soundSwitcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <crc645877ad3d44b9b81b.GTButton
+                    android:layout_gravity="center"
+                    android:id="@id/updateAccountButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    app:button_type="Standart"
+                    app:title="@string/UpdateAccount" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <crc645877ad3d44b9b81b.GTButton
+                    android:layout_gravity="center"
+                    android:id="@id/moreAppsButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    app:button_type="Inactive"
+                    app:title="@string/MoreApps" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <crc645877ad3d44b9b81b.GTButton
+                    android:layout_gravity="center"
+                    android:id="@id/privacyPolicyButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    app:button_type="Inactive"
+                    app:title="@string/PrivacyPolicy" />
+            </FrameLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="bottom|center|right"
+            android:id="@id/mainSettings_version"
+            android:padding="@dimen/spacing_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RegularSmallTextStyle" />
+    </FrameLayout>
+</LinearLayout>

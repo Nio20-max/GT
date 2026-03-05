@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:gravity="center_vertical"
+    android:id="@id/tableViewHeaderText"
+    android:paddingLeft="@dimen/spacing_small"
+    android:paddingRight="@dimen/spacing_small"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingHorizontal="@dimen/spacing_small"
+    style="@style/HeaderRowStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

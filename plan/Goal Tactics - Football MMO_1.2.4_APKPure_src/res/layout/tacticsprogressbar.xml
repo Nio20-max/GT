@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_minimal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.0">
+        <TextView
+            android:layout_gravity="center|left"
+            android:id="@id/tacticProgressName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/colorAccentGreen"
+            android:layout_gravity="center|right"
+            android:id="@id/tacticProgressValue"
+            android:paddingRight="@dimen/spacing_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle" />
+    </FrameLayout>
+    <crc645877ad3d44b9b81b.TacticsProgressBar
+        android:layout_gravity="center_vertical"
+        android:id="@id/tacticProgressBar"
+        android:layout_width="0.0dip"
+        android:layout_height="15.0dip"
+        android:layout_weight="4.0" />
+</LinearLayout>

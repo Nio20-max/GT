@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@id/campDialog"
+        android:layout_width="@dimen/training_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/CampDialog"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        style="@style/SmallTextStyle" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/campItemsContainer"
+        android:background="@drawable/background_transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/training_start"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_alignParentEnd="true">
+        <include
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1.0"
+            layout="@layout/trainingcampitem" />
+        <include
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1.0"
+            layout="@layout/trainingcampitem" />
+        <include
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1.0"
+            layout="@layout/trainingcampitem" />
+    </LinearLayout>
+</RelativeLayout>

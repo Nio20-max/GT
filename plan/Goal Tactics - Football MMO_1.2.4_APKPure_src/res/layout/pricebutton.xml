@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:id="@id/priceButton_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        style="@style/SmallTextStyle" />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/priceButton_image"
+        android:layout_width="14.0dip"
+        android:layout_height="14.0dip"
+        android:layout_marginLeft="5.0dip"
+        android:src="@drawable/balance_star"
+        android:scaleType="centerInside" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:layout_gravity="center_vertical"
+        android:id="@id/priceButton_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3.0dip"
+        android:text="900"
+        style="@style/SmallTextStyle" />
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_medium"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@id/tmChoosePositon"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:text="@string/ChoosePosition"
+            style="@style/TextStyle" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/button_height"
+            android:layout_above="@id/quickSearchResetButton"
+            android:layout_alignTop="@id/transfermarketChoosePosition">
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <crc645877ad3d44b9b81b.GTRangeSlider
+                    android:layout_gravity="center"
+                    android:id="@id/ageSlider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_small"
+                    android:layout_marginHorizontal="@dimen/spacing_small" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <crc645877ad3d44b9b81b.GTRangeSlider
+                    android:layout_gravity="center"
+                    android:id="@id/strengthSlider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_small"
+                    android:layout_marginHorizontal="@dimen/spacing_small" />
+            </FrameLayout>
+        </LinearLayout>
+        <crc645877ad3d44b9b81b.GTButton
+            android:gravity="center"
+            android:id="@id/quickSearchResetButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:layout_alignParentEnd="true"
+            app:title="@string/Reset"
+            style="@style/ButtonStyle" />
+        <crc645877ad3d44b9b81b.ComboBox
+            android:id="@id/transfermarketChoosePosition"
+            android:layout_width="180.0dip"
+            android:layout_height="180.0dip"
+            android:text="@string/SelectPosition"
+            android:layout_below="@id/tmChoosePositon"
+            android:layout_centerHorizontal="true"
+            android:translationZ="100.0dip" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@id/setbudgetText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:text="@string/BudgetLimitText"
+            style="@style/TextStyle" />
+        <crc645877ad3d44b9b81b.GTSwitcher
+            android:id="@id/budgetSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@id/setbudgetText"
+            android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/quickSearchButton"
+            android:layout_below="@id/budgetSwitcher">
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <crc645877ad3d44b9b81b.GTRangeSlider
+                    android:layout_gravity="center"
+                    android:id="@id/talentSlider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_small"
+                    android:layout_marginHorizontal="@dimen/spacing_small" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+                <crc645877ad3d44b9b81b.GTRangeSlider
+                    android:layout_gravity="center"
+                    android:id="@id/skillSlider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_small"
+                    android:layout_marginHorizontal="@dimen/spacing_small" />
+            </FrameLayout>
+        </LinearLayout>
+        <crc645877ad3d44b9b81b.GTButton
+            android:gravity="center"
+            android:id="@id/quickSearchButton"
+            android:tag="search_button"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/spacing_small"
+            app:title="@string/Search"
+            style="@style/ButtonStyle" />
+    </RelativeLayout>
+</LinearLayout>

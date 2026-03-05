@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/popup_shadow"
+    android:background="@color/colorBlackTransparent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/popup_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/popup_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.2" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/popup_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.8" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/popup_characterEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.57" />
+        <View
+            android:id="@id/popup_frame"
+            android:background="@drawable/background_popup"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/popup_bottom"
+            app:layout_constraintDimensionRatio="W,7:4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/popup_top" />
+        <FrameLayout
+            android:id="@id/popup_view"
+            android:background="@drawable/rounded_corners_shape"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:layout_margin="@dimen/popup_border_width"
+            app:layout_constraintBottom_toBottomOf="@id/popup_frame"
+            app:layout_constraintLeft_toLeftOf="@id/popup_frame"
+            app:layout_constraintRight_toRightOf="@id/popup_frame"
+            app:layout_constraintTop_toTopOf="@id/popup_frame">
+            <TextView
+                android:gravity="center"
+                android:id="@id/popup_title"
+                android:background="@drawable/tab_middle_inactive"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/popup_title_height"
+                android:text="@string/app_name"
+                style="@style/TextStyle" />
+            <crc645877ad3d44b9b81b.GTImageView
+                android:id="@id/popup_background"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/popup_title_height"
+                android:src="@drawable/popup_background_green"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+        <crc645877ad3d44b9b81b.GTImageView
+            android:id="@id/popup_character"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:src="@drawable/characters_anna_neutral"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toBottomOf="@id/popup_view"
+            app:layout_constraintEnd_toEndOf="@id/popup_characterEnd"
+            app:layout_constraintTop_toTopOf="@id/popup_view"
+            app:layout_constraintWidth_percent="0.52" />
+        <FrameLayout
+            android:id="@id/popup_content"
+            android:background="@drawable/rounded_corners_shape"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="@dimen/popup_border_width"
+            android:layout_marginTop="@dimen/popup_content_top_margin"
+            android:layout_marginRight="@dimen/popup_border_width"
+            android:layout_marginBottom="@dimen/popup_border_width"
+            app:layout_constraintBottom_toBottomOf="@id/popup_frame"
+            app:layout_constraintLeft_toLeftOf="@id/popup_frame"
+            app:layout_constraintRight_toRightOf="@id/popup_frame"
+            app:layout_constraintTop_toTopOf="@id/popup_frame" />
+        <FrameLayout
+            android:id="@id/popup_content_small"
+            android:background="@drawable/rounded_corners_shape"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="@dimen/popup_border_width"
+            android:layout_marginTop="@dimen/popup_content_top_margin"
+            android:layout_marginRight="@dimen/popup_border_width"
+            android:layout_marginBottom="@dimen/popup_border_width"
+            app:layout_constraintBottom_toBottomOf="@id/popup_frame"
+            app:layout_constraintRight_toRightOf="@id/popup_frame"
+            app:layout_constraintTop_toTopOf="@id/popup_frame"
+            app:layout_constraintWidth_percent="0.35" />
+        <View
+            android:id="@id/popup_closeButtonGuide"
+            android:layout_width="@dimen/popup_button_shift"
+            android:layout_height="@dimen/popup_button_shift"
+            app:layout_constraintLeft_toLeftOf="@id/popup_view"
+            app:layout_constraintTop_toTopOf="@id/popup_view" />
+        <ImageButton
+            android:id="@id/popup_closeButton"
+            android:tag="close_button"
+            android:background="@drawable/button_close_selector"
+            android:layout_width="@dimen/popup_button_size"
+            android:layout_height="@dimen/popup_button_size"
+            android:contentDescription=""
+            app:layout_constraintBottom_toBottomOf="@id/popup_closeButtonGuide"
+            app:layout_constraintRight_toRightOf="@id/popup_closeButtonGuide" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

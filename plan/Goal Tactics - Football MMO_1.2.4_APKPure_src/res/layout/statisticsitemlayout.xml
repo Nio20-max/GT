@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/tatisticsItem_MainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_minimal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:id="@id/StatisticsItem_Spacing"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/spacing_medium" />
+    <ImageView
+        android:id="@id/StatisticsItem_TitleBackground"
+        android:background="@drawable/headline_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="25.0dip"
+        android:contentDescription="" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@id/StatisticsItem_Image"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="1.0dip"
+            android:layout_marginBottom="1.0dip"
+            android:contentDescription=""
+            android:layout_marginStart="@dimen/spacing_medium" />
+        <TextView
+            android:id="@id/StatisticsItem_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_marginStart="@dimen/spacing_medium"
+            style="@style/TextStyle" />
+    </LinearLayout>
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:layout_gravity="end|center"
+        android:id="@id/StatisticsItem_Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        style="@style/TextStyle" />
+</FrameLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SurfaceView
+        android:id="@id/intro_surfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+    <crc645877ad3d44b9b81b.GTButton
+        android:id="@id/intro_skipButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:premium="false"
+        app:title="@string/SkipVideo" />
+    <View
+        android:id="@id/intro_shadow"
+        android:background="@android:color/black"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:paddingBottom="@dimen/spacing_small"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:id="@id/squadSkillItem_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skill"
+        style="@style/TextStyle" />
+    <crc645877ad3d44b9b81b.GTProgressBar
+        android:layout_gravity="center|right"
+        android:id="@id/squadSkillItem_Progress"
+        android:layout_width="@dimen/progressbar_width"
+        android:layout_height="@dimen/spacing_large" />
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center|right"
+        android:id="@id/squadSkillItem_Text"
+        android:layout_width="@dimen/progressbar_width"
+        android:layout_height="wrap_content"
+        android:text="150.00"
+        style="@style/SmallTextStyle" />
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center|right"
+        android:id="@id/squadSkillItem_Bonus"
+        android:paddingLeft="@dimen/progressbar_padding"
+        android:paddingRight="@dimen/progressbar_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="+0.00"
+        android:paddingHorizontal="@dimen/progressbar_padding"
+        style="@style/GlowTextStyle" />
+</FrameLayout>

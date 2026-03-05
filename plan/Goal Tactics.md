@@ -1,0 +1,170 @@
+- Goal Tactics
+  - actual version
+    - shop
+      - stars
+        - Android
+          - 20.000 stars for 5,99 44.000 stars for 10,99 87.000 stars for 21,99 250.000 stars for 54,99 600.000 stars for 109,99
+        - IOS
+          - 20.000 stars for 5,99 44.000 stars for 9,99 87.000 stars for 19,99 250.000 stars for 49,99 600.000 stars for 99,99
+        - ads
+          - Theoretically it's possible to watch unlimited ads for 100 stars per ad.
+      - medi packs
+        - It is possible to buy medi-packs. The price is 1000 per pack and lowers with the number of packs.
+    - club
+      - my club
+        - You can see information about your club.
+      - sponsors
+        - You can make sponsorships for stars and money.
+      - emails (only ingame)
+        - You get daily training and financial reports and friend/friendly requests.
+      - accomplishments
+        - You see what you have won.
+    - finances
+      - You see the course of the money you have and on what you spend the money in the last two days.
+    - stadium
+      - You can build different buildings that bring money like the stadium, you can build buildings that boost the training progress, the quality of players you scout, the fitness and the health.
+    - squad
+      - You can see all your players with all the details. You can use skill cards and upgrade the player. Besides that you can sell your players.
+    - equipment
+      - You can buy tricots and emblems for up to 10.000 stars.
+    - line up
+      - You can change the line up for the next 3 games, including the friendly.
+    - training
+      - You can train your players in team training, in training camps and in individual training. Beside that you can train the tactics.
+    - scouting
+      - You can scout for 10.000 money or for 2.000 stars. The 10.000 scout you can do every 12 hours and the 2.000 scout every 3 hours, but you can speed up the 3 hours for 150 stars.
+    - transfer market
+      - You can buy players, filter for some, set some as favorite and see the players you sell.
+    - league
+      - You can see your league, all games and the soccer list.
+    - GT Ladder
+      - You can play in another league against all the other clubs that participate in it too. You have a team stamina that you can refill for 500 stars.
+    - friends
+      - You have a friend list in which you can invite other clubs to friendlys, search for manager and see with who you played a friendly with.
+      - other club overview
+        - You can see some details like the league and the date when the club was made. You can see the squad of this club and the league table. Beside that you can see on IOS the stadium.
+    - live
+      - You can read a game report for the game you are playing at the moment.
+    - chat
+      - You can write in a chat with all clubs in it.
+  - what I like about the game(Nio)
+    - I like about the game, that you don't need to be online all the time and that you don't need to set every hour something up. You can do some things whenever you want. As long as this continues to be the case I will play a remake. Another thing that is very important is, that it is possible to get everything with watching ads. I don't want to spend much money on this, so I watch ads. And when there is a maximum of ads many of the old players won't continue playing. At the moment there is only one league everyone is looking on. With these suggestions there are many new leagues that would add some more leagues and not everyone is only focused on one single league. I think the game didn't made enough profit before, because there weren't enough persons that found the game. So the game should get a new name. When a new player finds the game and gets stars at the beginning because of tasks the person has done, this could keep this person to stick to the game. In the game were two groups that were rivals, with only private and group chats the work for the support would be reduced. When there are some players on TM from Goal Tactics that are only available for managers in some leagues, the new and bad managers would have a chance to get good players, because the first league clubs won't outbid him. I think an important point is, that all the bugs are getting fixed.
+  - GT remake features
+    - live
+      - substitution
+        - Make it possible to substitute players and change formations while the game is running.
+    - league
+      - champions league
+        - Make a competition with all first league teams and the 16 best second league teams. The competition could start after a season and could be instead of the friendlys the first few days. But there should still be more money from the competition then you would get in friendlys.
+      - different cups
+        - Make a cup for each league with all teams. The winners of these cups should get the chance to play in another cup for much money.
+    - equipment
+      - perks
+        - Make perks which you can buy and that give you a strength boost in the games. Strengths you could boost are: home game bonus, tactic bonus, general bonus, penalty-, captain-, free kick- and corner bonus.
+          - price suggestions
+            - Higher home game/tactical bonus (5% more)(only one of the two) 1 game: 2,000 stars 5 games: 8,000 stars 15 games: 22,000 stars 1 season: 40,000 stars General Bonus(10% more) 1 game: 5,000 5 games: 20,000 stars 15 games: 55,000 stars 1 season: 100,000 stars Captain, penalties, corners, free kicks (50% bonus) For one individually: 1 game: 500 stars 5 games: 2,000 stars 15 games: 5,000 stars 1 season: 10,000 stars All together: 1 game: 1,500 stars 5 games: 7,000 stars 15 games: 20,000 stars 1 season: 35,000 stars
+      - skill cards
+        - Make it possible to buy skill cards with stars.
+          - Price suggestions
+            - 2,5 for 2.000 stars 1,25 for 1.000 stars 0,5 for 500 stars
+    - chat
+      - private chat
+        - Make private chats available
+      - group chats
+        - Make it possible to make group chats with stars
+    - stadium
+      - seat maximum
+        - Make it possible to build unlimited seats. You should make it possible to build the seats that go over the old maximum with stars. But you should set the amount of stars down, because the prices in stars are too expensive at the moment.
+      - different seat prices
+        - I think there shouldn't ne different seat prices for each league. I think all leagues should get the same money per seat. Otherwise the small clubs don't get enough money.
+    - finances
+      - star grid
+        - Make it possible to see the same information you can see for money for stars.
+    - shop
+      - ads event
+        - Please make events for 200 stars per ad again. If the premium version will be added, this should be a 2 for the stars, so the 20 version gets 280 stars per ad.
+      - ads bug Android
+        - Please make it possible to watch unlimited ads on Android. On IOS it's already possible, but there is a bug on Android that makes this impossible.
+      - abbonement for premium
+        - 3 a month or 20.000 stars 33 a year or 220.000 stars
+          - 500 more stars a day = 15.000 stars a month = 182.500 stars a year 110 stars per ad A graph that displays all the leagues and positions in each season
+        - 6 a month or 45.000 stars 65 a year or 500.000 stars
+          - 1000 more stars a day = 30.000 stars a month = 365.000 stars a year 1 16 year old player with talent 10 at the first day of the season 120 stars per ad Overview over all seasons and all leagues A graph that displays all the leagues and positions in each season
+        - 10 a month or 65.000 stars 105 a year or 700.000 stars
+          - 1500 more stars a day = 45.000 stars a month = 547.500 stars a year 2 16 year old players with talent 10 at the first day of the season 130 stars per ad Faster support answers Overview over all seasons and leagues All time table for every league A graph that displays all the leagues and positions in each season
+        - 20 a month or 100.000 stars 180 a year or 1.050.000 stars
+          - 2000 more stars a day = 60.000 stars a month = 730.000 stars a year 3 16 year old players with talent 10 at the first day of the season 140 stars per ad Faster support answers Possible to upload own badges Overview over all seasons and leagues All time table for every league A graph that displays all the leagues and positions in each season doubled skill cards
+      - prices
+        - Please make the prices for Android and IOS the same.
+    - generally
+      - women league
+        - Make a second world with women football. I think it would be good if there is a shared stars account.
+      - alliances
+        - Make it possible to make alliances. Maybe make a price of 20.000 stars to make an alliance.
+          - functions
+            - alliance cup
+              - Make an alliance cup where alliances need to make a team together and with that team they play against other alliances. The winner could get money.
+            - alliance chat
+              - Make an alliance chat in which all the persons in the alliance are.
+            - alliance board
+              - Make an alliance board in which you can make different threads. And you could make a option to make it only for admins possible to see these threads.
+            - role
+              - Make an admin role with wich you can kick members of the alliance and confirm new ones. And in the alliance cup you could change the formation as an admin.
+      - name of the game
+        - I think you should change the name of the game. When you search for football manager you can't find Goal Tactics. A new name that is easy to remember and that you find when you search football manager.
+      - Android / IOS version
+        - Make these two versions of the game the exact same, so there is no disadvantage for one.
+      - fans
+        - Please make it more important that you have many fans and members. For example you could say, that fans can buy tricots and members pay money.
+      - strength bug
+        - On Android there is a bug that the strength of the team isn't updating. So the other teams don't see the real strength of the own team.
+      - tasks
+        - I think there should be tasks to get stars or money.
+    - squad
+      - injuries
+        - Make longer injuries possible, so more players need to buy medi-packs. A injurie could be up to 12 days.
+      - positions
+        - Split the position into the side positions and the middle positions.
+    - line up
+      - formation
+        - Make more formations possible. For example: 5-3-2; 4-5-1
+      - player details
+        - Make it possible to see the age and talent in the formation while changing it.
+    - training
+      - more individual trainings
+        - Make it possible to train one player 5 times in individual training. The prices for the individual trainings could rise with the number of individual trainings that are already bought on this player.
+          - price suggestions
+            - 1. Individual training: One-time: 1,000, weekly: 500 2. Individual training: One-time: 1,500, weekly: 750 3. Individual training: One-time: 2,000, weekly: 1,000 4. Individual training: One-time: 2,500, weekly: 1,250 5. Individual training: One-time: 3,000, weekly: 1,500
+      - more realistic strength
+        - Players from 30 years old should loose strength unless they are upgraded for at least 10.000 stars.
+      - tactics
+        - Make the maximum of tactics to 150%. From 100% to 150% you should pay 100 stars a day to train the tactics.
+          - small calculations
+            - 100 stars a day: 7 tactics * 50% per tactic = 350% Because you get 2% a day: 350% : 2% per day = 175 days 175 day * 100 stars a day = 175.000 stars
+            - 500 stars a day: 7 tactics * 50% per tactic = 350% Because you get 2% a day: 350% : 2% per day = 175 days 175 day * 500 stars a day = 875.000 stars
+      - training accounts
+        - Make it impossible to buy the same training camp again with an exception for experience. With that it would be impossible to make training accounts.
+      - maximum strength
+        - Make the maximum strength of one player on 1100. With the 15 year old players and the 5 individual training the players get much more strength.
+      - bug
+        - There is a bug that sometimes the training stands out for one day.
+    - scouting
+      - 15 year old players
+        - Make it possible to get 15 year old players. There could be a chance to get such a player that grows with every player that is scouted. The 17 year old player should be talent 10.
+    - transfer market
+      - better player from GT
+        - At the beginning of every new season a few good players like at the start of the world cup in Qatar
+      - players for some manager
+        - Good players from GT on TM that are only available for new manager, so they want to keep playing.
+      - players for some leagues
+        - Make some players from GT that are only available for some leagues, so the persons from the lower leagues have a chance to get new good players.
+    - friends
+      - own series
+        - Make it possible to set an own series in which the friends are shown.
+      - player strength
+        - On IOS it's possible to see the player strength of players in squads of other managers. Please make this possible on Android too.
+    - GT ladder
+      - price money
+        - Make the amount of money that you can get in the ladder higher, because the amount that you can win at the moment is too low.
+      - different GT Ladders
+        - Make different GT Ladders for the different leagues, so the persons in the fourth league don't play against the ones from the first league.

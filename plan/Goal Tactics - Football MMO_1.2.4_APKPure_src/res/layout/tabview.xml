@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:background="@drawable/navigationbar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/tabbar_height">
+        <View
+            android:id="@id/tab_header_left"
+            android:background="@drawable/tab_inactive"
+            android:layout_width="@dimen/spacing_extralarge"
+            android:layout_height="fill_parent" />
+        <View
+            android:layout_gravity="right"
+            android:id="@id/tab_header_right"
+            android:background="@drawable/tab_inactive"
+            android:layout_width="@dimen/spacing_extralarge"
+            android:layout_height="fill_parent" />
+        <crc645877ad3d44b9b81b.TabHeaderView
+            android:id="@id/tabHeaderView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+    <crc645877ad3d44b9b81b.PageScrollView
+        android:id="@id/tabScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

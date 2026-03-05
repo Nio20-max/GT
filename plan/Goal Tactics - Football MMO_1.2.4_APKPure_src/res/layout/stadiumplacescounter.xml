@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:paddingLeft="@dimen/spacing_small"
+    android:paddingRight="@dimen/spacing_small"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@id/stadiumPlacesCounter_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Standings"
+        android:layout_centerHorizontal="true"
+        style="@style/TextStyle" />
+    <crc645877ad3d44b9b81b.GTButton
+        android:id="@id/stadiumPlacesCounter_Up"
+        android:background="@drawable/arrow_up_selector"
+        android:layout_width="@dimen/vertical_arrow_width"
+        android:layout_height="@dimen/vertical_arrow_height"
+        android:layout_marginBottom="@dimen/spacing_minimal"
+        android:layout_above="@id/stadiumPlacesCounter_Count"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_alignStart="@id/stadiumPlacesCounter_Count"
+        app:custom_background="true" />
+    <TextView
+        android:id="@id/stadiumPlacesCounter_Count"
+        android:background="@drawable/background_greenwithstroke"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_medium"
+        android:paddingBottom="@dimen/spacing_small"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="53,400"
+        android:layout_centerVertical="true"
+        style="@style/ButtonStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/stadiumPlacesCounter_Increase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+100"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:layout_alignParentEnd="true"
+        style="@style/TextStyle" />
+    <crc645877ad3d44b9b81b.GTButton
+        android:id="@id/stadiumPlacesCounter_Down"
+        android:background="@drawable/arrow_down_selector"
+        android:layout_width="@dimen/vertical_arrow_width"
+        android:layout_height="@dimen/vertical_arrow_height"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_below="@id/stadiumPlacesCounter_Count"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_alignStart="@id/stadiumPlacesCounter_Count"
+        app:custom_background="true" />
+    <TextView
+        android:textColor="@color/colorHighlight"
+        android:id="@id/stadiumPlacesCounter_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 hrs. 40 min."
+        android:layout_below="@id/stadiumPlacesCounter_Down"
+        android:layout_centerHorizontal="true"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorHighlight"
+        android:id="@id/stadiumPlacesCounter_Max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Maximum"
+        android:layout_above="@id/stadiumPlacesCounter_Up"
+        android:layout_centerHorizontal="true"
+        style="@style/TextStyle" />
+    <crc645877ad3d44b9b81b.GTButton
+        android:id="@id/stadiumPlacesCounter_SpeedupButton"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_below="@id/stadiumPlacesCounter_Time"
+        android:layout_centerHorizontal="true"
+        app:premium="true"
+        app:title="@string/SpeedUp" />
+</RelativeLayout>

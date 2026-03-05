@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/chatMessage_Container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textColor="@color/colorGray"
+        android:id="@id/chatMessage_Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        app:layout_constraintBottom_toTopOf="@id/chatMessage_GuideLineHor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextStyle" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/chatMessage_GuideLineHor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="30.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/chatMessage_GuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="40.0dip" />
+    <ImageView
+        android:id="@id/chatMessage_Logo"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:src="@drawable/wappen01_normal"
+        android:contentDescription=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chatMessage_GuideLineHor" />
+    <TextView
+        android:textColor="@color/colorHighlight"
+        android:id="@id/chatMessage_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginBottom="2.0dip"
+        app:layout_constraintLeft_toRightOf="@id/chatMessage_GuideLine"
+        app:layout_constraintTop_toTopOf="@id/chatMessage_GuideLineHor"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@android:color/white"
+        android:id="@id/chatMessage_Text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginRight="@dimen/spacing_medium"
+        app:layout_constraintLeft_toRightOf="@id/chatMessage_GuideLine"
+        app:layout_constraintRight_toLeftOf="@id/chatMessage_Time"
+        app:layout_constraintTop_toBottomOf="@id/chatMessage_Name"
+        style="@style/RegularTextStyle" />
+    <TextView
+        android:textColor="@color/colorGray"
+        android:id="@id/chatMessage_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chatMessage_Name"
+        app:layout_constraintTop_toTopOf="@id/chatMessage_Text"
+        style="@style/RegularTextStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

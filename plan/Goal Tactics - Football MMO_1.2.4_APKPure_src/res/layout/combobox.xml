@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:clipChildren="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <crc645877ad3d44b9b81b.GTTableView
+        android:id="@id/comboBoxTable"
+        android:background="@drawable/background_combobox"
+        android:padding="@dimen/spacing_minimal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="9.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginBottom="@dimen/spacing_minimal" />
+    <crc645877ad3d44b9b81b.GTButton
+        android:id="@id/comboBoxButton"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/teamview_greenbutton_height"
+        style="@style/ButtonStyle" />
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="@dimen/popup_card_margin"
+    app:cardCornerRadius="@dimen/popup_corner_radius"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <crc645877ad3d44b9b81b.GTHorizontalScrollView
+        android:background="@drawable/popup_background_green"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@id/skillPopupContainer"
+            android:paddingTop="@dimen/spacing_extralarge"
+            android:paddingBottom="@dimen/spacing_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </crc645877ad3d44b9b81b.GTHorizontalScrollView>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@id/rangeSlider_name"
+        android:paddingLeft="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        style="@style/TextStyle" />
+    <TextView
+        android:textColor="@color/colorAccentGreen"
+        android:id="@id/rangeSlider_value"
+        android:paddingLeft="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 - 9"
+        android:layout_alignParentRight="true"
+        style="@style/TextStyle" />
+    <View
+        android:background="@drawable/bar_background"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/slider_line_height"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:layout_below="@id/rangeSlider_name"
+        android:layout_alignTop="@id/rangeSlider_line"
+        android:layout_alignBottom="@id/rangeSlider_line" />
+    <View
+        android:id="@id/rangeSlider_line"
+        android:background="@drawable/bar_highlight"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/slider_line_height"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/slider_margin"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:layout_below="@id/rangeSlider_name" />
+    <View
+        android:id="@id/rangeSlider_left"
+        android:background="@drawable/handle"
+        android:layout_width="@dimen/slider_thumb_size"
+        android:layout_height="@dimen/slider_thumb_size"
+        android:layout_below="@id/rangeSlider_name" />
+    <View
+        android:id="@id/rangeSlider_right"
+        android:background="@drawable/handle"
+        android:layout_width="@dimen/slider_thumb_size"
+        android:layout_height="@dimen/slider_thumb_size"
+        android:layout_below="@id/rangeSlider_name"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

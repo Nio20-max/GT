@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@drawable/background_shadow"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:layout_gravity="center"
+        android:id="@id/progress_glow"
+        android:background="@drawable/progress_glow"
+        android:layout_width="@dimen/progress_glow_size"
+        android:layout_height="@dimen/progress_glow_size" />
+    <View
+        android:layout_gravity="center"
+        android:id="@id/progress_ball"
+        android:background="@drawable/progress_ball"
+        android:layout_width="@dimen/progress_ball_size"
+        android:layout_height="@dimen/progress_ball_size" />
+</FrameLayout>

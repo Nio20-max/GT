@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/background_transparent_nocorners"
+        android:layout_toRightOf="@id/TrainingsProgress_SelectSkill" />
+    <crc64e9f97cf19b8286a9.ChartView
+        android:id="@id/TrainingProgress_Chart"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_toRightOf="@id/TrainingsProgress_SelectSkill" />
+    <crc645877ad3d44b9b81b.GTTableView
+        android:id="@id/TrainingsProgress_SelectSkill"
+        android:layout_width="200.0dip"
+        android:layout_height="fill_parent" />
+</RelativeLayout>

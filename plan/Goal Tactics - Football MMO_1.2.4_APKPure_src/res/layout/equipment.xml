@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <crc645877ad3d44b9b81b.GTCollectionView
+        android:id="@id/equipment_EquipmentView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <crc645877ad3d44b9b81b.NoDataView
+        android:id="@id/NoEquipmentContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:button_1_text="@string/Buy"
+        app:character="AnnaCheer"
+        app:message="@string/NoShirt" />
+</FrameLayout>

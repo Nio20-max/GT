@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@drawable/background_premium"
+    android:paddingTop="@dimen/spacing_small"
+    android:paddingRight="@dimen/spacing_small"
+    android:paddingBottom="@dimen/spacing_small"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/spacing_small"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/sponsor_premium_star"
+        android:layout_width="@dimen/sponsorsview_image_width"
+        android:layout_height="@dimen/sponsorsview_image_size"
+        android:src="@drawable/balance_star"
+        android:scaleType="centerInside"
+        android:layout_centerVertical="true"
+        android:contentDescription="" />
+    <TextView
+        android:id="@id/sponsor_premium_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/sponsor_premium_value"
+        android:layout_toRightOf="@id/sponsor_premium_star"
+        android:layout_centerVertical="true"
+        style="@style/TextStyle" />
+    <TextView
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/colorStars"
+        android:id="@id/sponsor_premium_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_extrasmall"
+        android:text="+300"
+        android:layout_toLeftOf="@id/sponsor_premium_small_start"
+        android:layout_centerVertical="true"
+        style="@style/TextStyle" />
+    <ImageView
+        android:id="@id/sponsor_premium_small_start"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:src="@drawable/balance_star"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

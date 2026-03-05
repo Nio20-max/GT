@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:id="@id/progressBarBackground"
+        android:background="@drawable/progressbg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@id/progressBarImage"
+        android:background="@drawable/progress"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

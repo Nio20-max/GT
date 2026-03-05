@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <crc645877ad3d44b9b81b.GTTableRowView
+        android:id="@id/financeTab_Total"
+        android:background="@drawable/background_combobox"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_alignParentBottom="true" />
+    <crc645877ad3d44b9b81b.GTTableView
+        android:id="@id/financeTab_Table"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/financeTab_Total" />
+    <crc645877ad3d44b9b81b.NoDataView
+        android:id="@id/noFinanceContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:character="Anna"
+        app:message="@string/NoFinance" />
+</RelativeLayout>

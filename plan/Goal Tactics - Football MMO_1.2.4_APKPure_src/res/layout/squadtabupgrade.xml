@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:padding="@dimen/spacing_medium"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:gravity="center"
+        android:id="@id/squadUpgradeTab_description"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/PlayerAlreadyUpgraded"
+        style="@style/LargeTextStyle" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/squadUpgradeTab_upgradePanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PlayerUpgradeDescription"
+            style="@style/TextStyle" />
+        <RelativeLayout
+            android:orientation="vertical"
+            android:background="@drawable/background_transparent"
+            android:paddingTop="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium">
+            <crc645877ad3d44b9b81b.GTSlider
+                android:id="@id/UpgradeSlider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_medium" />
+            <TextView
+                android:id="@id/Strength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_below="@id/UpgradeSlider"
+                style="@style/TextStyle" />
+            <crc645877ad3d44b9b81b.GTStrengthStarsView
+                android:id="@id/Stars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginBottom="1.0dip"
+                android:layout_toRightOf="@id/Strength"
+                android:layout_alignTop="@id/Strength" />
+            <TextView
+                android:id="@id/StrengthName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_below="@id/UpgradeSlider"
+                android:layout_alignParentEnd="true"
+                style="@style/TextStyle" />
+            <crc645877ad3d44b9b81b.GTButton
+                android:id="@id/UpgradeButton"
+                android:layout_width="150.0dip"
+                android:layout_height="@dimen/teamview_greenbutton_height"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_below="@id/Strength"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:textSize="@dimen/large_text_size"
+                android:id="@id/squadUpgrade_StrengthIncrease"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                android:paddingBottom="@dimen/spacing_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/UpgradeButton"
+                style="@style/GlowTextStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

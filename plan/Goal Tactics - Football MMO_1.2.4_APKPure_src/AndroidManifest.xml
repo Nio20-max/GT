@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    android:compileSdkVersion="32"
+    android:compileSdkVersionCodename="12"
+    package="com.xyrality.goaltactics"
+    platformBuildVersionCode="32"
+    platformBuildVersionName="12"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Allows the app to create network sockets and use customised network protocols. The browser and other applications provide means to send data to the Internet, so this permission is not required to send data to the Internet. -->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <!-- Allows the app to view information about network connections such as which networks exist and are connected. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Allows the app to view information about Wi-Fi networking, such as whether Wi-Fi is enabled and name of connected Wi-Fi devices. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Allows the app to prevent the phone from going to sleep. -->
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+    <!-- Allows the app to retrieve its install referrer information. -->
+    <uses-permission
+        android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <!-- Allows apps to accept cloud-to-device messages sent by the app's service. Using this service will incur data usage. Malicious apps could cause excess data usage. -->
+    <uses-permission
+        android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- Allows a publisher app to access a valid advertising ID directly or indirectly. -->
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID" />
+    <!-- Allows the user to purchase items through Google Play from within this app. -->
+    <uses-permission
+        android:name="com.android.vending.BILLING" />
+    <application
+        android:theme="@style/GTTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/icon"
+        android:name="android.app.Application"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification_icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+        <activity
+            android:theme="@style/com_facebook_activity_theme"
+            android:label="@string/app_name"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="fbconnect"
+                    android:host="cct.com.xyrality.goaltactics" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ironsource.sdk.controller.ControllerActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.ironsource.sdk.controller.InterstitialActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.ironsource.sdk.controller.OpenUrlActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:name="crc645877ad3d44b9b81b.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:noHistory="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="xy.gt" />
+            </intent-filter>
+        </activity>
+        <receiver
+            android:label="Local Notifications Broadcast Receiver"
+            android:name="crc645877ad3d44b9b81b.AlarmHandler"
+            android:enabled="true" />
+        <service
+            android:name="crc645877ad3d44b9b81b.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name="mono.MonoRuntimeProvider"
+            android:exported="false"
+            android:authorities="com.xyrality.goaltactics.mono.MonoRuntimeProvider.__mono_init__"
+            android:initOrder="1999999999" />
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
+            android:name="com.facebook.CustomTabMainActivity" />
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false"
+            android:directBootAware="true">
+            <intent-filter
+                android:priority="-500">
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.xyrality.goaltactics.firebaseinitprovider"
+            android:initOrder="100"
+            android:directBootAware="true" />
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:exported="false"
+            android:authorities="com.xyrality.goaltactics.FacebookInitProvider" />
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct" />
+        </service>
+        <provider
+            android:name="com.helpshift.support.providers.HelpshiftFileProvider"
+            android:exported="false"
+            android:authorities="com.xyrality.goaltactics.helpshift.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/hs__provider_paths" />
+        </provider>
+        <activity
+            android:theme="@style/Helpshift.Theme.Activity"
+            android:name="com.helpshift.support.activities.ParentActivity"
+            android:launchMode="singleTop"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:theme="@style/Helpshift.Theme.Dialog"
+            android:name="com.helpshift.support.HSReview"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:theme="@style/Helpshift.Theme.Activity"
+            android:name="com.helpshift.campaigns.activities.ParentActivity" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.helpshift.campaigns.activities.NotificationActivity"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:configChanges="layoutDirection|locale|orientation|screenSize"
+            android:noHistory="true" />
+        <service
+            android:name="com.helpshift.campaigns.services.NotificationService"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="4.0.0" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+        <meta-data
+            android:name="com.android.dynamic.apk.fused.modules"
+            android:value="base" />
+        <meta-data
+            android:name="com.android.stamp.source"
+            android:value="https://play.google.com/store" />
+        <meta-data
+            android:name="com.android.stamp.type"
+            android:value="STAMP_TYPE_STANDALONE_APK" />
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:value="@xml/splits0" />
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="1" />
+    </application>
+</manifest>

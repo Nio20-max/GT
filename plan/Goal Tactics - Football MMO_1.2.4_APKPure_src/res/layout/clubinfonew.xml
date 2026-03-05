@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@id/clubInfoContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <crc645877ad3d44b9b81b.TextValueListView
+        android:id="@id/clubInfoList"
+        android:scrollbars="none"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="3.0" />
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="4.0">
+        <ImageView
+            android:id="@id/clubInfoStadium"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/stadium1"
+            android:scaleType="fitStart"
+            android:contentDescription="" />
+        <crc645877ad3d44b9b81b.GTImageView
+            android:id="@id/clubInfoLogo"
+            android:layout_width="@dimen/teamview_logo_size"
+            android:layout_height="@dimen/teamview_logo_size"
+            android:layout_marginTop="@dimen/teamview_margin_top"
+            android:layout_centerHorizontal="true"
+            android:contentDescription=""
+            app:touchable="true" />
+        <RelativeLayout
+            android:id="@id/clubInfoMatchesContainer"
+            android:background="@drawable/matchesbg"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/teamview_matchcontainer_height"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:id="@id/matchInfoHomeLogo"
+                android:layout_width="@dimen/teamview_matchlogo_size"
+                android:layout_height="@dimen/teamview_matchlogo_size"
+                android:src="@drawable/wappen01_normal"
+                android:contentDescription=""
+                android:layout_alignParentStart="true" />
+            <ImageView
+                android:id="@id/matchInfoAwayLogo"
+                android:layout_width="@dimen/teamview_matchlogo_size"
+                android:layout_height="@dimen/teamview_matchlogo_size"
+                android:src="@drawable/wappen01_normal"
+                android:contentDescription=""
+                android:layout_alignParentEnd="true" />
+            <TextView
+                android:textColor="@color/colorAccentBlue"
+                android:gravity="center"
+                android:id="@id/matchInfoDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/teamview_matchdate_margin"
+                android:layout_marginRight="@dimen/teamview_matchdate_margin"
+                android:text="01.02.2020 12:00 AM"
+                android:maxLines="1"
+                android:shadowColor="@color/colorText"
+                android:layout_alignBottom="@id/matchInfoHomeLogo"
+                android:layout_alignStart="@id/matchInfoHomeLogo"
+                android:layout_alignEnd="@id/matchInfoAwayLogo"
+                style="@style/TextStyle" />
+            <TextView
+                android:textColor="@color/colorAccentBlue"
+                android:gravity="center"
+                android:id="@id/matchInfoStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/teamview_matchscore_margin"
+                android:layout_marginRight="@dimen/teamview_matchscore_margin"
+                android:text="0:0"
+                android:shadowColor="@color/colorText"
+                android:layout_alignTop="@id/matchInfoHomeLogo"
+                android:layout_alignStart="@id/matchInfoHomeLogo"
+                android:layout_alignEnd="@id/matchInfoAwayLogo"
+                style="@style/TextStyle" />
+            <View
+                android:id="@id/clubInfoDivider"
+                android:layout_width="@dimen/teamview_clubinfo_divider"
+                android:layout_height="@dimen/teamview_clubinfo_divider"
+                android:layout_centerInParent="true" />
+            <TextView
+                android:gravity="center"
+                android:id="@id/matchInfoHomeName"
+                android:background="@drawable/bluebg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/teamview_club_name_height"
+                android:layout_marginTop="@dimen/teamview_bluebg_margin"
+                android:maxLines="1"
+                android:layout_below="@id/matchInfoHomeLogo"
+                android:layout_marginEnd="@dimen/teamview_bluebg_margin"
+                android:layout_alignEnd="@id/clubInfoDivider"
+                android:layout_alignParentStart="true"
+                style="@style/TextStyle" />
+            <TextView
+                android:gravity="center"
+                android:id="@id/matchInfoAwayName"
+                android:background="@drawable/bluebg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/teamview_club_name_height"
+                android:layout_marginTop="@dimen/teamview_bluebg_margin"
+                android:maxLines="1"
+                android:layout_below="@id/matchInfoAwayLogo"
+                android:layout_marginStart="@dimen/teamview_bluebg_margin"
+                android:layout_alignStart="@id/clubInfoDivider"
+                android:layout_alignParentEnd="true"
+                style="@style/TextStyle" />
+            <Button
+                android:id="@id/matchInfoLineup"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/teamview_greenbutton_height"
+                android:layout_marginTop="@dimen/teamview_greenbutton_margin_top"
+                android:text="@string/Lineup"
+                android:layout_below="@id/matchInfoHomeName"
+                android:layout_marginEnd="@dimen/teamview_greenbutton_margin_end"
+                android:layout_alignStart="@id/matchInfoHomeName"
+                android:layout_alignEnd="@id/matchInfoHomeName"
+                style="@style/ButtonStyle" />
+            <Button
+                android:id="@id/matchInfoCompare"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/teamview_greenbutton_height"
+                android:layout_marginTop="@dimen/teamview_greenbutton_margin_top"
+                android:text="@string/Compare"
+                android:layout_below="@id/matchInfoAwayName"
+                android:layout_marginEnd="@dimen/teamview_greenbutton_margin_end"
+                android:layout_alignStart="@id/matchInfoAwayName"
+                android:layout_alignEnd="@id/matchInfoAwayName"
+                style="@style/ButtonStyle" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchInfoHomeName"
+                android:layout_alignLeft="@id/matchInfoHomeName"
+                android:layout_alignRight="@id/matchInfoHomeName"
+                android:layout_alignParentBottom="true">
+                <crc645877ad3d44b9b81b.GTStrengthStarsView
+                    android:layout_gravity="center"
+                    android:id="@id/LastMatchHomeStrength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchInfoAwayName"
+                android:layout_alignLeft="@id/matchInfoAwayName"
+                android:layout_alignRight="@id/matchInfoAwayName"
+                android:layout_alignParentBottom="true">
+                <crc645877ad3d44b9b81b.GTStrengthStarsView
+                    android:layout_gravity="center"
+                    android:id="@id/LastMatchAwayStrength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </RelativeLayout>
+        <View
+            android:id="@id/clubInfoMatchDivider"
+            android:layout_width="@dimen/teamview_clubinfo_divider"
+            android:layout_height="@dimen/teamview_clubinfo_divider"
+            android:layout_centerInParent="true" />
+        <Button
+            android:textColor="@color/colorGray"
+            android:id="@id/clubInfoLastMatch"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/teamview_blackbutton_height"
+            android:text="@string/LastMatch"
+            android:layout_above="@id/clubInfoMatchesContainer"
+            android:layout_alignRight="@id/clubInfoMatchDivider"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/teamview_blackbutton_margin_top"
+            android:layout_marginEnd="@dimen/teamview_blackbutton_margin_end"
+            style="@style/SubtabStyle" />
+        <Button
+            android:id="@id/clubInfoNextMatch"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/teamview_blackbutton_height"
+            android:text="@string/NextMatch"
+            android:layout_above="@id/clubInfoMatchesContainer"
+            android:layout_alignLeft="@id/clubInfoMatchDivider"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="@dimen/teamview_blackbutton_margin_end"
+            android:layout_marginEnd="@dimen/teamview_blackbutton_margin_top"
+            style="@style/SubtabStyle" />
+        <crc645877ad3d44b9b81b.GTImageView
+            android:id="@id/clubInfoHomeTrikot"
+            android:layout_width="@dimen/teamview_matchshirt_size"
+            android:layout_height="@dimen/teamview_matchshirt_size"
+            android:layout_marginBottom="@dimen/teamview_matchshirt_margin"
+            android:layout_above="@id/clubInfoLastMatch"
+            android:contentDescription=""
+            android:layout_marginStart="@dimen/teamview_matchshirt_margin"
+            app:touchable="true" />
+        <crc645877ad3d44b9b81b.GTImageView
+            android:id="@id/clubInfoAwayTrikot"
+            android:layout_width="@dimen/teamview_matchshirt_size"
+            android:layout_height="@dimen/teamview_matchshirt_size"
+            android:layout_marginBottom="@dimen/teamview_matchshirt_margin"
+            android:layout_above="@id/clubInfoLastMatch"
+            android:contentDescription=""
+            android:layout_marginEnd="@dimen/teamview_matchshirt_margin"
+            android:layout_alignParentEnd="true"
+            app:touchable="true" />
+        <TextView
+            android:gravity="center"
+            android:id="@id/clubInfoSeason"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/SeasonInfo"
+            android:layout_above="@id/clubInfoLastMatch"
+            style="@style/TextStyle" />
+        <TextView
+            android:gravity="center"
+            android:id="@id/clubInfoName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ClubName"
+            android:layout_above="@id/clubInfoSeason"
+            style="@style/LargeTextStyle" />
+    </RelativeLayout>
+    <crc645877ad3d44b9b81b.GTListView
+        android:id="@id/clubNewsList"
+        android:scrollbars="none"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="3.0" />
+</LinearLayout>

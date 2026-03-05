@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="@dimen/popup_card_margin"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="@dimen/popup_corner_radius"
+    app:cardElevation="0.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:background="@color/colorGreen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/popup_corner_radius">
+        <crc645877ad3d44b9b81b.GTImageView
+            android:id="@id/renewGrassPopup_Stadium"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/building_stadion09"
+            android:scaleType="centerCrop" />
+        <View
+            android:background="@drawable/gradient_green"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Quality"
+            android:layout_above="@id/renewGrassPopup_Progress"
+            android:layout_alignStart="@id/renewGrassPopup_Progress"
+            style="@style/TextStyle" />
+        <crc645877ad3d44b9b81b.GradientProgressBar
+            android:id="@id/renewGrassPopup_Progress"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:layout_toStartOf="@id/renewGrassPopup_Button" />
+        <crc645877ad3d44b9b81b.GTButton
+            android:id="@id/renewGrassPopup_Button"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:layout_alignParentEnd="true"
+            app:title="@string/Renew"
+            style="@style/ButtonStyle" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/mainContainer"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <crc645877ad3d44b9b81b.GTListView
+        android:id="@id/mainMenu"
+        android:layout_width="@dimen/mainlayout_main_menu_width"
+        android:layout_height="fill_parent" />
+    <RelativeLayout
+        android:id="@id/gameContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/background"
+            android:scaleType="centerCrop"
+            android:contentDescription="" />
+        <TextView
+            android:gravity="center"
+            android:id="@id/topBar"
+            android:background="@drawable/tab_middle_inactive"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mainlayout_topbar_height"
+            style="@style/TextStyle" />
+        <FrameLayout
+            android:id="@id/bottomBar"
+            android:background="@drawable/navigationbar"
+            android:clipChildren="false"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mainlayout_bottombar_height"
+            android:layout_alignParentBottom="true">
+            <ImageButton
+                android:id="@id/backButton"
+                android:tag="back_button"
+                android:background="@drawable/button_back_selector"
+                android:layout_width="@dimen/mainlayout_menubutton_width"
+                android:layout_height="@dimen/mainlayout_bottombar_height"
+                android:contentDescription="" />
+            <ImageButton
+                android:id="@id/menuButton"
+                android:tag="menu_button"
+                android:background="@drawable/menu_selector"
+                android:layout_width="@dimen/mainlayout_menubutton_width"
+                android:layout_height="@dimen/mainlayout_bottombar_height"
+                android:contentDescription="" />
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:clipChildren="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@id/MediPacksButton"
+                    android:clipChildren="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mainlayout_balance_height"
+                    style="@style/ClickableResourcesStyle">
+                    <ImageView
+                        android:id="@id/resourcesMedipacksPlus"
+                        android:layout_width="@dimen/mainlayout_balance_plus_size"
+                        android:layout_height="@dimen/mainlayout_balance_plus_size"
+                        android:layout_marginTop="@dimen/mainlayout_balance_margin_start"
+                        android:src="@drawable/balance_plus"
+                        android:contentDescription=""
+                        android:layout_marginStart="@dimen/mainlayout_balance_margin_start" />
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/mainlayout_balanceimage_size"
+                        android:layout_height="@dimen/mainlayout_balanceimage_size"
+                        android:src="@drawable/balance_medipacks"
+                        android:contentDescription="" />
+                    <crc645877ad3d44b9b81b.AnimatedTextView
+                        android:id="@id/resourcesMedipacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:minWidth="@dimen/mainlayout_medipacks_min_width"
+                        android:layout_marginStart="@dimen/mainlayout_balance_margin_start" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@id/StarsButton"
+                    android:clipChildren="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mainlayout_balance_height"
+                    android:layout_marginStart="@dimen/mainlayout_balance_layout_margin_start"
+                    style="@style/ClickableResourcesStyle">
+                    <ImageView
+                        android:id="@id/resourcesStarsPlus"
+                        android:layout_width="@dimen/mainlayout_balance_plus_size"
+                        android:layout_height="@dimen/mainlayout_balance_plus_size"
+                        android:layout_marginTop="@dimen/mainlayout_balance_margin_start"
+                        android:src="@drawable/balance_plus"
+                        android:contentDescription=""
+                        android:layout_marginStart="@dimen/mainlayout_balance_margin_start" />
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/mainlayout_balanceimage_size"
+                        android:layout_height="@dimen/mainlayout_balanceimage_size"
+                        android:src="@drawable/balance_star"
+                        android:contentDescription="" />
+                    <crc645877ad3d44b9b81b.AnimatedTextView
+                        android:id="@id/resourcesStars"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:minWidth="@dimen/mainlayout_stars_min_width"
+                        android:layout_marginStart="@dimen/mainlayout_balance_margin_start" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:clipChildren="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mainlayout_balance_height"
+                    android:layout_marginStart="@dimen/mainlayout_balance_layout_margin_start"
+                    style="@style/ResourcesStyle">
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/mainlayout_balanceimage_size"
+                        android:layout_height="@dimen/mainlayout_balanceimage_size"
+                        android:src="@drawable/balance_money"
+                        android:contentDescription="" />
+                    <crc645877ad3d44b9b81b.AnimatedTextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@id/resourcesMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:minWidth="@dimen/mainlayout_euro_min_width"
+                        android:layout_marginStart="@dimen/mainlayout_balance_margin_start" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageButton
+                android:layout_gravity="right"
+                android:id="@id/contextMenuButton"
+                android:tag="context_menu_button"
+                android:background="@drawable/submenu_selector"
+                android:layout_width="@dimen/mainlayout_menubutton_width"
+                android:layout_height="@dimen/mainlayout_bottombar_height"
+                android:contentDescription="" />
+        </FrameLayout>
+        <crc645877ad3d44b9b81b.GTImageView
+            android:id="@id/main_character"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/spacing_extralarge"
+            android:scaleType="fitStart"
+            android:layout_above="@id/bottomBar"
+            android:layout_below="@id/topBar"
+            android:contentDescription=""
+            app:auto_hide="true" />
+        <FrameLayout
+            android:id="@id/mainFrame"
+            android:clipChildren="false"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/bottomBar"
+            android:layout_below="@id/topBar" />
+        <FrameLayout
+            android:id="@id/mainLayout_chatButtonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_medium">
+            <ImageButton
+                android:id="@id/mainLayoutChatButton"
+                android:background="@drawable/button_chat_selector"
+                android:layout_width="@dimen/round_button_size"
+                android:layout_height="@dimen/round_button_size"
+                android:contentDescription="" />
+            <View
+                android:layout_gravity="center|right|top"
+                android:id="@id/mainLayout_chatNotification"
+                android:background="@drawable/badge_circle"
+                android:visibility="gone"
+                android:layout_width="@dimen/mainlayout_chat_notification_size"
+                android:layout_height="@dimen/mainlayout_chat_notification_size" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@id/mainLayout_helpButtonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_alignParentEnd="true">
+            <ImageButton
+                android:id="@id/mainLayoutHelpButton"
+                android:background="@drawable/button_helpshift_selector"
+                android:layout_width="@dimen/round_button_size"
+                android:layout_height="@dimen/round_button_size"
+                android:contentDescription="" />
+        </FrameLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/contextMenuContainer"
+            android:layout_width="@dimen/mainlayout_context_menu_width"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mainlayout_bottombar_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+        <View
+            android:id="@id/menuBlocker"
+            android:background="@drawable/background_shadow"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <crc645877ad3d44b9b81b.GTProgress
+        android:id="@id/waitView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <crc645877ad3d44b9b81b.BlockerView
+        android:id="@id/blockerView"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <Button
+        android:layout_gravity="center|right|top"
+        android:id="@id/tutorial_closeButton"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/SkipTutorialButton"
+        style="@style/ButtonStyle" />
+    <View
+        android:id="@id/textFieldWatcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <crc645877ad3d44b9b81b.BlockerImageView
+        android:id="@id/loadingImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/loadingscreen"
+        android:scaleType="centerCrop"
+        android:contentDescription="" />
+    <TextView
+        android:layout_gravity="bottom|center|right"
+        android:id="@id/app_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_extralarge"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        style="@style/SmallTextStyle" />
+    <crc645877ad3d44b9b81b.SideNotificationView
+        android:layout_gravity="center_vertical"
+        android:id="@id/side_notification"
+        android:visibility="invisible"
+        android:layout_width="200.0dip"
+        android:layout_height="160.0dip" />
+</FrameLayout>

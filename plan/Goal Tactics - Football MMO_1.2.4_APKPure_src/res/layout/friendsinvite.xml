@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:gravity="center"
+        android:id="@id/friendsInviteText"
+        android:padding="@dimen/spacing_extralarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FriendsInviteText"
+        style="@style/TextStyle" />
+    <View
+        android:id="@id/friendsCenter"
+        android:layout_width="@dimen/teamview_clubinfo_divider"
+        android:layout_height="@dimen/teamview_clubinfo_divider"
+        android:layout_centerInParent="true" />
+    <Button
+        android:id="@id/friendsInviteWhatsApp"
+        android:layout_width="230.0dip"
+        android:layout_height="@dimen/teamview_greenbutton_height"
+        android:layout_margin="@dimen/spacing_medium"
+        android:text="@string/FriendsInviteWhatsApp"
+        android:layout_alignTop="@id/friendsCenter"
+        android:layout_alignEnd="@id/friendsCenter"
+        style="@style/ButtonStyle" />
+    <ImageView
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:layout_width="@dimen/teamview_greenbutton_height"
+        android:layout_height="@dimen/teamview_greenbutton_height"
+        android:src="@drawable/share_whatsapp"
+        android:layout_alignTop="@id/friendsInviteWhatsApp"
+        android:contentDescription=""
+        android:paddingStart="@dimen/spacing_small"
+        android:layout_alignStart="@id/friendsInviteWhatsApp"
+        android:translationZ="100.0dip" />
+    <Button
+        android:id="@id/friendsInviteMessenger"
+        android:layout_width="230.0dip"
+        android:layout_height="@dimen/teamview_greenbutton_height"
+        android:layout_margin="@dimen/spacing_medium"
+        android:text="@string/FriendsInviteMessenger"
+        android:layout_alignTop="@id/friendsCenter"
+        android:layout_alignStart="@id/friendsCenter"
+        style="@style/ButtonStyle" />
+    <ImageView
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:layout_width="@dimen/teamview_greenbutton_height"
+        android:layout_height="@dimen/teamview_greenbutton_height"
+        android:src="@drawable/share_messenger"
+        android:layout_alignTop="@id/friendsInviteMessenger"
+        android:contentDescription=""
+        android:paddingStart="@dimen/spacing_small"
+        android:layout_alignStart="@id/friendsInviteMessenger"
+        android:translationZ="100.0dip" />
+    <Button
+        android:id="@id/friendsInviteFacebook"
+        android:layout_width="230.0dip"
+        android:layout_height="@dimen/teamview_greenbutton_height"
+        android:layout_margin="@dimen/spacing_medium"
+        android:text="@string/FriendsInviteFacebook"
+        android:layout_below="@id/friendsInviteWhatsApp"
+        android:layout_alignEnd="@id/friendsCenter"
+        style="@style/ButtonStyle" />
+    <ImageView
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:layout_width="@dimen/teamview_greenbutton_height"
+        android:layout_height="@dimen/teamview_greenbutton_height"
+        android:src="@drawable/share_facebook"
+        android:layout_alignTop="@id/friendsInviteFacebook"
+        android:contentDescription=""
+        android:paddingStart="@dimen/spacing_small"
+        android:layout_alignStart="@id/friendsInviteFacebook"
+        android:translationZ="100.0dip" />
+    <Button
+        android:id="@id/friendsInviteOther"
+        android:layout_width="230.0dip"
+        android:layout_height="@dimen/teamview_greenbutton_height"
+        android:layout_margin="@dimen/spacing_medium"
+        android:text="@string/FriendsInviteOther"
+        android:layout_below="@id/friendsInviteMessenger"
+        android:layout_alignStart="@id/friendsCenter"
+        style="@style/ButtonStyle" />
+    <ImageView
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:layout_width="@dimen/teamview_greenbutton_height"
+        android:layout_height="@dimen/teamview_greenbutton_height"
+        android:src="@drawable/share_other"
+        android:layout_alignTop="@id/friendsInviteOther"
+        android:contentDescription=""
+        android:paddingStart="@dimen/spacing_small"
+        android:layout_alignStart="@id/friendsInviteOther"
+        android:translationZ="100.0dip" />
+</RelativeLayout>

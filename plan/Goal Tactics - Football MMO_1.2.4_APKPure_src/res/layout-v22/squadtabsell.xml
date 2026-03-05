@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/SellTab_AuctionContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/spacing_medium">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/EndAuction"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/colorAccentGreen"
+            android:id="@id/SellTab_EndOfAuc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:layout_alignParentEnd="true"
+            style="@style/TextStyle" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CurrentBid"
+            android:layout_below="@id/SellTab_EndOfAuc"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/colorEuro"
+            android:id="@id/SellTab_CurrentBid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:layout_below="@id/SellTab_EndOfAuc"
+            android:layout_alignParentEnd="true"
+            style="@style/TextStyle" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/HighestBidder"
+            android:layout_below="@id/SellTab_CurrentBid"
+            style="@style/TextStyle" />
+        <TextView
+            android:textColor="@color/colorHighlight"
+            android:id="@id/SellTab_HighestBidder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SellTab_CurrentBid"
+            android:layout_alignParentEnd="true"
+            style="@style/TextStyle" />
+        <crc645877ad3d44b9b81b.GTImageView
+            android:id="@id/SellTab_BidderLogo"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:scaleType="centerInside"
+            android:layout_toLeftOf="@id/SellTab_HighestBidder"
+            android:layout_alignTop="@id/SellTab_HighestBidder" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_transfermarket"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ScrollView
+        android:id="@id/SellTab_SellContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:gravity="center"
+                android:id="@id/SellTab_Description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_small"
+                style="@style/TextStyle" />
+            <RelativeLayout
+                android:background="@drawable/background_transparent"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingTop="@dimen/spacing_medium"
+                android:paddingRight="@dimen/spacing_large"
+                android:paddingBottom="@dimen/spacing_medium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/spacing_large"
+                android:paddingVertical="@dimen/spacing_medium">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Price"
+                    style="@style/TextStyle" />
+                <TextView
+                    android:textColor="@color/colorEuro"
+                    android:id="@id/SellTab_Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2,204,219"
+                    android:layout_alignParentEnd="true"
+                    style="@style/TextStyle" />
+                <crc645877ad3d44b9b81b.GTSlider
+                    android:id="@id/SellTab_PriceSlider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:layout_below="@id/SellTab_Price" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AuctionEndTime"
+                    android:layout_below="@id/SellTab_PriceSlider"
+                    style="@style/TextStyle" />
+                <TextView
+                    android:textColor="@color/colorAccentGreen"
+                    android:id="@id/SellTab_AucTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4/16/2021 2:00 PM"
+                    android:layout_below="@id/SellTab_PriceSlider"
+                    android:layout_alignParentEnd="true"
+                    style="@style/TextStyle" />
+                <crc645877ad3d44b9b81b.GTSlider
+                    android:id="@id/SellTab_AucTimeSlider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:layout_below="@id/SellTab_AucTime" />
+                <crc645877ad3d44b9b81b.GTButton
+                    android:id="@id/SellTab_SellButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_below="@id/SellTab_AucTimeSlider"
+                    android:layout_alignParentEnd="true"
+                    app:title="@string/Sell" />
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/background_transparent"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingTop="@dimen/spacing_medium"
+                android:paddingRight="@dimen/spacing_large"
+                android:paddingBottom="@dimen/spacing_medium"
+                android:visibility="visible"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:paddingHorizontal="@dimen/spacing_large"
+                android:paddingVertical="@dimen/spacing_medium">
+                <TextView
+                    android:textColor="@color/colorHighlight"
+                    android:gravity="center_horizontal"
+                    android:id="@id/SellTab_SellDescription"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextStyle" />
+                <crc645877ad3d44b9b81b.GTButton
+                    android:layout_gravity="end"
+                    android:id="@id/SellTab_ImmediatelySellButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    app:title="@string/Sell" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

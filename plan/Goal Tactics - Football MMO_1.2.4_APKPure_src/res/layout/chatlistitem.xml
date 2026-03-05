@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:paddingTop="10.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <crc645877ad3d44b9b81b.ChatMessageView
+        android:id="@id/chatListItem_Message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</FrameLayout>

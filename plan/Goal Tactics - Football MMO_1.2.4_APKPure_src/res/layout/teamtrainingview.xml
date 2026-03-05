@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@id/teamTrainingDialog"
+        android:layout_width="@dimen/training_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/TeamTrainingDialog"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        style="@style/SmallTextStyle" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/background_transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_marginStart="@dimen/training_start"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:layout_alignParentEnd="true">
+        <RelativeLayout
+            android:padding="@dimen/spacing_small"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_alignParentEnd="true">
+            <crc645877ad3d44b9b81b.ComboBox
+                android:id="@id/trainingMainSkill"
+                android:layout_width="fill_parent"
+                android:layout_height="150.0dip"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:layout_alignParentStart="true"
+                android:translationZ="100.0dip" />
+            <TextView
+                android:textColor="@color/colorHighlight"
+                android:gravity="center_horizontal"
+                android:id="@id/mainSkillText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="@string/MainSkill"
+                android:layout_alignParentBottom="true"
+                style="@style/SmallTextStyle" />
+            <crc645877ad3d44b9b81b.SkillView
+                android:id="@id/mainSkillView"
+                android:tag="mainskill_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/button_height"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:layout_above="@id/mainSkillText" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/spacing_small"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_alignParentEnd="true">
+            <crc645877ad3d44b9b81b.ComboBox
+                android:id="@id/trainingSubSkill"
+                android:layout_width="fill_parent"
+                android:layout_height="315.0dip"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:translationZ="100.0dip" />
+            <TextView
+                android:textColor="@color/colorAccentGreen"
+                android:gravity="center_horizontal"
+                android:id="@id/subSkillText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="@string/SubSkill"
+                android:layout_alignParentBottom="true"
+                style="@style/SmallTextStyle" />
+            <crc645877ad3d44b9b81b.SkillView
+                android:id="@id/subSkillView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/button_height"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:layout_above="@id/subSkillText" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/spacing_small"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:layout_weight="1.0"
+            android:layout_alignParentEnd="true">
+            <TextView
+                android:id="@id/trainingEfficiencyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TrainingEffeciencyValue"
+                style="@style/SmallTextStyle" />
+            <crc645877ad3d44b9b81b.GTLabel
+                android:id="@id/trainingEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_toRightOf="@id/trainingEfficiencyText"
+                style="@style/SmallTextStyle" />
+            <crc645877ad3d44b9b81b.GTLabel
+                android:id="@id/trainingEffectText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_below="@id/trainingEffect"
+                style="@style/SmallTextStyle" />
+            <TextView
+                android:id="@id/decreaseIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/DecreaseInValue"
+                android:layout_below="@id/trainingEffectText"
+                style="@style/SmallTextStyle" />
+            <crc645877ad3d44b9b81b.GTLabel
+                android:id="@id/timeLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_toRightOf="@id/decreaseIn"
+                android:layout_alignTop="@id/decreaseIn"
+                android:layout_alignParentEnd="true"
+                style="@style/SmallTextStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <crc645877ad3d44b9b81b.GTButton
+        android:id="@id/saveTrainingButton"
+        android:tag="save_training_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:title="@string/SaveSettings" />
+</RelativeLayout>

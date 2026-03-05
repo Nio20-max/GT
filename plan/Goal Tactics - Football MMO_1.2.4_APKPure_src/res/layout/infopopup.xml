@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:fillViewport="true"
+        android:layout_above="@id/dialogPopupOkButton">
+        <TextView
+            android:gravity="center"
+            android:id="@id/dialogPopupDescription"
+            android:padding="@dimen/spacing_large"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle" />
+    </ScrollView>
+    <crc645877ad3d44b9b81b.GTButton
+        android:id="@id/dialogPopupOkButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:text="@string/Ok"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        style="@style/ButtonStyle" />
+</RelativeLayout>
