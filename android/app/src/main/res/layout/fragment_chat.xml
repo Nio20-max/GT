@@ -1,22 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground">
+    android:background="@drawable/background_chat"
+    android:orientation="vertical"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp">
 
+    <!-- Messages list -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:clipToPadding="false"
-        android:padding="@dimen/spacing_medium" />
+        android:padding="@dimen/spacing_small" />
 
-    <include
-        android:id="@+id/noDataCard"
-        layout="@layout/view_no_data_card"
-        android:layout_width="wrap_content"
+    <!-- Typing indicator -->
+    <TextView
+        android:id="@+id/typingIndicator"
+        style="@style/SmallTextStyle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:paddingLeft="@dimen/spacing_small"
+        android:textColor="@color/colorGray"
         android:visibility="gone" />
 
-</FrameLayout>
+    <!-- Message input row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_small">
+
+        <EditText
+            android:id="@+id/messageInput"
+            style="@style/EntryStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/entry_height"
+            android:layout_weight="1"
+            android:hint="@string/send"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/send"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow_up_selector" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -80,6 +80,8 @@
     <string name="tactics_training">Tactics Training</string>
 
     <!-- Transfer Market -->
+    <string name="quick_search">Quick Search</string>
+    <string name="reset">Reset</string>
     <string name="all_players">All Players</string>
     <string name="my_bids">My Bids</string>
     <string name="favourites">Favourites</string>
@@ -95,7 +97,9 @@
 
     <!-- Friends -->
     <string name="friends_list">Friends List</string>
+    <string name="search_friends">Search Friends</string>
     <string name="search_manager">Search Manager</string>
+    <string name="invite">Invite</string>
     <string name="friendly_series">Friendly Series</string>
     <string name="invite_friendly">Invite to Friendly</string>
 

@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
 
+    <!-- Offers grid (use GridLayoutManager with span count in code) -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
@@ -11,12 +12,26 @@
         android:clipToPadding="false"
         android:padding="@dimen/spacing_medium" />
 
-    <include
-        android:id="@+id/noDataCard"
-        layout="@layout/view_no_data_card"
-        android:layout_width="wrap_content"
+    <!-- No-data overlay -->
+    <LinearLayout
+        android:id="@+id/noDataView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:visibility="gone" />
+        android:background="@drawable/background_darktransparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_large"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/noDataMessage"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_data" />
+
+    </LinearLayout>
 
 </FrameLayout>

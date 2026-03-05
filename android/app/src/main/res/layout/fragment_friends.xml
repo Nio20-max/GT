@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
 
+    <!-- Friends table -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
@@ -11,12 +12,49 @@
         android:clipToPadding="false"
         android:padding="@dimen/spacing_medium" />
 
-    <include
-        android:id="@+id/noDataCard"
-        layout="@layout/view_no_data_card"
-        android:layout_width="wrap_content"
+    <!-- No-data overlay with Search Friends and Invite buttons -->
+    <LinearLayout
+        android:id="@+id/noDataView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:visibility="gone" />
+        android:background="@drawable/background_darktransparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_large"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/noDataMessage"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_data" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/searchFriendsButton"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/search_friends" />
+
+            <Button
+                android:id="@+id/inviteButton"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:text="@string/invite" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

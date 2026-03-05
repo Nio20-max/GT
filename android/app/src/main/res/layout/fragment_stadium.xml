@@ -4,19 +4,91 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <!-- Scrollable map area -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:padding="@dimen/spacing_medium" />
+        android:fillViewport="true"
+        android:scrollbars="none">
 
-    <include
-        android:id="@+id/noDataCard"
-        layout="@layout/view_no_data_card"
-        android:layout_width="wrap_content"
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <!-- Map container -->
+            <FrameLayout
+                android:id="@+id/mapContainer"
+                android:layout_width="1365dp"
+                android:layout_height="768dp"
+                android:background="@drawable/map">
+
+                <!-- Building placement overlay -->
+                <FrameLayout
+                    android:id="@+id/buildingContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!-- Active construction progress bar on map -->
+                <ProgressBar
+                    android:id="@+id/constructionProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:progressDrawable="@drawable/progress"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <!-- Progress window overlay (top-right) -->
+    <LinearLayout
+        android:id="@+id/progressWindow"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone" />
+        android:layout_gravity="top|end"
+        android:layout_margin="@dimen/spacing_medium"
+        android:background="@drawable/background_darktransparent"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_medium"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/buildingName"
+            style="@style/TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/progressPercent"
+            style="@style/SmallTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/spacing_small" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small" />
+
+        <TextView
+            android:id="@+id/timeRemaining"
+            style="@style/SmallTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/time_left" />
+
+    </LinearLayout>
 
 </FrameLayout>
