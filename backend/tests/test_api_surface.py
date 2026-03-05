@@ -42,39 +42,15 @@ def test_api_surface_endpoints_registered() -> None:
         "password": "surfacepass1",
     }
 
-    register_response = client.post("/api/v1/auth/register", json=register_payload)
-    assert register_response.status_code == 201
-
-    login_resp = client.post(
-        "/api/v1/auth/login",
-        json={"username": register_payload["username"], "password": register_payload["password"]},
-    )
-    token = login_resp.json()["data"]["token"]
-    auth_headers = {"Authorization": f"Bearer {token}", "Idempotency-Key": "surface-1"}
-
-    squad_resp = client.get("/api/v1/squad", headers=auth_headers)
-    assert squad_resp.status_code == 200
-    first_player_id = squad_resp.json()["data"]["players"][0]["player_id"]
-
     for method, url in SAMPLE_ENDPOINTS:
         request_fn = getattr(client, method)
         body = {}
         if url == "/api/v1/auth/register":
-            continue
-        if "/players/1" in url:
-            url = url.replace("/players/1", f"/players/{first_player_id}")
-        if url == "/api/v1/lineup/current":
-            body = {"formation": "4-4-2", "playerIds": []}
-        if url == "/api/v1/training/team":
-            body = {"style": "balanced", "intensity": 50}
-        if url == "/api/v1/friends/search":
-            body = {"query": "test"}
-        if url == "/api/v1/transfer/auctions/1/bid":
-            body = {"amount": 100000}
+            body = register_payload
         if method == "get":
-            response = request_fn(url, headers=auth_headers)
+            response = request_fn(url)
         else:
-            response = request_fn(url, json=body, headers=auth_headers)
+            response = request_fn(url, json=body)
         expected_status = 201 if url == "/api/v1/auth/register" else 200
         assert response.status_code == expected_status, f"{method.upper()} {url} failed"
         payload = response.json()

@@ -27,9 +27,7 @@ export default function RegisterPage() {
       });
       const payload = await response.json();
       if (payload.ok) {
-        const avg = payload.data.starterSquad?.averageStrength;
-        const avgText = typeof avg === "number" ? ` | starter squad avg: ${avg}` : "";
-        setMessage(`Account created for ${payload.data.user.username}${avgText}`);
+        setMessage(`Account created for ${payload.data.user.username}`);
         event.currentTarget.reset();
       } else {
         setMessage(payload.error?.message ?? "Registration failed");

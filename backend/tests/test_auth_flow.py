@@ -16,9 +16,6 @@ def test_register_login_profile_flow() -> None:
     )
     assert register_resp.status_code == 201
     assert register_resp.json()["ok"] is True
-    register_data = register_resp.json()["data"]
-    assert register_data["starterSquad"]["count"] >= 16
-    assert 66 <= float(register_data["starterSquad"]["averageStrength"]) <= 74
 
     login_resp = client.post(
         "/api/v1/auth/login",
@@ -52,6 +49,3 @@ def test_register_login_profile_flow() -> None:
     assert squad_resp.status_code == 200
     squad = squad_resp.json()["data"]
     assert squad["count"] >= 16
-    strengths = [float(player["strength"]) for player in squad["players"]]
-    avg_strength = sum(strengths) / len(strengths)
-    assert 66 <= avg_strength <= 74

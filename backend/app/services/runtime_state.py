@@ -3,16 +3,13 @@ from __future__ import annotations
 from collections import Counter
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
-from hashlib import sha256
 from random import Random
 
 from app.core.config import settings
 from app.domain.bots import BotProfile, daily_star_budget, draw_persona
 from app.domain.match_engine import MatchInput, TeamVector, simulate_result
 from app.domain.training import TrainingContext, daily_gain
-from app.services.event_bus import EVENT_BUS
 from app.services.persistent_json import JsonStateFile
-from app.services.settlement_store import SETTLEMENT_STORE
 
 
 @dataclass
@@ -33,7 +30,6 @@ class RuntimeState:
         self.season_id = 1
         self.fixtures: list[Fixture] = []
         self._fixture_counter = 0
-        self._artifacts_by_fixture: dict[int, dict] = {}
         self._state_file = JsonStateFile(settings.state_dir_path / "runtime_state.json")
         if not self._load():
             self._seed_fixtures()
@@ -61,17 +57,6 @@ class RuntimeState:
         self.season_id = int(payload.get("seasonId", 1))
         self.fixtures = parsed
         self._fixture_counter = max(f.fixture_id for f in parsed)
-        raw_artifacts = payload.get("artifactsByFixture", {})
-        if isinstance(raw_artifacts, dict):
-            normalized: dict[int, dict] = {}
-            for key, value in raw_artifacts.items():
-                try:
-                    fixture_id = int(key)
-                except Exception:
-                    continue
-                if isinstance(value, dict):
-                    normalized[fixture_id] = value
-            self._artifacts_by_fixture = normalized
         return True
 
     def _save(self) -> None:
@@ -80,30 +65,8 @@ class RuntimeState:
                 "seasonId": self.season_id,
                 "fixtureCounter": self._fixture_counter,
                 "fixtures": [asdict(fixture) for fixture in self.fixtures],
-                "artifactsByFixture": self._artifacts_by_fixture,
             }
         )
-
-    def fixture_by_id(self, fixture_id: int) -> Fixture | None:
-        for fixture in self.fixtures:
-            if fixture.fixture_id == fixture_id:
-                return fixture
-        return None
-
-    def fixture_lock_status(self, fixture_id: int) -> dict:
-        fixture = self.fixture_by_id(fixture_id)
-        if fixture is None:
-            return {"fixtureId": fixture_id, "exists": False, "locked": False}
-        return {
-            "fixtureId": fixture.fixture_id,
-            "exists": True,
-            "competition": fixture.competition,
-            "status": fixture.status,
-            "locked": fixture.status != "scheduled",
-        }
-
-    def precompute_artifact(self, fixture_id: int) -> dict | None:
-        return self._artifacts_by_fixture.get(fixture_id)
 
     def _seed_fixtures(self, leagues: int = 2, clubs_per_league: int = 12) -> None:
         self.fixtures.clear()
@@ -178,27 +141,6 @@ class RuntimeState:
             result = simulate_result(match)
             fixture.result_home = result["homeGoals"]
             fixture.result_away = result["awayGoals"]
-            frozen_inputs = {
-                "competition": fixture.competition,
-                "seasonId": fixture.season_id,
-                "homeTeam": fixture.home_team,
-                "awayTeam": fixture.away_team,
-                "seedVersion": match.seed_version,
-            }
-            checksum = sha256(
-                (
-                    f"{fixture.fixture_id}|{fixture.competition}|{fixture.season_id}|"
-                    f"{fixture.home_team}|{fixture.away_team}|{result['homeGoals']}|{result['awayGoals']}"
-                ).encode("utf-8")
-            ).hexdigest()
-            self._artifacts_by_fixture[fixture.fixture_id] = {
-                "fixtureId": fixture.fixture_id,
-                "seedVersion": match.seed_version,
-                "frozenInputs": frozen_inputs,
-                "result": {"homeGoals": result["homeGoals"], "awayGoals": result["awayGoals"]},
-                "checksum": checksum,
-                "computedAtUtc": datetime.now(timezone.utc).isoformat(),
-            }
             fixture.status = "precomputed"
             updated += 1
         if updated:
@@ -210,19 +152,6 @@ class RuntimeState:
         for fixture in self.fixtures:
             if fixture.competition == competition and fixture.status == "precomputed":
                 fixture.status = "published"
-                settlement = SETTLEMENT_STORE.record_fixture_settlement(
-                    {
-                        "fixtureId": fixture.fixture_id,
-                        "competition": fixture.competition,
-                        "seasonId": fixture.season_id,
-                        "homeClubId": fixture.home_team,
-                        "awayClubId": fixture.away_team,
-                        "homeGoals": fixture.result_home,
-                        "awayGoals": fixture.result_away,
-                    },
-                    source="publish",
-                )
-                EVENT_BUS.publish("match.settled", settlement)
                 published += 1
         if published:
             self._save()
@@ -292,7 +221,6 @@ class RuntimeState:
             "seasonId": self.season_id,
             "fixturesByStatus": dict(status_counts),
             "sampleFixtures": sample,
-            "recentSettlements": SETTLEMENT_STORE.latest(limit=5),
             "timestampUtc": datetime.now(timezone.utc).isoformat(),
         }
 

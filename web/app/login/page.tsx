@@ -3,7 +3,6 @@
 import { FormEvent, useState } from "react";
 
 import GameShell from "../components/GameShell";
-import { setStoredToken } from "../lib/authToken";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "";
 
@@ -30,7 +29,6 @@ export default function LoginPage() {
       if (payload.ok) {
         const nextToken = payload.data.token as string;
         setToken(nextToken);
-        setStoredToken(nextToken);
 
         const profileResp = await fetch(`${API_BASE}/api/v1/me/profile`, {
           headers: { Authorization: `Bearer ${nextToken}` },

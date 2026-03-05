@@ -1,8 +1,6 @@
 import Link from "next/link";
 
 import GameShell from "./components/GameShell";
-import RealtimeFeed from "./components/RealtimeFeed";
-import RuntimeWindows from "./components/RuntimeWindows";
 import { SECTION_DATA } from "./lib/navigation";
 
 export default function HomePage() {
@@ -11,8 +9,6 @@ export default function HomePage() {
   return (
     <GameShell title="Dashboard">
       <p className="intro-text">Everything in the left menu is now mapped to a real route with usable page content.</p>
-      <RuntimeWindows />
-      <RealtimeFeed />
       <div className="card-grid">
         {featureCards.map(([slug, section]) => (
           <section key={slug} className="feature-card">
