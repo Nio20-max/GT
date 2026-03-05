@@ -12,3 +12,5 @@
 2026-03-05T12:49:00Z | PHASE-B_SMOKE | pass | Verified core relations exist and partitioned tables are configured.
 2026-03-05T12:53:00Z | PHASE-C_CORE | pass | Added deterministic match seed/result baseline and bot persona/budget formulas.
 2026-03-05T12:54:00Z | PHASE-C_TESTS | pass | Backend suite passed after Phase C additions (`14 passed`).
+2026-03-05T12:58:00Z | PHASE-F_SIM | pass | Ran fast deterministic multi-season simulation harness (3 seasons, 198 matches).
+2026-03-05T12:59:00Z | REPORTING | pass | Created `plan/SIMULATION_REPORT.md`, `plan/PROBLEMS.md`, and `plan/status/phase-F.md`.
