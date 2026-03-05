@@ -100,9 +100,6 @@ Web/data stack:
 - logs and alerts for API errors, queue lag, tick failures
 
 5. Deployment model
-- App directory: `/opt/gt`
-- Virtual env: `/opt/gt/.venv`
-- Env config: `/etc/gt/gt.env`
 - systemd units:
   - `gt-api.service`
   - `gt-worker.service`
