@@ -57,4 +57,23 @@
     <!-- Compare screen -->
     <color name="colorCompareBackground">#FF161F13</color>
     <color name="colorCompareGreen">#FF2E5A10</color>
+
+    <!-- Skill card colors -->
+    <color name="colorSkillCardBackground">#66376E78</color>
+    <color name="colorSkillCardBlue">#FF6ED4E7</color>
+    <color name="colorSkillCardLegend">#FFA425F3</color>
+    <color name="colorSkillCardMaster">#FF126CEF</color>
+
+    <!-- Score gradient -->
+    <color name="colorScoreGradientStart">#FF2A2A2A</color>
+    <color name="colorScoreGradientEnd">#FF151515</color>
+
+    <!-- Section variants -->
+    <color name="colorSectionWaring">#A0B22222</color>
+    <color name="colorSectionNew">#A00088FF</color>
+
+    <!-- Chart colors -->
+    <color name="color_chart_balance">#FFFFD700</color>
+    <color name="color_chart_income">#FF00FF00</color>
+    <color name="color_chart_outcome">#FFFF5555</color>
 </resources>

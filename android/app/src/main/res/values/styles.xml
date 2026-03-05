@@ -45,4 +45,35 @@
         <item name="android:background">@color/colorDarkGray</item>
     </style>
 
+    <!-- HUD resource bar: clickable (medipacks, stars) -->
+    <style name="ClickableResourcesStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- HUD resource bar: non-clickable (money) -->
+    <style name="ResourcesStyle">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- Entry field style (login inputs) -->
+    <style name="EntryStyle" parent="TextStyle">
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="android:background">@drawable/background_darktransparent</item>
+        <item name="android:textColorHint">@color/colorGray</item>
+    </style>
+
+    <!-- Section title style -->
+    <style name="SectionTitleStyle" parent="TextStyle">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:background">@color/colorSection</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <!-- Auto-size text style (used in some APK views) -->
+    <style name="AutoSizeTextStyle" parent="TextStyle" />
+
 </resources>
